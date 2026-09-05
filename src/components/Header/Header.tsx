@@ -107,17 +107,17 @@ export const Header: React.FC = () => {
       {/* 2. MAIN HEADER (Orange Navbar with transparent logo & transparent text logo, NO BOXES) */}
       <div className="bg-[#ea580c] py-3 px-3 sm:px-6">
         <div className="max-w-[1240px] mx-auto flex items-center justify-between gap-3 sm:gap-6">
-          {/* Dual Brand Logo: Completely transparent, no background boxes */}
-          <Link to="/" className="flex items-center gap-3 shrink-0 group">
+          {/* Dual Brand Logo: Exact logo.png and text_logo_white.png directly with NO backgrounds */}
+          <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
             <img
-              src="/logo_transparent.png"
+              src="/logo.png"
               alt="New Family Bazar Logo"
-              className="h-10 w-10 object-contain drop-shadow-sm transition-transform group-hover:scale-105"
+              className="h-10 w-10 object-contain drop-shadow-xs transition-transform group-hover:scale-105"
             />
             <img
-              src="/text_logo_clean_white.png"
+              src="/text_logo_white.png"
               alt="New Family Bazar"
-              className="h-7 w-auto object-contain drop-shadow-sm transition-transform group-hover:scale-105"
+              className="h-7 w-auto object-contain drop-shadow-xs transition-transform group-hover:scale-105"
             />
           </Link>
 

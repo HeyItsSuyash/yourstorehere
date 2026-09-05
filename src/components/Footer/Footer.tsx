@@ -15,16 +15,16 @@ export const Footer: React.FC = () => {
       <div className="max-w-[1240px] mx-auto px-6 space-y-12">
         {/* Main 5 columns matching supermarket layout with warm orange brand theme */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 items-start">
-          {/* Col 1: Brand (lg:col-span-3) - Transparent logos without enclosing boxes */}
+          {/* Col 1: Brand (lg:col-span-3) - Exact logo.png and text_logo_white.png directly with NO backgrounds */}
           <div className="lg:col-span-3 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-2.5">
               <img
-                src="/logo_transparent.png"
+                src="/logo.png"
                 alt="New Family Bazar Logo"
                 className="h-10 w-10 object-contain"
               />
               <img
-                src="/text_logo_clean_white.png"
+                src="/text_logo_white.png"
                 alt="New Family Bazar"
                 className="h-7 w-auto object-contain"
               />
