@@ -1,0 +1,240 @@
+/* =========================================================================
+   NEW FAMILY BAZAR - UNIFIED BRAND DESIGN SYSTEM
+   Exact Theme Consistency: Palette, Typography & Spacing Scale
+   ========================================================================= */
+
+:root {
+  /* 1. Brand Color Palette (Template-exact Supermarket Palette) */
+  --nfb-green-primary: #246b19;
+  --nfb-green-dark: #1e5215;
+  --nfb-green-darker: #153c0e;
+  --nfb-green-forest: #103b0d;
+  --nfb-green-light: #f0f6ec;
+  --nfb-green-hover: #184910;
+  
+  /* Neutral Cream Surfaces & Subtle Borders */
+  --nfb-bg-page: #f8f9f5;
+  --nfb-bg-card: #ffffff;
+  --nfb-bg-hero: #f4f6ef;
+  --nfb-border-card: #e5e9df;
+  --nfb-border-light: #ecefe6;
+  --nfb-border-dark: #d8ded0;
+
+  /* Strict Typography Hierarchy */
+  --font-brand: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --nfb-text-primary: #111827;
+  --nfb-text-secondary: #4b5563;
+  --nfb-text-muted: #6b7280;
+  --nfb-text-subtle: #9ca3af;
+
+  /* Badges & Accents */
+  --nfb-accent-yellow: #f59e0b;
+  --nfb-accent-yellow-dark: #d97706;
+
+  /* 2. Strict Spacing & Layout Tokens */
+  --nfb-container-max: 1240px;
+  --nfb-radius-sm: 0.375rem; /* 6px */
+  --nfb-radius-md: 0.5rem;   /* 8px */
+  --nfb-radius-lg: 0.75rem;  /* 12px - Cards */
+  --nfb-radius-xl: 1rem;     /* 16px - Banners */
+  --nfb-radius-full: 9999px;
+}
+
+/* Base Body Application */
+body {
+  font-family: var(--font-brand);
+  background-color: var(--nfb-bg-page);
+  color: var(--nfb-text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Uniform Supermarket Container */
+.nfb-container {
+  max-width: var(--nfb-container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Page base */
+.nfb-page-bg {
+  background-color: var(--nfb-bg-page);
+  color: var(--nfb-text-primary);
+}
+
+/* Uniform Supermarket Card */
+.nfb-card {
+  background-color: var(--nfb-bg-card);
+  border: 1px solid var(--nfb-border-card);
+  border-radius: 0.75rem; /* 12px */
+  transition: all 0.2s ease-in-out;
+}
+.nfb-card:hover {
+  border-color: var(--nfb-green-primary);
+  box-shadow: 0 4px 12px -2px rgba(36, 107, 25, 0.08);
+}
+
+/* Primary Button (Green Filled) */
+.nfb-btn-primary {
+  background-color: var(--nfb-green-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  transition: background-color 0.15s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+.nfb-btn-primary:hover {
+  background-color: var(--nfb-green-hover);
+}
+
+/* Secondary Button (Green Outline) */
+.nfb-btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--nfb-green-primary);
+  color: var(--nfb-green-primary);
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+.nfb-btn-outline:hover {
+  background-color: var(--nfb-green-primary);
+  color: #ffffff;
+}
+
+/* Discount Pill Badge (Matches template.jpg exact green discount badge) */
+.nfb-discount-badge {
+  background-color: var(--nfb-green-primary);
+  color: #ffffff;
+  font-size: 0.625rem;
+  font-weight: 900;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  line-height: 1.15;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Hero Section Container */
+.nfb-hero-container {
+  background-color: var(--nfb-bg-hero);
+  border: 1px solid #e5e9de;
+  border-radius: 1rem;
+}
+
+/* Flash Deals pill */
+.nfb-flash-badge {
+  background-color: var(--nfb-green-light);
+  color: var(--nfb-green-primary);
+  font-size: 0.6875rem;
+  font-weight: 900;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+/* Category header underline */
+.nfb-section-underline {
+  width: 2rem;
+  height: 2px;
+  background-color: var(--nfb-green-primary);
+  margin: 0.25rem auto 0;
+  border-radius: 9999px;
+}
+
+/* =========================================================================
+   DELIGHTFUL MICRO-ANIMATIONS & HOVER EFFECTS
+   ========================================================================= */
+
+@keyframes nfbPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(36, 107, 25, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(36, 107, 25, 0);
+  }
+}
+
+@keyframes nfbFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes nfbFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pulse-glow {
+  animation: nfbPulseGlow 2.5s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: nfbFloat 3s infinite ease-in-out;
+}
+
+.animate-fade-in-up {
+  animation: nfbFadeInUp 0.35s ease-out forwards;
+}
+
+/* Smooth interactive micro-transitions */
+.nfb-interactive-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+.nfb-interactive-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -3px rgba(36, 107, 25, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Image zoom on card hover */
+.nfb-img-zoom {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .nfb-img-zoom {
+  transform: scale(1.06);
+}
+
+/* Social Icon Button Styling */
+.nfb-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  transition: all 0.2s ease;
+}
+.nfb-social-btn:hover {
+  background-color: var(--nfb-green-primary);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
