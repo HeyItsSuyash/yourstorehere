@@ -132,18 +132,14 @@ export const Header: React.FC = () => {
       {/* 2. MAIN HEADER (Logo, Search, Account, Cart) */}
       <div className="bg-white py-3 sm:py-3.5 px-3 sm:px-4">
         <div className="max-w-[1240px] mx-auto flex items-center justify-between gap-3 sm:gap-4">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-            <div className="w-8 h-8 rounded-lg bg-[#246b19] flex items-center justify-center text-white font-black shadow-xs">
-              <ShoppingBag className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-[18px] sm:text-[21px] font-black tracking-tight text-[#111] leading-none">
-                NEW FAMILY <span className="text-[#246b19]">BAZAR</span>
-              </div>
-              <div className="text-[8.5px] sm:text-[9.5px] font-semibold text-[#555] tracking-wider mt-0.5">
-                Fresh. Quality. Everyday.
-              </div>
+          {/* Logo with official white typography logo */}
+          <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
+            <div className="h-9 px-2.5 rounded-lg bg-[#246b19] flex items-center justify-center shadow-xs transition-transform group-hover:scale-[1.02]">
+              <img
+                src="/text_logo_white.png"
+                alt="New Family Bazar"
+                className="h-6 w-auto object-contain"
+              />
             </div>
           </Link>
 

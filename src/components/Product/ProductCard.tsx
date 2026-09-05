@@ -140,10 +140,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <button
               type="button"
               onClick={handleAddToCart}
-              className="w-full border border-[#246b19] text-[#246b19] hover:bg-[#246b19] hover:text-white transition-all text-[10.5px] font-bold py-1.5 rounded-md flex items-center justify-center gap-1 cursor-pointer active:scale-95"
+              className="w-full border border-[#246b19] text-[#246b19] hover:bg-[#246b19] hover:text-white transition-all text-[10.5px] font-bold py-1.5 rounded-md flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
             >
               <span>ADD TO CART</span>
-              <span className="text-xs">🛒</span>
+              <ShoppingCart className="w-3.5 h-3.5" />
             </button>
           ) : (
             <div className="flex items-center justify-between bg-[#246b19] text-white rounded-md overflow-hidden py-0.5 px-2">

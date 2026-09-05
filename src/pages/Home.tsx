@@ -120,15 +120,7 @@ export const Home: React.FC = () => {
         {/* =========================================================================
             1. HERO SECTION (Exact 1:1 match with templte_1.png using hero_section.png)
            ========================================================================= */}
-        <section className="relative overflow-hidden bg-white rounded-3xl min-h-[500px] lg:min-h-[560px] flex items-center px-4 sm:px-8 lg:px-12 py-10 lg:py-14 border border-[#edf1e8] shadow-xs">
-          {/* Subtle Organic Background Arc Gradient matching template */}
-          <div 
-            className="absolute inset-0 pointer-events-none opacity-90"
-            style={{
-              background: 'radial-gradient(ellipse 70% 65% at 90% 40%, #eef5e9 0%, #f7faf4 45%, #ffffff 80%)'
-            }}
-          />
-
+        <section className="relative overflow-hidden bg-[#f7faf5] rounded-xl min-h-[500px] lg:min-h-[560px] flex items-center px-4 sm:px-8 lg:px-12 py-10 lg:py-14 border border-[#e5ebdf] shadow-xs">
           <div className="relative w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
             {/* Left Column Copy */}
             <div className="lg:col-span-6 space-y-5 text-left max-w-xl">

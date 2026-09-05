@@ -18,13 +18,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
           {/* Col 1: Brand (lg:col-span-3) */}
           <div className="lg:col-span-3 space-y-3">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded bg-white text-[#103b0d] flex items-center justify-center font-black">
-                <ShoppingBag className="w-4 h-4" />
-              </div>
-              <span className="text-lg font-black tracking-tight text-white">
-                NEW FAMILY <span className="text-emerald-400">BAZAR</span>
-              </span>
+            <Link to="/" className="inline-block">
+              <img
+                src="/text_logo_white.png"
+                alt="New Family Bazar"
+                className="h-7 w-auto object-contain"
+              />
             </Link>
             <p className="text-[11px] text-emerald-100/80 leading-relaxed max-w-xs">
               {t('footer.tagline')}

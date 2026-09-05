@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, Check } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Check, Star } from 'lucide-react';
 import { useToast } from '../context/ToastContext';
 
 export const Contact: React.FC = () => {
@@ -85,7 +85,13 @@ export const Contact: React.FC = () => {
                 </strong>
                 <p className="text-[11px] text-slate-500 mt-0.5">Behajam Rd, Motinagar Colony, Lakhimpur, UP</p>
                 <div className="flex items-center gap-1.5 text-amber-500 font-bold text-xs mt-1">
-                  <span>★★★★★</span>
+                  <div className="flex items-center">
+                    <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                    <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                    <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                    <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                    <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                  </div>
                   <span className="text-slate-700">4.8 • Supermarket & Shopping Mall</span>
                 </div>
               </div>

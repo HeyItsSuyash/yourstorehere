@@ -8,7 +8,8 @@ import {
   Check,
   ArrowRight,
   Plus,
-  ArrowLeft
+  ArrowLeft,
+  Zap
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
@@ -279,13 +280,14 @@ export const Checkout: React.FC = () => {
                 }`}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs font-extrabold text-emerald-800">
-                    ⚡ 30-Min Express
+                  <span className="text-xs font-extrabold text-emerald-800 flex items-center gap-1">
+                    <Zap className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                    <span>30-Min Express</span>
                   </span>
                   {deliveryType === 'express' && <Check className="w-4 h-4 text-emerald-700" />}
                 </div>
                 <p className="text-xs text-slate-600">
-                  Shipped directly from nearest Bellandur store
+                  Shipped directly from nearest Lakhimpur store
                 </p>
                 <span className="text-[11px] font-bold text-emerald-700 mt-2 block">
                   FREE with your order
