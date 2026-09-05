@@ -33,9 +33,9 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
         {Array.from({ length: 10 }).map((_, i) => (
           <div
             key={i}
-            className="bg-white rounded-xl-none p-4 border border-slate-100 animate-pulse flex flex-col justify-between h-72"
+            className="bg-white rounded-xl p-4 border border-slate-100 animate-pulse flex flex-col justify-between h-72"
           >
-            <div className="bg-slate-200 h-32 rounded-xl-none w-full" />
+            <div className="bg-slate-200 h-32 rounded-xl w-full" />
             <div className="space-y-2 mt-4">
               <div className="bg-slate-200 h-3 w-1/3 rounded-xl" />
               <div className="bg-slate-200 h-4 w-5/6 rounded-xl" />
@@ -43,7 +43,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
             </div>
             <div className="flex justify-between items-center mt-4">
               <div className="bg-slate-200 h-5 w-16 rounded-xl" />
-              <div className="bg-slate-200 h-8 w-16 rounded-xl-none" />
+              <div className="bg-slate-200 h-8 w-16 rounded-xl" />
             </div>
           </div>
         ))}

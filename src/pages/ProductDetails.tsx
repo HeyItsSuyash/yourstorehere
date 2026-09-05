@@ -117,12 +117,12 @@ export const ProductDetails: React.FC = () => {
       </div>
 
       {/* Main Grid: Gallery on left, Details on right */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-white rounded-xl-none p-6 sm:p-8 border border-slate-200/80 shadow-xs">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80 shadow-xs">
         {/* Left Column: Image Gallery */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="relative aspect-square rounded-xl-none bg-slate-50 p-6 flex items-center justify-center border border-slate-100 overflow-hidden">
+          <div className="relative aspect-square rounded-xl bg-slate-50 p-6 flex items-center justify-center border border-slate-100 overflow-hidden">
             {product.discount > 0 && (
-              <span className="absolute top-4 left-4 bg-[#ea580c] text-white text-xs font-black px-2.5 py-1 rounded-xl-none">
+              <span className="absolute top-4 left-4 bg-[#ea580c] text-white text-xs font-black px-2.5 py-1 rounded-xl">
                 {product.discount}% OFF
               </span>
             )}
@@ -135,7 +135,7 @@ export const ProductDetails: React.FC = () => {
                   'info'
                 );
               }}
-              className="absolute top-4 right-4 p-2.5 rounded-xl-none bg-white shadow-xs border border-slate-200 hover:border-rose-300"
+              className="absolute top-4 right-4 p-2.5 rounded-xl bg-white shadow-xs border border-slate-200 hover:border-rose-300"
             >
               <Heart
                 className={`w-5 h-5 ${
@@ -157,7 +157,7 @@ export const ProductDetails: React.FC = () => {
                 key={idx}
                 type="button"
                 onClick={() => setSelectedImage(img)}
-                className={`w-16 h-16 rounded-xl-none border-2 p-1 bg-slate-50 overflow-hidden ${
+                className={`w-16 h-16 rounded-xl border-2 p-1 bg-slate-50 overflow-hidden ${
                   selectedImage === img ? 'border-orange-300' : 'border-transparent'
                 }`}
               >
@@ -183,7 +183,7 @@ export const ProductDetails: React.FC = () => {
 
           {/* Rating & Reviews */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1 bg-amber-50 text-amber-900 px-2 py-1 rounded-xl-none text-xs font-bold border border-amber-200">
+            <div className="flex items-center gap-1 bg-amber-50 text-amber-900 px-2 py-1 rounded-xl text-xs font-bold border border-amber-200">
               <span>{product.rating}</span>
               <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
             </div>
@@ -193,7 +193,7 @@ export const ProductDetails: React.FC = () => {
           </div>
 
           {/* Pricing Block */}
-          <div className="p-4 bg-orange-50/50 rounded-xl-none border border-orange-200 flex items-center justify-between">
+          <div className="p-4 bg-orange-50/50 rounded-xl border border-orange-200 flex items-center justify-between">
             <div>
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-black text-slate-900">
@@ -210,7 +210,7 @@ export const ProductDetails: React.FC = () => {
               </span>
             </div>
             {product.discount > 0 && (
-              <span className="text-xs font-black text-[#c2410c] bg-orange-200 px-3 py-1.5 rounded-xl-none">
+              <span className="text-xs font-black text-[#c2410c] bg-orange-200 px-3 py-1.5 rounded-xl">
                 Save ₹{product.originalPrice - product.price}
               </span>
             )}
@@ -239,16 +239,16 @@ export const ProductDetails: React.FC = () => {
               <button
                 type="button"
                 onClick={handleAddToCart}
-                className="flex-1 flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm py-3.5 px-6 rounded-xl-none shadow-md transition-all "
+                className="flex-1 flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm py-3.5 px-6 rounded-xl shadow-md transition-all "
               >
                 <span>ADD TO BASKET</span>
               </button>
             ) : (
-              <div className="flex items-center justify-between bg-[#ea580c] text-white rounded-xl-none px-4 py-2 sm:w-48 shadow-md">
+              <div className="flex items-center justify-between bg-[#ea580c] text-white rounded-xl px-4 py-2 sm:w-48 shadow-md">
                 <button
                   type="button"
                   onClick={() => updateQuantity(product.id, inCartQty - 1)}
-                  className="p-1 hover:bg-[#c2410c] rounded-xl-none"
+                  className="p-1 hover:bg-[#c2410c] rounded-xl"
                 >
                   <Minus className="w-4 h-4" />
                 </button>
@@ -256,7 +256,7 @@ export const ProductDetails: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateQuantity(product.id, inCartQty + 1)}
-                  className="p-1 hover:bg-[#c2410c] rounded-xl-none"
+                  className="p-1 hover:bg-[#c2410c] rounded-xl"
                 >
                   <Plus className="w-4 h-4" />
                 </button>
@@ -266,14 +266,14 @@ export const ProductDetails: React.FC = () => {
             <button
               type="button"
               onClick={handleBuyNow}
-              className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-black text-sm py-3.5 px-6 rounded-xl-none shadow-md transition-all "
+              className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-black text-sm py-3.5 px-6 rounded-xl shadow-md transition-all "
             >
               BUY NOW
             </button>
           </div>
 
           {/* Delivery Pincode Checker */}
-          <div className="p-4 bg-slate-50 rounded-xl-none border border-slate-200/80 space-y-2">
+          <div className="p-4 bg-slate-50 rounded-xl border border-slate-200/80 space-y-2">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
               <MapPin className="w-4 h-4 text-[#ea580c]" />
               <span>Check Delivery Speed in Your Area</span>
@@ -288,11 +288,11 @@ export const ProductDetails: React.FC = () => {
                   setPincodeStatus('idle');
                 }}
                 placeholder="Enter 6-digit Pincode (e.g. 262701)"
-                className="flex-1 bg-white border border-slate-300 px-3 py-2 rounded-xl-none text-xs outline-none focus:border-orange-300 font-medium"
+                className="flex-1 bg-white border border-slate-300 px-3 py-2 rounded-xl text-xs outline-none focus:border-orange-300 font-medium"
               />
               <button
                 type="submit"
-                className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl-none"
+                className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl"
               >
                 Check
               </button>
@@ -331,7 +331,7 @@ export const ProductDetails: React.FC = () => {
       </div>
 
       {/* Tabs: Description, Highlights, Reviews */}
-      <div className="mt-10 bg-white rounded-xl-none p-6 sm:p-8 border border-slate-200/80">
+      <div className="mt-10 bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80">
         <div className="flex border-b border-slate-200 gap-6">
           <button
             type="button"
@@ -380,19 +380,19 @@ export const ProductDetails: React.FC = () => {
 
           {activeTab === 'nutrition' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-              <div className="p-3 bg-slate-50 rounded-xl-none">
+              <div className="p-3 bg-slate-50 rounded-xl">
                 <span className="text-slate-400 block font-medium">Brand</span>
                 <span className="font-bold text-slate-800">{product.brand}</span>
               </div>
-              <div className="p-3 bg-slate-50 rounded-xl-none">
+              <div className="p-3 bg-slate-50 rounded-xl">
                 <span className="text-slate-400 block font-medium">Quantity / Weight</span>
                 <span className="font-bold text-slate-800">{product.unit}</span>
               </div>
-              <div className="p-3 bg-slate-50 rounded-xl-none">
+              <div className="p-3 bg-slate-50 rounded-xl">
                 <span className="text-slate-400 block font-medium">Shelf Life</span>
                 <span className="font-bold text-slate-800">6 to 12 Months</span>
               </div>
-              <div className="p-3 bg-slate-50 rounded-xl-none">
+              <div className="p-3 bg-slate-50 rounded-xl">
                 <span className="text-slate-400 block font-medium">Country of Origin</span>
                 <span className="font-bold text-slate-800">India</span>
               </div>
@@ -401,7 +401,7 @@ export const ProductDetails: React.FC = () => {
 
           {activeTab === 'reviews' && (
             <div className="space-y-4">
-              <div className="p-4 bg-slate-50 rounded-xl-none border border-slate-100">
+              <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="font-bold text-slate-900 text-xs">Aakash Nair</span>
                   <div className="flex text-amber-500">

@@ -12,7 +12,7 @@ export const About: React.FC = () => {
       />
       {/* Hero */}
       <div className="text-center space-y-4 max-w-2xl mx-auto">
-        <div className="inline-flex items-center gap-1.5 bg-orange-100 text-[#c2410c] text-xs font-bold px-3 py-1 rounded-xl-none">
+        <div className="inline-flex items-center gap-1.5 bg-orange-100 text-[#c2410c] text-xs font-bold px-3 py-1 rounded-xl">
           <Sparkles className="w-3.5 h-3.5" />
           <span>OUR STORY & PHILOSOPHY</span>
         </div>
@@ -26,8 +26,8 @@ export const About: React.FC = () => {
 
       {/* 3 Pillars */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div className="p-6 bg-white rounded-xl-none border border-slate-200/80 shadow-xs space-y-3">
-          <div className="w-12 h-12 rounded-xl-none bg-orange-50 text-[#ea580c] flex items-center justify-center font-bold">
+        <div className="p-6 bg-white rounded-xl border border-slate-200/80 shadow-xs space-y-3">
+          <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#ea580c] flex items-center justify-center font-bold">
             <CheckCircle2 className="w-6 h-6" />
           </div>
           <h3 className="text-base font-black text-slate-900">Direct From Farm & Mills</h3>
@@ -36,8 +36,8 @@ export const About: React.FC = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-white rounded-xl-none border border-slate-200/80 shadow-xs space-y-3">
-          <div className="w-12 h-12 rounded-xl-none bg-orange-50 text-[#ea580c] flex items-center justify-center font-bold">
+        <div className="p-6 bg-white rounded-xl border border-slate-200/80 shadow-xs space-y-3">
+          <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#ea580c] flex items-center justify-center font-bold">
             <ShieldCheck className="w-6 h-6" />
           </div>
           <h3 className="text-base font-black text-slate-900">Honest Everyday Pricing</h3>
@@ -46,8 +46,8 @@ export const About: React.FC = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-white rounded-xl-none border border-slate-200/80 shadow-xs space-y-3">
-          <div className="w-12 h-12 rounded-xl-none bg-orange-50 text-[#ea580c] flex items-center justify-center font-bold">
+        <div className="p-6 bg-white rounded-xl border border-slate-200/80 shadow-xs space-y-3">
+          <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#ea580c] flex items-center justify-center font-bold">
             <Heart className="w-6 h-6" />
           </div>
           <h3 className="text-base font-black text-slate-900">Family-First Care</h3>
@@ -58,7 +58,7 @@ export const About: React.FC = () => {
       </div>
 
       {/* Our Promise Banner */}
-      <div className="bg-gradient-to-r from-[#ea580c] to-[#c2410c] rounded-xl-none p-8 sm:p-10 text-white text-center space-y-4">
+      <div className="bg-gradient-to-r from-[#ea580c] to-[#c2410c] rounded-xl p-8 sm:p-10 text-white text-center space-y-4">
         <h2 className="text-2xl sm:text-3xl font-black">Our Promise to You</h2>
         <p className="text-xs sm:text-sm text-orange-100 max-w-xl mx-auto leading-relaxed">
           If any item in your grocery basket does not meet your expectations for freshness or quality, we will gladly replace it at your doorstep immediately.
@@ -66,7 +66,7 @@ export const About: React.FC = () => {
         <div className="pt-2">
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 bg-white text-[#9a3412] font-bold text-xs px-6 py-3 rounded-xl-none shadow-md hover:bg-orange-50"
+            className="inline-flex items-center gap-2 bg-white text-[#9a3412] font-bold text-xs px-6 py-3 rounded-xl shadow-md hover:bg-orange-50"
           >
             <span>START YOUR GROCERY RUN</span>
             <ArrowRight className="w-4 h-4" />

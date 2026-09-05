@@ -35,11 +35,11 @@ export const Coupons: React.FC = () => {
           {initialCoupons.map((coupon) => (
             <div
               key={coupon.code}
-              className="p-5 rounded-xl-none bg-white border border-slate-200 hover:border-[#ea580c] transition-all shadow-xs flex flex-col justify-between"
+              className="p-5 rounded-xl bg-white border border-slate-200 hover:border-[#ea580c] transition-all shadow-xs flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="font-mono text-sm font-black text-[#c2410c] bg-orange-50 border border-orange-200 px-3 py-1 rounded-xl-none tracking-wider">
+                  <span className="font-mono text-sm font-black text-[#c2410c] bg-orange-50 border border-orange-200 px-3 py-1 rounded-xl tracking-wider">
                     {coupon.code}
                   </span>
                   <span className="text-[11px] font-bold text-slate-400 flex items-center gap-1">
@@ -67,7 +67,7 @@ export const Coupons: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => handleApply(coupon.code)}
-                  className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl-none shadow-2xs transition-colors"
+                  className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl shadow-2xs transition-colors"
                 >
                   Apply in Cart
                 </button>

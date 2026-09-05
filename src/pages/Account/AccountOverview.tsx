@@ -35,7 +35,7 @@ export const AccountOverview: React.FC = () => {
         {/* Highlight Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {/* Card 1: Loyalty Points */}
-          <div className="p-5 rounded-xl-none bg-gradient-to-br from-orange-50 to-amber-50/50 border border-orange-200">
+          <div className="p-5 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50/50 border border-orange-200">
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-bold text-[#c2410c] uppercase">
                 Family Points
@@ -58,7 +58,7 @@ export const AccountOverview: React.FC = () => {
           </div>
 
           {/* Card 2: Active Coupons */}
-          <div className="p-5 rounded-xl-none bg-amber-50/50 border border-amber-200">
+          <div className="p-5 rounded-xl bg-amber-50/50 border border-amber-200">
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-bold text-amber-900 uppercase">
                 Coupons Ready
@@ -79,7 +79,7 @@ export const AccountOverview: React.FC = () => {
           </div>
 
           {/* Card 3: Total Orders */}
-          <div className="p-5 rounded-xl-none bg-slate-50 border border-slate-200">
+          <div className="p-5 rounded-xl bg-slate-50 border border-slate-200">
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-bold text-slate-700 uppercase">
                 All Orders
@@ -104,7 +104,7 @@ export const AccountOverview: React.FC = () => {
 
         {/* Most Recent Order Spotlight */}
         {recentOrder && (
-          <div className="p-5 bg-white rounded-xl-none border border-slate-200/90 shadow-2xs space-y-3">
+          <div className="p-5 bg-white rounded-xl border border-slate-200/90 shadow-2xs space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-[#ea580c]" />
@@ -112,7 +112,7 @@ export const AccountOverview: React.FC = () => {
                   Latest Order Spotlight (#{recentOrder.id})
                 </h3>
               </div>
-              <span className="bg-orange-100 text-[#c2410c] text-[11px] font-bold px-2.5 py-0.5 rounded-xl-none">
+              <span className="bg-orange-100 text-[#c2410c] text-[11px] font-bold px-2.5 py-0.5 rounded-xl">
                 {recentOrder.status}
               </span>
             </div>
@@ -136,7 +136,7 @@ export const AccountOverview: React.FC = () => {
               </div>
               <Link
                 to={`/track-order/${recentOrder.id}`}
-                className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl-none"
+                className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl"
               >
                 Track Now
               </Link>
@@ -156,7 +156,7 @@ export const AccountOverview: React.FC = () => {
             </Link>
           </div>
           {addresses[0] && (
-            <div className="p-4 rounded-xl-none bg-slate-50 border border-slate-200 text-xs text-slate-600">
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
               <span className="font-bold text-slate-900 block">
                 {addresses[0].name} ({addresses[0].type})
               </span>

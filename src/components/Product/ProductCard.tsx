@@ -140,13 +140,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <button
               type="button"
               onClick={handleAddToCart}
-              className="w-full border border-[#ea580c] text-[#ea580c] hover:bg-[#ea580c] hover:text-white transition-all text-[10.5px] font-bold py-1.5 rounded-xl-none flex items-center justify-center gap-1.5 cursor-pointer "
+              className="w-full border border-[#ea580c] text-[#ea580c] hover:bg-[#ea580c] hover:text-white transition-all text-[10.5px] font-bold py-1.5 rounded-xl flex items-center justify-center gap-1.5 cursor-pointer "
             >
               <span>ADD TO CART</span>
               <ShoppingCart className="w-3.5 h-3.5" />
             </button>
           ) : (
-            <div className="flex items-center justify-between bg-[#ea580c] text-white rounded-xl-none overflow-hidden py-0.5 px-2">
+            <div className="flex items-center justify-between bg-[#ea580c] text-white rounded-xl overflow-hidden py-0.5 px-2">
               <button
                 type="button"
                 onClick={handleDecrement}

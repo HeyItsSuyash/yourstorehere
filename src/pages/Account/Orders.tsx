@@ -37,7 +37,7 @@ export const Orders: React.FC = () => {
               key={tab}
               type="button"
               onClick={() => setFilterTab(tab)}
-              className={`px-3.5 py-1.5 rounded-xl-none text-xs font-bold shrink-0 transition-colors ${
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-colors ${
                 filterTab === tab
                   ? 'bg-[#ea580c] text-white shadow-2xs'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -54,7 +54,7 @@ export const Orders: React.FC = () => {
             filteredOrders.map((order) => (
               <div
                 key={order.id}
-                className="bg-white rounded-xl-none border border-slate-200 p-5 space-y-4 hover:border-[#ea580c] transition-colors shadow-2xs"
+                className="bg-white rounded-xl border border-slate-200 p-5 space-y-4 hover:border-[#ea580c] transition-colors shadow-2xs"
               >
                 {/* Header */}
                 <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-100">
@@ -73,7 +73,7 @@ export const Orders: React.FC = () => {
 
                   <div className="flex items-center gap-3">
                     <span
-                      className={`text-xs font-extrabold px-3 py-1 rounded-xl-none uppercase tracking-wider ${
+                      className={`text-xs font-extrabold px-3 py-1 rounded-xl uppercase tracking-wider ${
                         order.status === 'Delivered'
                           ? 'bg-orange-100 text-[#c2410c] border border-orange-200'
                           : order.status === 'Out for Delivery'
@@ -93,7 +93,7 @@ export const Orders: React.FC = () => {
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-12 h-12 object-contain bg-slate-50 rounded-xl-none p-1 border"
+                        className="w-12 h-12 object-contain bg-slate-50 rounded-xl p-1 border"
                       />
                       <div className="min-w-0">
                         <p className="text-xs font-bold text-slate-800 line-clamp-1">
@@ -120,7 +120,7 @@ export const Orders: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <Link
                       to={`/track-order/${order.id}`}
-                      className="inline-flex items-center gap-1.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-3.5 py-2 rounded-xl-none transition-all shadow-2xs"
+                      className="inline-flex items-center gap-1.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-3.5 py-2 rounded-xl transition-all shadow-2xs"
                     >
                       <Truck className="w-3.5 h-3.5" />
                       <span>Track Order</span>
@@ -130,7 +130,7 @@ export const Orders: React.FC = () => {
                       onClick={() => {
                         showToast(`Items from #${order.id} added to basket!`);
                       }}
-                      className="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3 py-2 rounded-xl-none"
+                      className="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3 py-2 rounded-xl"
                     >
                       <RefreshCw className="w-3.5 h-3.5" />
                       <span>Buy Again</span>
@@ -140,7 +140,7 @@ export const Orders: React.FC = () => {
               </div>
             ))
           ) : (
-            <div className="text-center py-12 bg-slate-50 rounded-xl-none border border-slate-100">
+            <div className="text-center py-12 bg-slate-50 rounded-xl border border-slate-100">
               <p className="text-sm font-semibold text-slate-600">
                 No orders found under &ldquo;{filterTab}&rdquo;.
               </p>

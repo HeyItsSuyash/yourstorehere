@@ -30,7 +30,7 @@ export const CategoryCarousel: React.FC = () => {
           <button
             type="button"
             onClick={() => scroll('left')}
-            className="w-8 h-8 rounded-xl-none border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 transition-colors shadow-2xs"
+            className="w-8 h-8 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 transition-colors shadow-2xs"
             aria-label="Scroll left"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -38,7 +38,7 @@ export const CategoryCarousel: React.FC = () => {
           <button
             type="button"
             onClick={() => scroll('right')}
-            className="w-8 h-8 rounded-xl-none border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 transition-colors shadow-2xs"
+            className="w-8 h-8 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 flex items-center justify-center text-slate-600 transition-colors shadow-2xs"
             aria-label="Scroll right"
           >
             <ChevronRight className="w-4 h-4" />
@@ -55,14 +55,14 @@ export const CategoryCarousel: React.FC = () => {
           <Link
             key={cat.id}
             to={`/category/${cat.slug}`}
-            className="shrink-0 w-28 sm:w-36 md:w-40 group flex flex-col items-center bg-white rounded-xl-none p-3 border border-slate-200/70 hover:border-[#ea580c] hover:shadow-md transition-all duration-200 hover:-translate-y-1"
+            className="shrink-0 w-28 sm:w-36 md:w-40 group flex flex-col items-center bg-white rounded-xl p-3 border border-slate-200/70 hover:border-[#ea580c] hover:shadow-md transition-all duration-200 hover:-translate-y-1"
           >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl-none overflow-hidden bg-orange-50/60 p-1 flex items-center justify-center  transition-transform duration-200 border border-orange-100">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden bg-orange-50/60 p-1 flex items-center justify-center  transition-transform duration-200 border border-orange-100">
               <img
                 src={cat.image}
                 alt={cat.name}
                 loading="lazy"
-                className="w-full h-full object-cover rounded-xl-none"
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
             <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#ea580c] text-center line-clamp-2 mt-2 leading-tight">

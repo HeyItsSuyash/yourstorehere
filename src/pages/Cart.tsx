@@ -62,7 +62,7 @@ export const Cart: React.FC = () => {
   if (cart.length === 0) {
     return (
       <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-        <div className="w-20 h-20 rounded-xl-none bg-orange-50 text-[#ea580c] mx-auto flex items-center justify-center mb-4">
+        <div className="w-20 h-20 rounded-xl bg-orange-50 text-[#ea580c] mx-auto flex items-center justify-center mb-4">
           <ShoppingBag className="w-10 h-10" />
         </div>
         <h2 className="text-2xl font-black text-slate-900">Your Basket is Empty</h2>
@@ -71,7 +71,7 @@ export const Cart: React.FC = () => {
         </p>
         <Link
           to="/shop"
-          className="inline-flex items-center gap-2 mt-6 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-sm px-6 py-3.5 rounded-xl-none shadow-md"
+          className="inline-flex items-center gap-2 mt-6 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md"
         >
           <span>START SHOPPING</span>
           <ArrowRight className="w-4 h-4" />
@@ -96,7 +96,7 @@ export const Cart: React.FC = () => {
         {/* Left 7 Columns: Items List */}
         <div className="lg:col-span-7 space-y-4">
           {/* Free delivery progress bar */}
-          <div className="bg-white rounded-xl-none p-4 border border-orange-200 shadow-2xs">
+          <div className="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
             <div className="flex items-center justify-between text-xs mb-2">
               <span className="font-bold text-slate-800">
                 {distanceToFreeDelivery === 0 ? (
@@ -111,16 +111,16 @@ export const Cart: React.FC = () => {
               </span>
               <span className="font-black text-[#c2410c]">{freeDeliveryPercent}%</span>
             </div>
-            <div className="w-full h-2 bg-slate-100 rounded-xl-none overflow-hidden">
+            <div className="w-full h-2 bg-slate-100 rounded-xl overflow-hidden">
               <div
-                className="h-full bg-[#f97316] transition-all duration-300 rounded-xl-none"
+                className="h-full bg-[#f97316] transition-all duration-300 rounded-xl"
                 style={{ width: `${freeDeliveryPercent}%` }}
               />
             </div>
           </div>
 
           {/* Cart item cards */}
-          <div className="bg-white rounded-xl-none p-4 sm:p-6 border border-slate-200/80 divide-y divide-slate-100 shadow-xs">
+          <div className="bg-white rounded-xl p-4 sm:p-6 border border-slate-200/80 divide-y divide-slate-100 shadow-xs">
             {cart.map(({ product, quantity }) => (
               <div
                 key={product.id}
@@ -128,7 +128,7 @@ export const Cart: React.FC = () => {
               >
                 <Link
                   to={`/product/${product.id}`}
-                  className="w-16 h-16 sm:w-20 sm:h-20 bg-slate-50 rounded-xl-none p-1 shrink-0 flex items-center justify-center border border-slate-100"
+                  className="w-16 h-16 sm:w-20 sm:h-20 bg-slate-50 rounded-xl p-1 shrink-0 flex items-center justify-center border border-slate-100"
                 >
                   <img
                     src={product.image}
@@ -163,7 +163,7 @@ export const Cart: React.FC = () => {
 
                 {/* Quantity Stepper & Remove */}
                 <div className="flex flex-col items-end gap-2">
-                  <div className="flex items-center bg-orange-50 text-[#c2410c] border border-orange-200 rounded-xl-none overflow-hidden">
+                  <div className="flex items-center bg-orange-50 text-[#c2410c] border border-orange-200 rounded-xl overflow-hidden">
                     <button
                       type="button"
                       onClick={() => updateQuantity(product.id, quantity - 1)}
@@ -205,14 +205,14 @@ export const Cart: React.FC = () => {
         {/* Right 5 Columns: Discounts, Coupons, Loyalty, Order Summary */}
         <div className="lg:col-span-5 space-y-4">
           {/* Apply Coupon Box */}
-          <div className="bg-white rounded-xl-none p-5 border border-slate-200/80 shadow-xs space-y-3">
+          <div className="bg-white rounded-xl p-5 border border-slate-200/80 shadow-xs space-y-3">
             <div className="flex items-center gap-2">
               <Tag className="w-4 h-4 text-[#ea580c]" />
               <h3 className="font-bold text-slate-900 text-sm">Apply Coupon</h3>
             </div>
 
             {appliedCoupon ? (
-              <div className="p-3 bg-orange-50 border border-orange-200 rounded-xl-none flex items-center justify-between">
+              <div className="p-3 bg-orange-50 border border-orange-200 rounded-xl flex items-center justify-between">
                 <div>
                   <span className="text-xs font-extrabold text-[#c2410c]">
                     {appliedCoupon.code}
@@ -240,12 +240,12 @@ export const Cart: React.FC = () => {
                       setCouponError('');
                     }}
                     placeholder="Enter code (e.g. SAVE100)"
-                    className="flex-1 bg-slate-50 border border-slate-200 uppercase px-3 py-2 rounded-xl-none text-xs outline-none focus:border-orange-300 font-bold"
+                    className="flex-1 bg-slate-50 border border-slate-200 uppercase px-3 py-2 rounded-xl text-xs outline-none focus:border-orange-300 font-bold"
                   />
                   <button
                     type="button"
                     onClick={() => handleApplyCoupon()}
-                    className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2 rounded-xl-none shadow-2xs"
+                    className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2 rounded-xl shadow-2xs"
                   >
                     Apply
                   </button>
@@ -263,7 +263,7 @@ export const Cart: React.FC = () => {
                       key={cp.code}
                       type="button"
                       onClick={() => handleApplyCoupon(cp.code)}
-                      className="px-2.5 py-1 bg-orange-50 hover:bg-orange-100 text-[#c2410c] text-[11px] font-bold rounded-xl-none border border-orange-200 transition-colors"
+                      className="px-2.5 py-1 bg-orange-50 hover:bg-orange-100 text-[#c2410c] text-[11px] font-bold rounded-xl border border-orange-200 transition-colors"
                     >
                       {cp.code} ({cp.title})
                     </button>
@@ -274,7 +274,7 @@ export const Cart: React.FC = () => {
           </div>
 
           {/* Loyalty Points Redemption Box */}
-          <div className="bg-white rounded-xl-none p-5 border border-slate-200/80 shadow-xs">
+          <div className="bg-white rounded-xl p-5 border border-slate-200/80 shadow-xs">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Gift className="w-4 h-4 text-[#ea580c]" />
@@ -290,7 +290,7 @@ export const Cart: React.FC = () => {
                   onChange={(e) => setUseLoyalty(e.target.checked)}
                   className="sr-only peer"
                 />
-                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-xl-none peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-xl-none after:h-5 after:w-5 after:transition-all peer-checked:bg-[#ea580c]"></div>
+                <div className="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-xl peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-xl after:h-5 after:w-5 after:transition-all peer-checked:bg-[#ea580c]"></div>
               </label>
             </div>
             {useLoyalty && (
@@ -301,7 +301,7 @@ export const Cart: React.FC = () => {
           </div>
 
           {/* Bill Summary */}
-          <div className="bg-white rounded-xl-none p-6 border border-slate-200/80 shadow-xs space-y-3">
+          <div className="bg-white rounded-xl p-6 border border-slate-200/80 shadow-xs space-y-3">
             <h3 className="font-bold text-slate-900 text-sm pb-2 border-b border-slate-100">
               Bill Summary
             </h3>
@@ -355,7 +355,7 @@ export const Cart: React.FC = () => {
                   ₹{finalTotal}
                 </span>
               </div>
-              <span className="text-xs font-bold text-[#ea580c] bg-orange-50 px-2.5 py-1 rounded-xl-none">
+              <span className="text-xs font-bold text-[#ea580c] bg-orange-50 px-2.5 py-1 rounded-xl">
                 Total Savings: ₹{totalSavings}
               </span>
             </div>
@@ -363,7 +363,7 @@ export const Cart: React.FC = () => {
             <button
               type="button"
               onClick={() => navigate('/checkout')}
-              className="w-full mt-4 flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm py-4 rounded-xl-none shadow-md transition-all "
+              className="w-full mt-4 flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm py-4 rounded-xl shadow-md transition-all "
             >
               <span>PROCEED TO CHECKOUT</span>
               <ArrowRight className="w-4 h-4" />

@@ -109,13 +109,13 @@ export const Shop: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsMobileFilterOpen(true)}
-              className="lg:hidden flex items-center gap-2 bg-[#fff7ed] text-[#ea580c] border border-[#d8ded0] font-bold text-xs px-4 py-2.5 rounded-xl-none shadow-2xs"
+              className="lg:hidden flex items-center gap-2 bg-[#fff7ed] text-[#ea580c] border border-[#d8ded0] font-bold text-xs px-4 py-2.5 rounded-xl shadow-2xs"
             >
               <Filter className="w-4 h-4" />
               <span>Filters</span>
             </button>
 
-            <div className="flex items-center gap-2 bg-white border border-[#d8ded0] rounded-xl-none px-3 py-2 text-xs font-semibold text-[#333]">
+            <div className="flex items-center gap-2 bg-white border border-[#d8ded0] rounded-xl px-3 py-2 text-xs font-semibold text-[#333]">
               <ArrowUpDown className="w-3.5 h-3.5 text-[#777]" />
               <label htmlFor="shop-sort-select" className="text-[#777]">Sort by:</label>
               <select

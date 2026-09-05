@@ -23,7 +23,7 @@ export const MobileBottomNav: React.FC = () => {
             key={item.label}
             to={item.path}
             className={({ isActive }) =>
-              `flex flex-col items-center justify-center w-14 py-1 rounded-xl-none transition-colors relative ${
+              `flex flex-col items-center justify-center w-14 py-1 rounded-xl transition-colors relative ${
                 isActive ? 'text-[#ea580c] font-bold' : 'text-slate-500 hover:text-slate-800'
               }`
             }
@@ -31,7 +31,7 @@ export const MobileBottomNav: React.FC = () => {
             <div className="relative">
               <Icon className="w-5 h-5" />
               {!!item.badge && item.badge > 0 && (
-                <span className="absolute -top-1.5 -right-2.5 bg-[#ea580c] text-white text-[10px] font-black w-4 h-4 rounded-xl-none flex items-center justify-center">
+                <span className="absolute -top-1.5 -right-2.5 bg-[#ea580c] text-white text-[10px] font-black w-4 h-4 rounded-xl flex items-center justify-center">
                   {item.badge}
                 </span>
               )}

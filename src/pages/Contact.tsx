@@ -41,7 +41,7 @@ export const Contact: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left 6 cols: Store Details & Simulated Map */}
         <div className="lg:col-span-6 space-y-6">
-          <div className="bg-white rounded-xl-none p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-4">
+          <div className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-4">
             <h2 className="text-lg font-black text-slate-900">
               New Family Bazar - Lakhimpur Supermarket
             </h2>
@@ -83,8 +83,8 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Google Maps Card with real link */}
-            <div className="rounded-xl-none overflow-hidden border border-slate-200 bg-slate-100 relative h-52 flex flex-col justify-between p-4 mt-4">
-              <div className="bg-white/90 backdrop-blur-xs p-3 rounded-xl-none border border-slate-200 shadow-xs max-w-sm text-xs">
+            <div className="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 relative h-52 flex flex-col justify-between p-4 mt-4">
+              <div className="bg-white/90 backdrop-blur-xs p-3 rounded-xl border border-slate-200 shadow-xs max-w-sm text-xs">
                 <strong className="font-bold text-slate-900 block text-sm">
                   NEW FAMILY BAZAR, Lakhimpur
                 </strong>
@@ -105,7 +105,7 @@ export const Contact: React.FC = () => {
                 href="https://maps.app.goo.gl/dik1TVGpPLVk4dBo8"
                 target="_blank"
                 rel="noreferrer"
-                className="self-start inline-flex items-center gap-1.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-3.5 py-2 rounded-xl-none shadow-sm transition-transform "
+                className="self-start inline-flex items-center gap-1.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-3.5 py-2 rounded-xl shadow-sm transition-transform "
               >
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Open in Google Maps Directions</span>
@@ -115,15 +115,15 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Right 6 cols: Feedback / Contact Form */}
-        <div className="lg:col-span-6 bg-white rounded-xl-none p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-5">
+        <div className="lg:col-span-6 bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-5">
           <h2 className="text-lg font-black text-slate-900">Send Us a Message</h2>
           <p className="text-xs text-slate-500">
             Have questions about an order or product feedback? Reach out to our store managers.
           </p>
 
           {sent ? (
-            <div className="p-6 bg-orange-50 rounded-xl-none border border-orange-200 text-center space-y-2">
-              <div className="w-10 h-10 bg-[#f97316] text-white rounded-xl-none flex items-center justify-center mx-auto">
+            <div className="p-6 bg-orange-50 rounded-xl border border-orange-200 text-center space-y-2">
+              <div className="w-10 h-10 bg-[#f97316] text-white rounded-xl flex items-center justify-center mx-auto">
                 <Check className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-[#9a3412] text-sm">Message Received</h3>
@@ -140,7 +140,7 @@ export const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Enter your name"
-                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-orange-300 focus:bg-white"
+                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl text-xs outline-none focus:border-orange-300 focus:bg-white"
                   required
                 />
               </div>
@@ -154,7 +154,7 @@ export const Contact: React.FC = () => {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="+91 98765 43210"
-                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-orange-300 focus:bg-white"
+                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl text-xs outline-none focus:border-orange-300 focus:bg-white"
                   required
                 />
               </div>
@@ -166,14 +166,14 @@ export const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="How can we help your family with groceries today?"
-                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-orange-300 focus:bg-white"
+                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl text-xs outline-none focus:border-orange-300 focus:bg-white"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs py-3.5 rounded-xl-none shadow-md transition-all "
+                className="w-full flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs py-3.5 rounded-xl shadow-md transition-all "
               >
                 <span>SEND MESSAGE</span>
                 <Send className="w-3.5 h-3.5" />

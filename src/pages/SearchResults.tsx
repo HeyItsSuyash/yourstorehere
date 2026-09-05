@@ -52,8 +52,8 @@ export const SearchResults: React.FC = () => {
         {matches.length > 0 ? (
           <ProductGrid products={matches} columns={5} />
         ) : (
-          <div className="bg-white rounded-xl-none p-12 text-center border border-slate-200/80 max-w-md mx-auto space-y-4 shadow-xs">
-            <div className="w-16 h-16 rounded-xl-none bg-orange-50 text-[#ea580c] mx-auto flex items-center justify-center">
+          <div className="bg-white rounded-xl p-12 text-center border border-slate-200/80 max-w-md mx-auto space-y-4 shadow-xs">
+            <div className="w-16 h-16 rounded-xl bg-orange-50 text-[#ea580c] mx-auto flex items-center justify-center">
               <Search className="w-8 h-8" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -65,7 +65,7 @@ export const SearchResults: React.FC = () => {
             <div className="pt-2">
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-5 py-3 rounded-xl-none shadow-xs"
+                className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-5 py-3 rounded-xl shadow-xs"
               >
                 <span>Browse All Supermarket Items</span>
                 <ArrowRight className="w-4 h-4" />
