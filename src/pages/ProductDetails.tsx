@@ -107,9 +107,9 @@ export const ProductDetails: React.FC = () => {
       />
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-slate-500 mb-6">
-        <Link to="/" className="hover:text-emerald-700">Home</Link>
+        <Link to="/" className="hover:text-[#ea580c]">Home</Link>
         <span>/</span>
-        <Link to={`/category/${product.category}`} className="hover:text-emerald-700 capitalize">
+        <Link to={`/category/${product.category}`} className="hover:text-[#ea580c] capitalize">
           {product.category.replace('-', ' ')}
         </Link>
         <span>/</span>
@@ -122,7 +122,7 @@ export const ProductDetails: React.FC = () => {
         <div className="lg:col-span-6 space-y-4">
           <div className="relative aspect-square rounded-xl-none bg-slate-50 p-6 flex items-center justify-center border border-slate-100 overflow-hidden">
             {product.discount > 0 && (
-              <span className="absolute top-4 left-4 bg-emerald-700 text-white text-xs font-black px-2.5 py-1 rounded-xl-none">
+              <span className="absolute top-4 left-4 bg-[#ea580c] text-white text-xs font-black px-2.5 py-1 rounded-xl-none">
                 {product.discount}% OFF
               </span>
             )}
@@ -158,7 +158,7 @@ export const ProductDetails: React.FC = () => {
                 type="button"
                 onClick={() => setSelectedImage(img)}
                 className={`w-16 h-16 rounded-xl-none border-2 p-1 bg-slate-50 overflow-hidden ${
-                  selectedImage === img ? 'border-emerald-600' : 'border-transparent'
+                  selectedImage === img ? 'border-orange-300' : 'border-transparent'
                 }`}
               >
                 <img src={img} alt="thumb" className="w-full h-full object-contain" />
@@ -170,7 +170,7 @@ export const ProductDetails: React.FC = () => {
         {/* Right Column: Information & Actions */}
         <div className="lg:col-span-6 space-y-5">
           <div>
-            <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider">
+            <span className="text-xs font-bold text-[#ea580c] uppercase tracking-wider">
               {product.brand}
             </span>
             <h1 className="text-xl sm:text-2xl font-black text-slate-900 mt-1">
@@ -193,7 +193,7 @@ export const ProductDetails: React.FC = () => {
           </div>
 
           {/* Pricing Block */}
-          <div className="p-4 bg-emerald-50/50 rounded-xl-none border border-emerald-100 flex items-center justify-between">
+          <div className="p-4 bg-orange-50/50 rounded-xl-none border border-orange-200 flex items-center justify-between">
             <div>
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-black text-slate-900">
@@ -205,12 +205,12 @@ export const ProductDetails: React.FC = () => {
                   </span>
                 )}
               </div>
-              <span className="text-[11px] text-emerald-700 font-bold">
+              <span className="text-[11px] text-[#ea580c] font-bold">
                 (Inclusive of all taxes)
               </span>
             </div>
             {product.discount > 0 && (
-              <span className="text-xs font-black text-emerald-800 bg-emerald-200 px-3 py-1.5 rounded-xl-none">
+              <span className="text-xs font-black text-[#c2410c] bg-orange-200 px-3 py-1.5 rounded-xl-none">
                 Save ₹{product.originalPrice - product.price}
               </span>
             )}
@@ -225,7 +225,7 @@ export const ProductDetails: React.FC = () => {
               <ul className="space-y-1">
                 {product.highlights.map((h, i) => (
                   <li key={i} className="flex items-center gap-2 text-xs text-slate-600">
-                    <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <Check className="w-3.5 h-3.5 text-[#ea580c] shrink-0" />
                     <span>{h}</span>
                   </li>
                 ))}
@@ -239,16 +239,16 @@ export const ProductDetails: React.FC = () => {
               <button
                 type="button"
                 onClick={handleAddToCart}
-                className="flex-1 flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-black text-sm py-3.5 px-6 rounded-xl-none shadow-md transition-all active:scale-95"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm py-3.5 px-6 rounded-xl-none shadow-md transition-all "
               >
                 <span>ADD TO BASKET</span>
               </button>
             ) : (
-              <div className="flex items-center justify-between bg-emerald-700 text-white rounded-xl-none px-4 py-2 sm:w-48 shadow-md">
+              <div className="flex items-center justify-between bg-[#ea580c] text-white rounded-xl-none px-4 py-2 sm:w-48 shadow-md">
                 <button
                   type="button"
                   onClick={() => updateQuantity(product.id, inCartQty - 1)}
-                  className="p-1 hover:bg-emerald-800 rounded-xl-none"
+                  className="p-1 hover:bg-[#c2410c] rounded-xl-none"
                 >
                   <Minus className="w-4 h-4" />
                 </button>
@@ -256,7 +256,7 @@ export const ProductDetails: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateQuantity(product.id, inCartQty + 1)}
-                  className="p-1 hover:bg-emerald-800 rounded-xl-none"
+                  className="p-1 hover:bg-[#c2410c] rounded-xl-none"
                 >
                   <Plus className="w-4 h-4" />
                 </button>
@@ -266,7 +266,7 @@ export const ProductDetails: React.FC = () => {
             <button
               type="button"
               onClick={handleBuyNow}
-              className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-black text-sm py-3.5 px-6 rounded-xl-none shadow-md transition-all active:scale-95"
+              className="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-black text-sm py-3.5 px-6 rounded-xl-none shadow-md transition-all "
             >
               BUY NOW
             </button>
@@ -275,7 +275,7 @@ export const ProductDetails: React.FC = () => {
           {/* Delivery Pincode Checker */}
           <div className="p-4 bg-slate-50 rounded-xl-none border border-slate-200/80 space-y-2">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
-              <MapPin className="w-4 h-4 text-emerald-700" />
+              <MapPin className="w-4 h-4 text-[#ea580c]" />
               <span>Check Delivery Speed in Your Area</span>
             </div>
             <form onSubmit={handleCheckPincode} className="flex gap-2">
@@ -288,18 +288,18 @@ export const ProductDetails: React.FC = () => {
                   setPincodeStatus('idle');
                 }}
                 placeholder="Enter 6-digit Pincode (e.g. 262701)"
-                className="flex-1 bg-white border border-slate-300 px-3 py-2 rounded-xl-none text-xs outline-none focus:border-emerald-600 font-medium"
+                className="flex-1 bg-white border border-slate-300 px-3 py-2 rounded-xl-none text-xs outline-none focus:border-orange-300 font-medium"
               />
               <button
                 type="submit"
-                className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-4 py-2 rounded-xl-none"
+                className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl-none"
               >
                 Check
               </button>
             </form>
 
             {pincodeStatus === 'available' && (
-              <p className="text-xs text-emerald-700 font-semibold flex items-center gap-1.5 animate-in fade-in">
+              <p className="text-xs text-[#ea580c] font-semibold flex items-center gap-1.5 animate-in fade-in">
                 <Check className="w-3.5 h-3.5" />
                 Delivery available in 30-45 mins at pincode {pincode}!
               </p>
@@ -315,15 +315,15 @@ export const ProductDetails: React.FC = () => {
           {/* Trust assurances */}
           <div className="grid grid-cols-3 gap-2 pt-2 border-t border-slate-100 text-center">
             <div className="p-2">
-              <Truck className="w-4 h-4 text-emerald-700 mx-auto mb-1" />
+              <Truck className="w-4 h-4 text-[#ea580c] mx-auto mb-1" />
               <p className="text-[10px] font-bold text-slate-700">30-Min Delivery</p>
             </div>
             <div className="p-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-700 mx-auto mb-1" />
+              <ShieldCheck className="w-4 h-4 text-[#ea580c] mx-auto mb-1" />
               <p className="text-[10px] font-bold text-slate-700">100% Genuine</p>
             </div>
             <div className="p-2">
-              <RefreshCw className="w-4 h-4 text-emerald-700 mx-auto mb-1" />
+              <RefreshCw className="w-4 h-4 text-[#ea580c] mx-auto mb-1" />
               <p className="text-[10px] font-bold text-slate-700">Easy Returns</p>
             </div>
           </div>
@@ -338,7 +338,7 @@ export const ProductDetails: React.FC = () => {
             onClick={() => setActiveTab('details')}
             className={`pb-3 text-sm font-bold border-b-2 transition-colors ${
               activeTab === 'details'
-                ? 'border-emerald-700 text-emerald-800'
+                ? 'border-[#ea580c] text-[#c2410c]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -349,7 +349,7 @@ export const ProductDetails: React.FC = () => {
             onClick={() => setActiveTab('nutrition')}
             className={`pb-3 text-sm font-bold border-b-2 transition-colors ${
               activeTab === 'nutrition'
-                ? 'border-emerald-700 text-emerald-800'
+                ? 'border-[#ea580c] text-[#c2410c]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -360,7 +360,7 @@ export const ProductDetails: React.FC = () => {
             onClick={() => setActiveTab('reviews')}
             className={`pb-3 text-sm font-bold border-b-2 transition-colors ${
               activeTab === 'reviews'
-                ? 'border-emerald-700 text-emerald-800'
+                ? 'border-[#ea580c] text-[#c2410c]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >

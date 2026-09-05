@@ -152,3 +152,24 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .animate-fade-in-up {
   animation: nfbFadeInUp 0.3s ease-out forwards;
 }
+
+/* Horizontal Looping Marquee */
+@keyframes nfbMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: nfbMarquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+

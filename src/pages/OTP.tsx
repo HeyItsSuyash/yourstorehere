@@ -59,8 +59,8 @@ export const OTP: React.FC = () => {
         </p>
 
         {/* OTP Demo Banner */}
-        <div className="my-4 p-2.5 bg-emerald-50 rounded-xl-none border border-emerald-200 text-center">
-          <span className="text-xs font-bold text-emerald-800">
+        <div className="my-4 p-2.5 bg-orange-50 rounded-xl-none border border-orange-200 text-center">
+          <span className="text-xs font-bold text-[#c2410c]">
             Demo OTP: <span className="tracking-widest underline font-black">123456</span>
           </span>
         </div>
@@ -76,7 +76,7 @@ export const OTP: React.FC = () => {
                 maxLength={1}
                 value={digit}
                 onChange={(e) => handleChange(idx, e.target.value)}
-                className="w-12 h-14 text-center font-black text-lg border border-slate-300 rounded-xl-none bg-slate-50 focus:bg-white focus:border-emerald-600 outline-none transition-all shadow-2xs"
+                className="w-12 h-14 text-center font-black text-lg border border-slate-300 rounded-xl-none bg-slate-50 focus:bg-white focus:border-orange-300 outline-none transition-all shadow-2xs"
               />
             ))}
           </div>
@@ -85,7 +85,7 @@ export const OTP: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-black text-sm py-3.5 rounded-xl-none shadow-md transition-all active:scale-95"
+            className="w-full flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm py-3.5 rounded-xl-none shadow-md transition-all "
           >
             <span>VERIFY & PROCEED</span>
             <ArrowRight className="w-4 h-4" />
@@ -96,7 +96,7 @@ export const OTP: React.FC = () => {
           <button
             type="button"
             onClick={() => showToast('New OTP sent to your phone!', 'info')}
-            className="text-xs font-bold text-emerald-700 hover:underline"
+            className="text-xs font-bold text-[#ea580c] hover:underline"
           >
             Didn&apos;t receive OTP? Resend code
           </button>

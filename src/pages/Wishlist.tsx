@@ -27,7 +27,7 @@ export const Wishlist: React.FC = () => {
         <div>
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-6 py-3 rounded-xl-none shadow-xs"
+            className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-6 py-3 rounded-xl-none shadow-xs"
           >
             <span>DISCOVER GROCERIES</span>
             <ArrowRight className="w-4 h-4" />

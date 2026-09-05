@@ -43,7 +43,7 @@ export const Profile: React.FC = () => {
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-emerald-600 focus:bg-white"
+              className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-orange-300 focus:bg-white"
               required
             />
           </div>
@@ -57,7 +57,7 @@ export const Profile: React.FC = () => {
                 type="text"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-emerald-600 focus:bg-white"
+                className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-orange-300 focus:bg-white"
                 required
               />
             </div>
@@ -69,7 +69,7 @@ export const Profile: React.FC = () => {
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-emerald-600 focus:bg-white"
+                className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-orange-300 focus:bg-white"
                 required
               />
             </div>
@@ -84,7 +84,7 @@ export const Profile: React.FC = () => {
                 type="date"
                 value={formData.dob}
                 onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
-                className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-emerald-600 focus:bg-white"
+                className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-orange-300 focus:bg-white"
               />
             </div>
             <div>
@@ -99,7 +99,7 @@ export const Profile: React.FC = () => {
                     gender: e.target.value as any
                   })
                 }
-                className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-emerald-600 focus:bg-white"
+                className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-sm font-medium outline-none focus:border-orange-300 focus:bg-white"
               >
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -112,7 +112,7 @@ export const Profile: React.FC = () => {
           <div className="pt-3">
             <button
               type="submit"
-              className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-6 py-3 rounded-xl-none shadow-md transition-all active:scale-95"
+              className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-6 py-3 rounded-xl-none shadow-md transition-all "
             >
               <Save className="w-4 h-4" />
               <span>SAVE CHANGES</span>

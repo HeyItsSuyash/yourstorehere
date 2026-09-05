@@ -6,7 +6,7 @@ export const PromoBanners: React.FC = () => {
   return (
     <section className="my-8 grid grid-cols-1 md:grid-cols-12 gap-4">
       {/* Banner 1: Weekend Super Saver (Large Green Banner inspired by reference) */}
-      <div className="md:col-span-8 relative overflow-hidden rounded-xl-none bg-gradient-to-r from-emerald-900 via-emerald-800 to-green-800 text-white p-6 sm:p-8 flex flex-col justify-between shadow-md">
+      <div className="md:col-span-8 relative overflow-hidden rounded-xl-none bg-gradient-to-r from-[#c2410c] via-[#ea580c] to-[#9a3412] text-white p-6 sm:p-8 flex flex-col justify-between shadow-md">
         <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-20 pointer-events-none bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
         
         <div className="relative z-10 max-w-md space-y-3">
@@ -19,7 +19,7 @@ export const PromoBanners: React.FC = () => {
             Weekend Super Saver
           </h3>
 
-          <p className="text-emerald-100 text-xs sm:text-sm leading-relaxed">
+          <p className="text-orange-100 text-xs sm:text-sm leading-relaxed">
             Stock up on family staples! Enjoy up to 30% off on premium Basmati rice, cold-pressed oils, fresh spices, and dairy. Hurry, offer valid till Sunday.
           </p>
         </div>
@@ -27,13 +27,13 @@ export const PromoBanners: React.FC = () => {
         <div className="relative z-10 mt-6 flex items-center justify-between">
           <Link
             to="/shop?filter=deals"
-            className="inline-flex items-center gap-2 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-black text-xs sm:text-sm px-5 py-2.5 rounded-xl-none transition-all shadow-sm"
+            className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-emerald-300 text-slate-950 font-black text-xs sm:text-sm px-5 py-2.5 rounded-xl-none transition-all shadow-sm"
           >
             <span>SHOP DEALS NOW</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
 
-          <div className="flex items-center gap-2 bg-emerald-950/60 backdrop-blur-xs border border-emerald-700/60 px-3 py-1.5 rounded-xl-none text-xs font-bold text-emerald-200">
+          <div className="flex items-center gap-2 bg-slate-900/60 backdrop-blur-xs border border-[#ea580c]/60 px-3 py-1.5 rounded-xl-none text-xs font-bold text-orange-200">
             <Clock className="w-4 h-4 text-amber-400" />
             <span>Ends in 14h : 22m</span>
           </div>
@@ -43,13 +43,13 @@ export const PromoBanners: React.FC = () => {
       {/* Banner 2: 30 Minutes Delivery */}
       <div className="md:col-span-4 relative overflow-hidden rounded-xl-none bg-gradient-to-br from-white to-emerald-50/60 border border-emerald-200 p-6 flex flex-col justify-between shadow-xs">
         <div className="space-y-3">
-          <div className="inline-flex items-center gap-1 text-emerald-800 text-xs font-bold bg-emerald-100 px-2.5 py-1 rounded-xl-none">
-            <Zap className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600" />
+          <div className="inline-flex items-center gap-1 text-[#c2410c] text-xs font-bold bg-orange-100 px-2.5 py-1 rounded-xl-none">
+            <Zap className="w-3.5 h-3.5 text-[#ea580c] fill-emerald-600" />
             <span>EXPRESS SPEED</span>
           </div>
 
           <h3 className="text-xl font-extrabold text-slate-900 leading-snug">
-            Get Delivery in <span className="text-emerald-700">30 Minutes!</span>
+            Get Delivery in <span className="text-[#ea580c]">30 Minutes!</span>
           </h3>
 
           <p className="text-xs text-slate-600 leading-relaxed">
@@ -60,7 +60,7 @@ export const PromoBanners: React.FC = () => {
         <div className="mt-6">
           <Link
             to="/shop"
-            className="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-emerald-800 text-white font-bold text-xs py-3 px-4 rounded-xl-none transition-colors shadow-xs"
+            className="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-[#c2410c] text-white font-bold text-xs py-3 px-4 rounded-xl-none transition-colors shadow-xs"
           >
             <span>ORDER EXPRESS</span>
             <ArrowRight className="w-4 h-4" />

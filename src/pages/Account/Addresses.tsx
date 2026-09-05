@@ -92,7 +92,7 @@ export const Addresses: React.FC = () => {
           <button
             type="button"
             onClick={handleStartAdd}
-            className="flex items-center gap-1.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-4 py-2.5 rounded-xl-none shadow-xs transition-colors"
+            className="flex items-center gap-1.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2.5 rounded-xl-none shadow-xs transition-colors"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>Add Address</span>
@@ -106,13 +106,13 @@ export const Addresses: React.FC = () => {
               key={addr.id}
               className={`p-5 rounded-xl-none border transition-all flex flex-col justify-between ${
                 addr.isDefault
-                  ? 'bg-emerald-50/40 border-emerald-300 ring-1 ring-emerald-300'
+                  ? 'bg-orange-50/40 border-orange-300 ring-1 ring-orange-300'
                   : 'bg-white border-slate-200'
               }`}
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-xl-none bg-emerald-100 text-emerald-800 flex items-center gap-1">
+                  <span className="text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-xl-none bg-orange-100 text-[#c2410c] flex items-center gap-1">
                     {addr.type === 'Home' ? (
                       <Home className="w-3 h-3" />
                     ) : (
@@ -121,7 +121,7 @@ export const Addresses: React.FC = () => {
                     {addr.type}
                   </span>
                   {addr.isDefault && (
-                    <span className="text-[10px] font-black text-emerald-700 uppercase bg-white border border-emerald-200 px-2 py-0.5 rounded-xl-none">
+                    <span className="text-[10px] font-black text-[#ea580c] uppercase bg-white border border-orange-200 px-2 py-0.5 rounded-xl-none">
                       Default
                     </span>
                   )}
@@ -148,7 +148,7 @@ export const Addresses: React.FC = () => {
                       setDefaultAddress(addr.id);
                       showToast('Set as default delivery address');
                     }}
-                    className="text-emerald-700 font-bold hover:underline"
+                    className="text-[#ea580c] font-bold hover:underline"
                   >
                     Set as Default
                   </button>
@@ -157,7 +157,7 @@ export const Addresses: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => handleStartEdit(addr)}
-                    className="text-slate-600 hover:text-emerald-700 flex items-center gap-1 font-semibold"
+                    className="text-slate-600 hover:text-[#ea580c] flex items-center gap-1 font-semibold"
                   >
                     <Edit2 className="w-3.5 h-3.5" />
                     <span>Edit</span>
@@ -248,7 +248,7 @@ export const Addresses: React.FC = () => {
                     name="addressType"
                     checked={formData.type === t}
                     onChange={() => setFormData({ ...formData, type: t })}
-                    className="accent-emerald-700"
+                    className="accent-[#ea580c]"
                   />
                   <span>{t}</span>
                 </label>
@@ -265,7 +265,7 @@ export const Addresses: React.FC = () => {
               </button>
               <button
                 type="submit"
-                className="px-5 py-2 text-xs font-bold bg-emerald-700 text-white rounded-xl-none shadow-xs"
+                className="px-5 py-2 text-xs font-bold bg-[#ea580c] text-white rounded-xl-none shadow-xs"
               >
                 Save Address
               </button>

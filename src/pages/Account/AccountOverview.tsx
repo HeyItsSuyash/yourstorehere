@@ -35,22 +35,22 @@ export const AccountOverview: React.FC = () => {
         {/* Highlight Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {/* Card 1: Loyalty Points */}
-          <div className="p-5 rounded-xl-none bg-gradient-to-br from-emerald-50 to-emerald-100/40 border border-emerald-200">
+          <div className="p-5 rounded-xl-none bg-gradient-to-br from-orange-50 to-amber-50/50 border border-orange-200">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-emerald-800 uppercase">
+              <span className="text-xs font-bold text-[#c2410c] uppercase">
                 Family Points
               </span>
-              <Gift className="w-5 h-5 text-emerald-700" />
+              <Gift className="w-5 h-5 text-[#ea580c]" />
             </div>
             <div className="text-2xl font-black text-slate-900">
               {user?.loyaltyPoints || 2450}
             </div>
-            <p className="text-[11px] text-emerald-700 font-semibold mt-1">
+            <p className="text-[11px] text-[#ea580c] font-semibold mt-1">
               Worth ₹{(user?.loyaltyPoints || 2450) / 10} on groceries
             </p>
             <Link
               to="/account/loyalty"
-              className="inline-flex items-center gap-1 text-xs font-bold text-emerald-800 hover:underline mt-3"
+              className="inline-flex items-center gap-1 text-xs font-bold text-[#c2410c] hover:underline mt-3"
             >
               <span>Redeem rewards</span>
               <ArrowRight className="w-3 h-3" />
@@ -107,12 +107,12 @@ export const AccountOverview: React.FC = () => {
           <div className="p-5 bg-white rounded-xl-none border border-slate-200/90 shadow-2xs space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-emerald-700" />
+                <Clock className="w-4 h-4 text-[#ea580c]" />
                 <h3 className="font-bold text-sm text-slate-900">
                   Latest Order Spotlight (#{recentOrder.id})
                 </h3>
               </div>
-              <span className="bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2.5 py-0.5 rounded-xl-none">
+              <span className="bg-orange-100 text-[#c2410c] text-[11px] font-bold px-2.5 py-0.5 rounded-xl-none">
                 {recentOrder.status}
               </span>
             </div>
@@ -130,13 +130,13 @@ export const AccountOverview: React.FC = () => {
               </div>
               <div>
                 <span className="text-slate-400 block">Delivery ETA</span>
-                <span className="font-bold text-emerald-700">
+                <span className="font-bold text-[#ea580c]">
                   {recentOrder.estimatedDelivery}
                 </span>
               </div>
               <Link
                 to={`/track-order/${recentOrder.id}`}
-                className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-4 py-2 rounded-xl-none"
+                className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl-none"
               >
                 Track Now
               </Link>
@@ -150,7 +150,7 @@ export const AccountOverview: React.FC = () => {
             <h3 className="font-bold text-sm text-slate-900">Primary Address</h3>
             <Link
               to="/account/addresses"
-              className="text-xs font-bold text-emerald-700 hover:underline"
+              className="text-xs font-bold text-[#ea580c] hover:underline"
             >
               Manage all ({addresses.length})
             </Link>

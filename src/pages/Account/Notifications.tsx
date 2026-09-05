@@ -76,7 +76,7 @@ export const Notifications: React.FC = () => {
             <button
               type="button"
               onClick={markAllRead}
-              className="text-xs font-bold text-emerald-700 hover:underline"
+              className="text-xs font-bold text-[#ea580c] hover:underline"
             >
               Mark all read
             </button>
@@ -99,7 +99,7 @@ export const Notifications: React.FC = () => {
                 className={`p-4 rounded-xl-none border transition-all flex items-start gap-3.5 ${
                   n.read
                     ? 'bg-white border-slate-200'
-                    : 'bg-emerald-50/40 border-emerald-300 ring-1 ring-emerald-200'
+                    : 'bg-orange-50/40 border-orange-300 ring-1 ring-orange-200'
                 }`}
               >
                 <div
@@ -107,8 +107,8 @@ export const Notifications: React.FC = () => {
                     n.type === 'order'
                       ? 'bg-amber-100 text-amber-800'
                       : n.type === 'points'
-                      ? 'bg-emerald-100 text-emerald-800'
-                      : 'bg-blue-100 text-blue-800'
+                      ? 'bg-orange-100 text-[#c2410c]'
+                      : 'bg-orange-100 text-[#ea580c]'
                   }`}
                 >
                   <Bell className="w-4 h-4" />

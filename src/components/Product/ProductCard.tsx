@@ -68,10 +68,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <button
           type="button"
           onClick={handleWishlistClick}
-          className={`p-1.5 rounded-xl-none transition-colors ${
+          className={`p-1 bg-transparent transition-colors ${
             isWishlisted
-              ? 'text-rose-500 bg-rose-50'
-              : 'text-[#888] hover:text-rose-500 hover:bg-slate-100'
+              ? 'text-rose-500'
+              : 'text-slate-400 hover:text-rose-500'
           }`}
           title={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
         >
@@ -82,7 +82,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {/* Product Image Link */}
       <Link
         to={`/product/${product.id}`}
-        className="block my-2 overflow-hidden aspect-square flex items-center justify-center p-2 group-hover:scale-105 transition-transform duration-200"
+        className="block my-2 overflow-hidden aspect-square flex items-center justify-center p-2  transition-transform duration-200"
       >
         <img
           src={product.image}
@@ -100,7 +100,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </span>
           <Link
             to={`/product/${product.id}`}
-            className="text-xs font-bold text-[#111] hover:text-[#246b19] line-clamp-1 leading-snug mt-0.5"
+            className="text-xs font-bold text-[#111] hover:text-[#ea580c] line-clamp-1 leading-snug mt-0.5"
             title={product.name}
           >
             {product.name}
@@ -129,7 +129,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </span>
             )}
             {product.discount > 0 && (
-              <span className="text-[10px] text-[#246b19] font-bold ml-auto">
+              <span className="text-[10px] text-[#ea580c] font-bold ml-auto">
                 Save ₹{product.originalPrice - product.price}
               </span>
             )}
@@ -140,13 +140,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <button
               type="button"
               onClick={handleAddToCart}
-              className="w-full border border-[#246b19] text-[#246b19] hover:bg-[#246b19] hover:text-white transition-all text-[10.5px] font-bold py-1.5 rounded-xl-none flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+              className="w-full border border-[#ea580c] text-[#ea580c] hover:bg-[#ea580c] hover:text-white transition-all text-[10.5px] font-bold py-1.5 rounded-xl-none flex items-center justify-center gap-1.5 cursor-pointer "
             >
               <span>ADD TO CART</span>
               <ShoppingCart className="w-3.5 h-3.5" />
             </button>
           ) : (
-            <div className="flex items-center justify-between bg-[#246b19] text-white rounded-xl-none overflow-hidden py-0.5 px-2">
+            <div className="flex items-center justify-between bg-[#ea580c] text-white rounded-xl-none overflow-hidden py-0.5 px-2">
               <button
                 type="button"
                 onClick={handleDecrement}

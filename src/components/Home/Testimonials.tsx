@@ -41,7 +41,7 @@ export const Testimonials: React.FC = () => {
         {reviews.map((r, i) => (
           <div
             key={i}
-            className="p-5 rounded-xl-none bg-slate-50 border border-slate-100 flex flex-col justify-between hover:border-emerald-200 transition-colors"
+            className="p-5 rounded-xl-none bg-slate-50 border border-slate-100 flex flex-col justify-between hover:border-orange-200 transition-colors"
           >
             <div>
               <div className="flex items-center gap-1 mb-3 text-amber-500">
@@ -58,11 +58,11 @@ export const Testimonials: React.FC = () => {
               <img
                 src={r.avatar}
                 alt={r.name}
-                className="w-10 h-10 rounded-xl-none object-cover border border-emerald-300"
+                className="w-10 h-10 rounded-xl-none object-cover border border-orange-200"
               />
               <div>
                 <h4 className="text-xs font-bold text-slate-900">{r.name}</h4>
-                <div className="flex items-center gap-1 text-[10px] text-emerald-700 font-semibold">
+                <div className="flex items-center gap-1 text-[10px] text-[#ea580c] font-semibold">
                   <ShieldCheck className="w-3 h-3" />
                   <span>Verified Buyer</span>
                 </div>

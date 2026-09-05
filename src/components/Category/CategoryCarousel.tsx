@@ -55,9 +55,9 @@ export const CategoryCarousel: React.FC = () => {
           <Link
             key={cat.id}
             to={`/category/${cat.slug}`}
-            className="shrink-0 w-28 sm:w-36 md:w-40 group flex flex-col items-center bg-white rounded-xl-none p-3 border border-slate-200/70 hover:border-emerald-500/50 hover:shadow-md transition-all duration-200 hover:-translate-y-1"
+            className="shrink-0 w-28 sm:w-36 md:w-40 group flex flex-col items-center bg-white rounded-xl-none p-3 border border-slate-200/70 hover:border-[#ea580c] hover:shadow-md transition-all duration-200 hover:-translate-y-1"
           >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl-none overflow-hidden bg-emerald-50/60 p-1 flex items-center justify-center group-hover:scale-105 transition-transform duration-200 border border-emerald-100">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl-none overflow-hidden bg-orange-50/60 p-1 flex items-center justify-center  transition-transform duration-200 border border-orange-100">
               <img
                 src={cat.image}
                 alt={cat.name}
@@ -65,7 +65,7 @@ export const CategoryCarousel: React.FC = () => {
                 className="w-full h-full object-cover rounded-xl-none"
               />
             </div>
-            <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-emerald-700 text-center line-clamp-2 mt-2 leading-tight">
+            <span className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#ea580c] text-center line-clamp-2 mt-2 leading-tight">
               {cat.name}
             </span>
             <span className="text-[10px] text-slate-400 font-semibold mt-1">

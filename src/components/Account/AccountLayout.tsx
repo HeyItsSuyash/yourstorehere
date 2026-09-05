@@ -43,7 +43,7 @@ export const AccountLayout: React.FC<{ children: React.ReactNode }> = ({ childre
         <aside className="lg:col-span-4 bg-white rounded-xl-none p-6 border border-slate-200/80 shadow-xs space-y-6">
           {/* User Mini Profile Header */}
           <div className="flex items-center gap-3.5 pb-6 border-b border-slate-100">
-            <div className="w-14 h-14 rounded-xl-none bg-emerald-700 text-white font-black text-xl flex items-center justify-center shadow-md">
+            <div className="w-14 h-14 rounded-xl-none bg-[#ea580c] text-white font-black text-xl flex items-center justify-center shadow-md">
               {user?.name ? user.name.charAt(0) : 'R'}
             </div>
             <div>
@@ -69,7 +69,7 @@ export const AccountLayout: React.FC<{ children: React.ReactNode }> = ({ childre
                   className={({ isActive }) =>
                     `flex items-center justify-between px-3.5 py-2.5 rounded-xl-none text-xs font-bold transition-colors ${
                       isActive
-                        ? 'bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-2xs'
+                        ? 'bg-orange-50 text-[#c2410c] border border-orange-200 shadow-2xs'
                         : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                     }`
                   }

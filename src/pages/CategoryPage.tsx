@@ -26,24 +26,24 @@ export const CategoryPage: React.FC = () => {
       />
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-slate-500 mb-4">
-        <Link to="/" className="hover:text-emerald-700">Home</Link>
+        <Link to="/" className="hover:text-[#ea580c]">Home</Link>
         <span>/</span>
-        <Link to="/shop" className="hover:text-emerald-700">Categories</Link>
+        <Link to="/shop" className="hover:text-[#ea580c]">Categories</Link>
         <span>/</span>
         <span className="text-slate-800 font-semibold">{currentCategory.name}</span>
       </div>
 
       {/* Category Hero Banner */}
-      <div className="relative overflow-hidden rounded-xl-none bg-gradient-to-r from-emerald-800 to-green-700 text-white p-6 sm:p-10 mb-8 shadow-md">
+      <div className="relative overflow-hidden rounded-xl-none bg-gradient-to-r from-[#ea580c] to-[#c2410c] text-white p-6 sm:p-10 mb-8 shadow-md">
         <div className="relative z-10 max-w-xl space-y-2">
-          <div className="inline-flex items-center gap-1.5 bg-emerald-900/60 backdrop-blur-xs text-emerald-200 text-xs font-bold px-3 py-1 rounded-xl-none border border-emerald-600/60">
+          <div className="inline-flex items-center gap-1.5 bg-black/30 backdrop-blur-xs text-orange-100 text-xs font-bold px-3 py-1 rounded-xl-none border border-orange-300/60">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             <span>AUTHENTIC INDIAN GROCERIES</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-black tracking-tight">
             {currentCategory.name}
           </h1>
-          <p className="text-xs sm:text-sm text-emerald-100 leading-relaxed">
+          <p className="text-xs sm:text-sm text-orange-100 leading-relaxed">
             {currentCategory.popularItemName}. Sourced directly from reputed mills, farm cooperatives, and certified suppliers.
           </p>
         </div>
@@ -69,8 +69,8 @@ export const CategoryPage: React.FC = () => {
             type="button"
             className={`px-3.5 py-1.5 rounded-xl-none text-xs font-bold shrink-0 transition-colors ${
               idx === 0
-                ? 'bg-emerald-700 text-white shadow-2xs'
-                : 'bg-white text-slate-700 border border-slate-200 hover:border-emerald-300'
+                ? 'bg-[#ea580c] text-white shadow-2xs'
+                : 'bg-white text-slate-700 border border-slate-200 hover:border-[#ea580c]'
             }`}
           >
             {tab}
@@ -86,7 +86,7 @@ export const CategoryPage: React.FC = () => {
           </h2>
           <Link
             to="/shop"
-            className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1"
+            className="text-xs font-bold text-[#ea580c] hover:text-[#c2410c] flex items-center gap-1"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Browse All Aisles</span>

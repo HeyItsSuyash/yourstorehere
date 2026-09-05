@@ -178,12 +178,6 @@ export const Home: React.FC = () => {
         <div className="relative max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-10 py-12 lg:py-16 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column Copy */}
           <div className="lg:col-span-7 space-y-6 text-left max-w-xl">
-            {/* Badge: SUPERMARKET FRESH */}
-            <div className="inline-flex items-center gap-1.5 bg-orange-100 text-[#ea580c] px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide">
-              <Sparkles className="w-3.5 h-3.5 text-[#ea580c]" />
-              <span>{t('hero.badge')}</span>
-            </div>
-
             {/* Title: Everything Your Family Needs, Under One Roof. */}
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-[#111827] leading-[1.08] tracking-tight">
               {t('hero.titleLine1')}<br />
@@ -213,8 +207,8 @@ export const Home: React.FC = () => {
               </Link>
             </div>
 
-            {/* Social Proof: Avatars + 10K+ + Rating */}
-            <div className="flex items-center gap-4 pt-4 border-t border-slate-200/80 max-w-md">
+            {/* Social Proof: Avatars + 10K+ + Rating (NO horizontal rule) */}
+            <div className="flex items-center gap-4 pt-2 max-w-md">
               <div className="flex items-center -space-x-2">
                 <img
                   src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
@@ -274,64 +268,46 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* HORIZONTAL LOOPING MARQUEE STRIP RIGHT BELOW HERO (Thin orange strip, white text, dots) */}
+      <div className="w-full bg-[#ea580c] py-2.5 overflow-hidden text-white shadow-xs">
+        <div className="animate-marquee whitespace-nowrap flex items-center text-xs font-bold tracking-wider uppercase">
+          {[1, 2, 3, 4].map((groupIndex) => (
+            <div key={groupIndex} className="flex items-center">
+              <span className="mx-4 flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-orange-200" />
+                {t('feat.farmFresh')}
+              </span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
+
+              <span className="mx-4 flex items-center gap-2">
+                <Truck className="w-4 h-4 text-orange-200 stroke-[2]" />
+                {t('feat.freeDelivery')}
+              </span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
+
+              <span className="mx-4 flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-orange-200 stroke-[2]" />
+                {t('feat.securePayment')}
+              </span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
+
+              <span className="mx-4 flex items-center gap-2">
+                <RefreshCw className="w-4 h-4 text-orange-200 stroke-[2]" />
+                {t('feat.easyReturns')}
+              </span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
+
+              <span className="mx-4">30 MINUTE EXPRESS DELIVERY</span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
+
+              <span className="mx-4">100% FRESHNESS GUARANTEE</span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 space-y-14 pt-8">
-        {/* 4 Feature Badges Bar (Icons free-flowing, no enclosing box, no borders) */}
-        <section className="bg-white rounded-2xl py-6 px-6 sm:px-8 shadow-sm">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* 1. Farm Fresh */}
-            <div className="flex items-center gap-3.5">
-              <Sparkles className="w-8 h-8 text-[#ea580c] shrink-0" />
-              <div className="text-left">
-                <span className="text-sm font-bold text-[#111827] block leading-snug">
-                  {t('feat.farmFresh')}
-                </span>
-                <span className="text-xs text-[#6b7280] block leading-snug mt-0.5">
-                  Handpicked Quality Produce
-                </span>
-              </div>
-            </div>
-
-            {/* 2. Fast Delivery */}
-            <div className="flex items-center gap-3.5">
-              <Truck className="w-8 h-8 text-[#ea580c] shrink-0 stroke-[2]" />
-              <div className="text-left">
-                <span className="text-sm font-bold text-[#111827] block leading-snug">
-                  Fast Delivery
-                </span>
-                <span className="text-xs text-[#6b7280] block leading-snug mt-0.5">
-                  On orders over ₹499
-                </span>
-              </div>
-            </div>
-
-            {/* 3. Secure Payment */}
-            <div className="flex items-center gap-3.5">
-              <ShieldCheck className="w-8 h-8 text-[#ea580c] shrink-0 stroke-[2]" />
-              <div className="text-left">
-                <span className="text-sm font-bold text-[#111827] block leading-snug">
-                  {t('feat.securePayment')}
-                </span>
-                <span className="text-xs text-[#6b7280] block leading-snug mt-0.5">
-                  100% UPI & Cards
-                </span>
-              </div>
-            </div>
-
-            {/* 4. Easy Returns */}
-            <div className="flex items-center gap-3.5">
-              <RefreshCw className="w-8 h-8 text-[#ea580c] shrink-0 stroke-[2]" />
-              <div className="text-left">
-                <span className="text-sm font-bold text-[#111827] block leading-snug">
-                  {t('feat.easyReturns')}
-                </span>
-                <span className="text-xs text-[#6b7280] block leading-snug mt-0.5">
-                  Doorstep hassle-free returns
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* =========================================================================
             2. SHOP BY CATEGORY (Cards with image backgrounds & clean typography)
            ========================================================================= */}
@@ -410,33 +386,37 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Banner: 30 Minutes Delivery (Smooth rounded) */}
-          <div className="lg:col-span-4 rounded-2xl overflow-hidden bg-[#fff7ed] p-8 flex flex-col justify-between shadow-sm relative">
+          {/* Right Banner: 30 Minutes Delivery with public/30MINDELIVERY.png as BACKGROUND */}
+          <div
+            className="lg:col-span-4 rounded-2xl overflow-hidden p-8 flex flex-col justify-between shadow-md relative bg-cover bg-center text-white"
+            style={{
+              backgroundImage: "url('/30MINDELIVERY.png')",
+              backgroundColor: '#ea580c'
+            }}
+          >
+            {/* Dark warm overlay for pristine contrast */}
+            <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/45 to-black/20 pointer-events-none" />
+
             <div className="space-y-3 z-10 text-left">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#ea580c] bg-orange-100 px-2.5 py-0.5 rounded-full inline-block">
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-white bg-[#ea580c] px-3 py-1 rounded-full inline-block shadow-xs">
                 EXPRESS DELIVERY
               </span>
-              <h3 className="text-lg font-extrabold text-[#111] leading-tight">
+              <h3 className="text-2xl font-black text-white leading-tight drop-shadow-md">
                 {t('banner.30Min')}
               </h3>
-              <p className="text-xs text-[#666] leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-100 leading-relaxed font-medium drop-shadow-sm max-w-xs">
                 {t('banner.30MinDesc')}
               </p>
-              <div className="pt-2">
-                <Link
-                  to="/shop"
-                  className="bg-[#ea580c] hover:bg-[#c2410c] text-white text-xs font-bold px-5 py-2.5 rounded-xl inline-block transition-colors shadow-xs"
-                >
-                  {t('hero.shopNow')}
-                </Link>
-              </div>
             </div>
-            <div className="mt-4 flex justify-end z-0">
-              <img
-                src="/template_assets/scooter_guy.png"
-                alt="Delivery partner on scooter"
-                className="h-28 object-contain"
-              />
+
+            <div className="pt-6 z-10 text-left">
+              <Link
+                to="/shop"
+                className="bg-[#ea580c] hover:bg-[#c2410c] text-white text-xs font-bold px-6 py-3 rounded-xl inline-flex items-center gap-2 transition-all shadow-md"
+              >
+                <span>{t('hero.shopNow')}</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
         </section>
@@ -476,7 +456,7 @@ export const Home: React.FC = () => {
                   <img
                     src={p.image}
                     alt={p.name}
-                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform"
+                    className="max-h-full max-w-full object-contain  transition-transform"
                   />
                 </div>
 

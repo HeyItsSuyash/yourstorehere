@@ -48,7 +48,7 @@ export const Contact: React.FC = () => {
 
             <div className="space-y-3.5 text-xs sm:text-sm text-slate-600">
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#ea580c] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-800 block">Store Address:</strong>
                   <span>Behajam Road, Motinagar Colony, Maharaj Nagar, Lakhimpur, Uttar Pradesh 262701</span>
@@ -56,7 +56,7 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <Clock className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-[#ea580c] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-800 block">Operating Hours:</strong>
                   <span>Monday – Sunday: 10:00 AM – 9:30 PM (Open 7 Days a Week)</span>
@@ -64,17 +64,17 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#ea580c] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-800 block">Contact Number:</strong>
-                  <a href="tel:09415922031" className="text-emerald-700 font-bold hover:underline">
+                  <a href="tel:09415922031" className="text-[#ea580c] font-bold hover:underline">
                     094159 22031
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#ea580c] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-800 block">Email Support:</strong>
                   <span>care@newfamilybazar.com</span>
@@ -105,7 +105,7 @@ export const Contact: React.FC = () => {
                 href="https://maps.app.goo.gl/dik1TVGpPLVk4dBo8"
                 target="_blank"
                 rel="noreferrer"
-                className="self-start inline-flex items-center gap-1.5 bg-[#246b19] hover:bg-[#1b5212] text-white font-bold text-xs px-3.5 py-2 rounded-xl-none shadow-sm transition-transform active:scale-95"
+                className="self-start inline-flex items-center gap-1.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-3.5 py-2 rounded-xl-none shadow-sm transition-transform "
               >
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Open in Google Maps Directions</span>
@@ -122,12 +122,12 @@ export const Contact: React.FC = () => {
           </p>
 
           {sent ? (
-            <div className="p-6 bg-emerald-50 rounded-xl-none border border-emerald-200 text-center space-y-2">
-              <div className="w-10 h-10 bg-emerald-600 text-white rounded-xl-none flex items-center justify-center mx-auto">
+            <div className="p-6 bg-orange-50 rounded-xl-none border border-orange-200 text-center space-y-2">
+              <div className="w-10 h-10 bg-[#f97316] text-white rounded-xl-none flex items-center justify-center mx-auto">
                 <Check className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-emerald-900 text-sm">Message Received</h3>
-              <p className="text-xs text-emerald-700">
+              <h3 className="font-bold text-[#9a3412] text-sm">Message Received</h3>
+              <p className="text-xs text-[#ea580c]">
                 Thank you, {formData.name}. Our representative will contact you within 2 business hours.
               </p>
             </div>
@@ -140,7 +140,7 @@ export const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Enter your name"
-                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-emerald-600 focus:bg-white"
+                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-orange-300 focus:bg-white"
                   required
                 />
               </div>
@@ -154,7 +154,7 @@ export const Contact: React.FC = () => {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="+91 98765 43210"
-                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-emerald-600 focus:bg-white"
+                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-orange-300 focus:bg-white"
                   required
                 />
               </div>
@@ -166,14 +166,14 @@ export const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="How can we help your family with groceries today?"
-                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-emerald-600 focus:bg-white"
+                  className="w-full bg-slate-50 border border-slate-200 px-3.5 py-2.5 rounded-xl-none text-xs outline-none focus:border-orange-300 focus:bg-white"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs py-3.5 rounded-xl-none shadow-md transition-all active:scale-95"
+                className="w-full flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs py-3.5 rounded-xl-none shadow-md transition-all "
               >
                 <span>SEND MESSAGE</span>
                 <Send className="w-3.5 h-3.5" />

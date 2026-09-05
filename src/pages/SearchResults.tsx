@@ -35,12 +35,12 @@ export const SearchResults: React.FC = () => {
       {/* Header */}
       <div className="pb-6 border-b border-slate-200">
         <div className="flex items-center gap-2 text-xs text-slate-500 mb-2">
-          <Link to="/" className="hover:text-emerald-700">Home</Link>
+          <Link to="/" className="hover:text-[#ea580c]">Home</Link>
           <span>/</span>
           <span className="text-slate-800 font-semibold">Search Results</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-black text-slate-900">
-          Search results for &ldquo;<span className="text-emerald-700">{query}</span>&rdquo;
+          Search results for &ldquo;<span className="text-[#ea580c]">{query}</span>&rdquo;
         </h1>
         <p className="text-xs sm:text-sm text-slate-500 mt-1">
           Found <span className="font-bold text-slate-800">{matches.length}</span> matching products
@@ -53,7 +53,7 @@ export const SearchResults: React.FC = () => {
           <ProductGrid products={matches} columns={5} />
         ) : (
           <div className="bg-white rounded-xl-none p-12 text-center border border-slate-200/80 max-w-md mx-auto space-y-4 shadow-xs">
-            <div className="w-16 h-16 rounded-xl-none bg-emerald-50 text-emerald-700 mx-auto flex items-center justify-center">
+            <div className="w-16 h-16 rounded-xl-none bg-orange-50 text-[#ea580c] mx-auto flex items-center justify-center">
               <Search className="w-8 h-8" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -65,7 +65,7 @@ export const SearchResults: React.FC = () => {
             <div className="pt-2">
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-5 py-3 rounded-xl-none shadow-xs"
+                className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-5 py-3 rounded-xl-none shadow-xs"
               >
                 <span>Browse All Supermarket Items</span>
                 <ArrowRight className="w-4 h-4" />
