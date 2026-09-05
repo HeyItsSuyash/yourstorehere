@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Heart, Sparkles, CheckCircle2, ShoppingBag, ArrowRight } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export const About: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-12">
+      <SEO
+        title="About Us - Lakhimpur's Trusted Family Supermarket"
+        description="Learn more about New Family Bazar, our mission to deliver farm-fresh groceries and authentic household products at honest everyday prices in Lakhimpur."
+      />
       {/* Hero */}
       <div className="text-center space-y-4 max-w-2xl mx-auto">
         <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-xl-none">

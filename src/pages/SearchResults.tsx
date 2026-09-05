@@ -3,6 +3,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { Search, ShoppingBag, ArrowRight } from 'lucide-react';
 import { ProductGrid } from '../components/Product/ProductGrid';
 import { products } from '../data/products';
+import { SEO } from '../components/SEO';
 
 export const SearchResults: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -27,6 +28,10 @@ export const SearchResults: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
+      <SEO
+        title={`Search Results for "${query}"`}
+        description={`Browse supermarket results for ${query} on New Family Bazar Lakhimpur. Find best deals on fresh food, vegetables, and everyday grocery items.`}
+      />
       {/* Header */}
       <div className="pb-6 border-b border-slate-200">
         <div className="flex items-center gap-2 text-xs text-slate-500 mb-2">

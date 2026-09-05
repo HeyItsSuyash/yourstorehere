@@ -18,6 +18,7 @@ import { products } from '../data/products';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import { useToast } from '../context/ToastContext';
+import { SEO } from '../components/SEO';
 
 export const ProductDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -66,6 +67,44 @@ export const ProductDetails: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-6">
+      <SEO
+        title={`${product.name} (${product.unit}) - ₹${product.price}`}
+        description={`Buy ${product.name} ${product.unit} online at ₹${product.price} from New Family Bazar Lakhimpur. Enjoy fresh quality guarantee and fast 30-min doorstep delivery.`}
+      />
+      {/* Schema.org Product Rich Snippet */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org/',
+            '@type': 'Product',
+            name: product.name,
+            image: product.image,
+            description: product.description,
+            brand: {
+              '@type': 'Brand',
+              name: product.brand
+            },
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'INR',
+              price: product.price,
+              availability: product.stock > 0
+                ? 'https://schema.org/InStock'
+                : 'https://schema.org/OutOfStock',
+              seller: {
+                '@type': 'Organization',
+                name: 'New Family Bazar'
+              }
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: product.rating,
+              reviewCount: product.reviewCount
+            }
+          })
+        }}
+      />
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-slate-500 mb-6">
         <Link to="/" className="hover:text-emerald-700">Home</Link>

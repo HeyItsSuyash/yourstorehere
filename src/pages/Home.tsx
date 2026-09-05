@@ -19,6 +19,7 @@ import { useCart } from '../context/CartContext';
 import { useToast } from '../context/ToastContext';
 import { useLanguage } from '../context/LanguageContext';
 import { products } from '../data/products';
+import { SEO } from '../components/SEO';
 
 export const Home: React.FC = () => {
   const { addToCart } = useCart();
@@ -157,6 +158,10 @@ export const Home: React.FC = () => {
 
   return (
     <div className="w-full bg-[#fdfcfb] min-h-screen text-[#1c1c1c] pb-20 font-sans">
+      <SEO
+        title="Fresh Quality Groceries Everyday | Supermarket Lakhimpur"
+        description="Shop fresh vegetables, fruits, staples, dairy, snacks & household essentials from New Family Bazar, Lakhimpur. Fast 30-min doorstep delivery."
+      />
       {/* =========================================================================
           1. HERO SECTION (FULL-WIDTH EXTENDED BACKGROUND, PROFESSIONAL & CLEAN)
          ========================================================================= */}

@@ -4,6 +4,7 @@ import { Sparkles, ArrowLeft } from 'lucide-react';
 import { ProductGrid } from '../components/Product/ProductGrid';
 import { categories } from '../data/categories';
 import { products } from '../data/products';
+import { SEO } from '../components/SEO';
 
 export const CategoryPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -19,6 +20,10 @@ export const CategoryPage: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-6">
+      <SEO
+        title={`${currentCategory.name} Online - Best Prices & Offers`}
+        description={`Order fresh ${currentCategory.name} from New Family Bazar Lakhimpur. Explore top brands, everyday discounts, and speedy 30-minute delivery.`}
+      />
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-slate-500 mb-4">
         <Link to="/" className="hover:text-emerald-700">Home</Link>

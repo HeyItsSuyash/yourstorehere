@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, Check, Star } from 'lucide-react';
 import { useToast } from '../context/ToastContext';
+import { SEO } from '../components/SEO';
 
 export const Contact: React.FC = () => {
   const { showToast } = useToast();
@@ -23,6 +24,10 @@ export const Contact: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 space-y-12">
+      <SEO
+        title="Store Locator & Contact Support | Lakhimpur"
+        description="Visit New Family Bazar in Motinagar Colony, Lakhimpur, UP or call 094159 22031 for orders, queries, and quick doorstep grocery deliveries."
+      />
       {/* Title */}
       <div className="text-center max-w-2xl mx-auto space-y-2">
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900">

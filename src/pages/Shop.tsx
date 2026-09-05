@@ -4,6 +4,7 @@ import { Filter, SlidersHorizontal, ArrowUpDown, X, Star } from 'lucide-react';
 import { ProductGrid } from '../components/Product/ProductGrid';
 import { products } from '../data/products';
 import { categories } from '../data/categories';
+import { SEO } from '../components/SEO';
 
 export const Shop: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -76,6 +77,10 @@ export const Shop: React.FC = () => {
 
   return (
     <div className="w-full bg-[#f8f9f5] min-h-screen py-6 font-sans">
+      <SEO
+        title="Shop Groceries, Fruits & Essentials Online"
+        description="Browse our complete supermarket catalog: fresh fruits, vegetables, dairy, staples, snacks, beverages and household cleaners in Lakhimpur."
+      />
       <div className="max-w-[1240px] mx-auto px-4">
         {/* Breadcrumb strip */}
         <div className="flex items-center gap-2 text-[11px] text-[#777] mb-4">
