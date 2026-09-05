@@ -29,9 +29,9 @@ export const CategoryPage: React.FC = () => {
       </div>
 
       {/* Category Hero Banner */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-800 to-green-700 text-white p-6 sm:p-10 mb-8 shadow-md">
+      <div className="relative overflow-hidden rounded-xl-none bg-gradient-to-r from-emerald-800 to-green-700 text-white p-6 sm:p-10 mb-8 shadow-md">
         <div className="relative z-10 max-w-xl space-y-2">
-          <div className="inline-flex items-center gap-1.5 bg-emerald-900/60 backdrop-blur-xs text-emerald-200 text-xs font-bold px-3 py-1 rounded-full border border-emerald-600/60">
+          <div className="inline-flex items-center gap-1.5 bg-emerald-900/60 backdrop-blur-xs text-emerald-200 text-xs font-bold px-3 py-1 rounded-xl-none border border-emerald-600/60">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             <span>AUTHENTIC INDIAN GROCERIES</span>
           </div>
@@ -62,7 +62,7 @@ export const CategoryPage: React.FC = () => {
           <button
             key={tab}
             type="button"
-            className={`px-3.5 py-1.5 rounded-full text-xs font-bold shrink-0 transition-colors ${
+            className={`px-3.5 py-1.5 rounded-xl-none text-xs font-bold shrink-0 transition-colors ${
               idx === 0
                 ? 'bg-emerald-700 text-white shadow-2xs'
                 : 'bg-white text-slate-700 border border-slate-200 hover:border-emerald-300'

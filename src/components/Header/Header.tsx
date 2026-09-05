@@ -41,29 +41,29 @@ export const Header: React.FC = () => {
   ];
 
   return (
-    <header className="w-full bg-[#f8f9f5] border-b border-[#e5e9e0] text-[#1c1c1c] sticky top-0 z-50">
-      {/* 1. TOP UTILITY BAR (Exact 1:1 match with template.jpg + Language Switcher & Social SVGs) */}
-      <div className="border-b border-[#ecefe6] text-[11px] py-1.5 px-3 sm:px-4 text-[#4a4a4a] bg-[#f8f9f5]">
+    <header className="w-full bg-[#ea580c] text-white sticky top-0 z-50 shadow-md">
+      {/* 1. TOP UTILITY BAR (Subtle deeper orange tint, borderless) */}
+      <div className="bg-[#c2410c] text-[11px] py-1.5 px-3 sm:px-6 text-orange-50 font-medium">
         <div className="max-w-[1240px] mx-auto flex flex-wrap items-center justify-between gap-2">
-          {/* Left Info Items */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-8">
+          {/* Left Info Items (Icons directly without enclosing boxes) */}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-7">
             <span className="flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-[#1b5e20] shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-orange-200 shrink-0" />
               <span className="truncate max-w-[200px] sm:max-w-none">{t('top.address')}</span>
             </span>
             <span className="hidden md:flex items-center gap-1.5">
-              <Truck className="w-3.5 h-3.5 text-[#1b5e20] shrink-0" />
+              <Truck className="w-3.5 h-3.5 text-orange-200 shrink-0" />
               <span>{t('top.freeDelivery')}</span>
             </span>
           </div>
 
           {/* Right Info Items */}
           <div className="flex items-center gap-3 sm:gap-6 ml-auto sm:ml-0">
-            {/* Hindi / English Language Switcher Button */}
+            {/* Hindi / English Language Switcher Button - Smooth rounded pill */}
             <button
               type="button"
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-[#246b19]/30 text-[#246b19] hover:bg-[#246b19] hover:text-white transition-all font-bold text-[10.5px] cursor-pointer shadow-2xs"
+              className="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/15 hover:bg-white text-white hover:text-[#c2410c] transition-all font-bold text-[10.5px] cursor-pointer"
               title="Toggle Hindi / English"
             >
               <Globe className="w-3 h-3" />
@@ -72,56 +72,31 @@ export const Header: React.FC = () => {
 
             <a
               href="tel:09415922031"
-              className="hidden sm:flex items-center gap-1.5 hover:text-[#1b5e20] transition-colors"
+              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#1b5e20] shrink-0" />
+              <Phone className="w-3.5 h-3.5 text-orange-200 shrink-0" />
               <span>094159 22031</span>
             </a>
             <span className="hidden lg:flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-[#1b5e20] shrink-0" />
+              <Clock className="w-3.5 h-3.5 text-orange-200 shrink-0" />
               <span>{t('top.timing')}</span>
             </span>
 
-            {/* Social icons - Clean SVGs instead of plain letters */}
-            <div className="flex items-center gap-1.5 text-[#444] pl-1">
-              {/* Facebook */}
-              <a
-                href="#facebook"
-                aria-label="Facebook"
-                className="w-5 h-5 rounded-full hover:bg-[#246b19] hover:text-white flex items-center justify-center transition-colors p-0.5"
-              >
-                <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+            {/* Social icons - Clean, no enclosing box */}
+            <div className="flex items-center gap-2.5 text-white/90 pl-1">
+              <a href="#facebook" aria-label="Facebook" className="hover:text-white hover:scale-110 transition-transform">
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
-              {/* Instagram */}
-              <a
-                href="#instagram"
-                aria-label="Instagram"
-                className="w-5 h-5 rounded-full hover:bg-[#246b19] hover:text-white flex items-center justify-center transition-colors p-0.5"
-              >
-                <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+              <a href="#instagram" aria-label="Instagram" className="hover:text-white hover:scale-110 transition-transform">
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg>
               </a>
-              {/* Twitter / X */}
-              <a
-                href="#twitter"
-                aria-label="Twitter"
-                className="w-5 h-5 rounded-full hover:bg-[#246b19] hover:text-white flex items-center justify-center transition-colors p-0.5"
-              >
-                <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+              <a href="#twitter" aria-label="Twitter" className="hover:text-white hover:scale-110 transition-transform">
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              {/* Pinterest */}
-              <a
-                href="#pinterest"
-                aria-label="Pinterest"
-                className="w-5 h-5 rounded-full hover:bg-[#246b19] hover:text-white flex items-center justify-center transition-colors p-0.5"
-              >
-                <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.373-.056.232-.186.281-.43.168-1.609-.748-2.614-3.097-2.614-4.987 0-4.062 2.951-7.794 8.512-7.794 4.468 0 7.943 3.184 7.943 7.438 0 4.441-2.799 8.016-6.684 8.016-1.305 0-2.533-.679-2.953-1.482l-.804 3.064c-.291 1.111-1.077 2.503-1.604 3.364 1.199.369 2.474.57 3.799.57 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
                 </svg>
               </a>
             </div>
@@ -129,75 +104,78 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. MAIN HEADER (Logo, Search, Account, Cart) */}
-      <div className="bg-white py-3 sm:py-3.5 px-3 sm:px-4">
-        <div className="max-w-[1240px] mx-auto flex items-center justify-between gap-3 sm:gap-4">
-          {/* Logo with official white typography logo */}
-          <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
-            <div className="h-9 px-2.5 rounded-lg bg-[#246b19] flex items-center justify-center shadow-xs transition-transform group-hover:scale-[1.02]">
-              <img
-                src="/text_logo_white.png"
-                alt="New Family Bazar"
-                className="h-6 w-auto object-contain"
-              />
-            </div>
+      {/* 2. MAIN HEADER (Orange Navbar with transparent logo & transparent text logo, NO BOXES) */}
+      <div className="bg-[#ea580c] py-3 px-3 sm:px-6">
+        <div className="max-w-[1240px] mx-auto flex items-center justify-between gap-3 sm:gap-6">
+          {/* Dual Brand Logo: Completely transparent, no background boxes */}
+          <Link to="/" className="flex items-center gap-3 shrink-0 group">
+            <img
+              src="/logo_transparent.png"
+              alt="New Family Bazar Logo"
+              className="h-10 w-10 object-contain drop-shadow-sm transition-transform group-hover:scale-105"
+            />
+            <img
+              src="/text_logo_clean_white.png"
+              alt="New Family Bazar"
+              className="h-7 w-auto object-contain drop-shadow-sm transition-transform group-hover:scale-105"
+            />
           </Link>
 
-          {/* Center Search Bar (Visible on md and up) */}
-          <div className="hidden md:flex items-center flex-1 max-w-[560px] mx-3 lg:mx-4 border border-[#e0e4d9] rounded-md overflow-hidden h-[42px] focus-within:border-[#246b19] transition-colors">
+          {/* Center Search Bar (Smooth rounded pill, subtle & clean) */}
+          <div className="hidden md:flex items-center flex-1 max-w-[540px] mx-3 lg:mx-6 bg-white rounded-full overflow-hidden h-[42px] shadow-sm">
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t('search.placeholder')}
-              className="flex-1 px-3.5 text-xs text-[#222] placeholder-[#888] outline-none"
+              className="flex-1 px-5 text-xs text-[#222] placeholder-[#888] outline-none"
             />
-            <div className="h-5 w-[1px] bg-[#e0e4d9]" />
-            <div className="relative px-3 flex items-center gap-1.5 text-xs text-[#444] cursor-pointer hover:text-[#111]">
+            <div className="h-4 w-[1px] bg-slate-200" />
+            <div className="relative px-3.5 flex items-center gap-1.5 text-xs text-[#555] cursor-pointer hover:text-[#111]">
               <span className="text-[11px] font-medium">{selectedCategory}</span>
               <ChevronDown className="w-3 h-3 text-[#777]" />
             </div>
             <Link
               to={`/search?q=${encodeURIComponent(searchQuery || 'fresh')}`}
-              className="w-[44px] h-full bg-[#255f1a] hover:bg-[#1b4b12] text-white flex items-center justify-center transition-colors shrink-0"
+              className="w-[44px] h-[36px] mr-1 bg-[#ea580c] hover:bg-[#c2410c] text-white rounded-full flex items-center justify-center transition-colors shrink-0"
               aria-label="Search"
             >
               <Search className="w-4 h-4" />
             </Link>
           </div>
 
-          {/* Right Area: Sign In / My Account + My Cart (Rupees Display) */}
-          <div className="flex items-center gap-4 sm:gap-6 shrink-0">
+          {/* Right Area: Sign In / My Account + My Cart */}
+          <div className="flex items-center gap-5 sm:gap-7 shrink-0 text-white">
             {/* Account */}
             <Link
               to={isAuthenticated ? '/account' : '/login'}
-              className="flex items-center gap-2 text-[#222] hover:text-[#246b19] transition-colors"
+              className="flex items-center gap-2 hover:text-orange-200 transition-colors"
             >
-              <User className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.75]" />
+              <User className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
               <div className="text-left text-xs leading-tight hidden sm:block">
-                <span className="text-[10px] text-[#777] block">
+                <span className="text-[10px] text-orange-200 block">
                   {isAuthenticated ? t('account.welcome') : t('account.signIn')}
                 </span>
-                <span className="font-bold text-[#111] block">
+                <span className="font-bold text-white block">
                   {isAuthenticated ? user?.name.split(' ')[0] : t('account.myAccount')}
                 </span>
               </div>
             </Link>
 
-            {/* My Cart (Changed from $ to ₹ Indian Rupees) */}
+            {/* My Cart */}
             <Link
               to="/cart"
-              className="flex items-center gap-2 text-[#222] hover:text-[#246b19] transition-colors pl-1"
+              className="flex items-center gap-2 hover:text-orange-200 transition-colors pl-1"
             >
               <div className="relative">
-                <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.75]" />
-                <span className="absolute -top-1.5 -right-2 bg-[#255f1a] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center animate-pulse-glow">
+                <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
+                <span className="absolute -top-1.5 -right-2 bg-white text-[#ea580c] text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
                   {totalItems}
                 </span>
               </div>
               <div className="text-left text-xs leading-tight hidden sm:block">
-                <span className="text-[10px] text-[#777] block">{t('cart.myCart')}</span>
-                <span className="font-black text-[#111] block">
+                <span className="text-[10px] text-orange-200 block">{t('cart.myCart')}</span>
+                <span className="font-extrabold text-white block">
                   ₹{subtotal}
                 </span>
               </div>
@@ -207,7 +185,7 @@ export const Header: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-1 text-[#222] hover:text-[#246b19] transition-colors"
+              className="lg:hidden p-1 text-white hover:text-orange-200 transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -215,18 +193,18 @@ export const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Search Bar (Visible on mobile screens) */}
-        <div className="md:hidden mt-2.5 flex items-center border border-[#e0e4d9] rounded-md overflow-hidden h-[38px] focus-within:border-[#246b19]">
+        {/* Mobile Search Bar */}
+        <div className="md:hidden mt-2.5 flex items-center bg-white rounded-full overflow-hidden h-[38px] shadow-xs px-1">
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={t('search.placeholder')}
-            className="flex-1 px-3 text-xs text-[#222] placeholder-[#888] outline-none"
+            className="flex-1 px-3.5 text-xs text-[#222] placeholder-[#888] outline-none"
           />
           <Link
             to={`/search?q=${encodeURIComponent(searchQuery || 'fresh')}`}
-            className="w-[40px] h-full bg-[#255f1a] text-white flex items-center justify-center shrink-0"
+            className="w-[32px] h-[32px] bg-[#ea580c] text-white rounded-full flex items-center justify-center shrink-0"
             aria-label="Search"
           >
             <Search className="w-3.5 h-3.5" />
@@ -234,69 +212,66 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* 3. NAVIGATION BAR */}
-      <div className="bg-white border-t border-[#f0f2eb] hidden lg:block">
-        <div className="max-w-[1240px] mx-auto px-4 flex items-center justify-between">
-          {/* Left: 'Shop by Categories' button with rounded corners */}
+      {/* 3. NAVIGATION BAR (Seamless background matching navbar - NO line between navbar and shop categories) */}
+      <div className="bg-[#ea580c] hidden lg:block border-0 pt-0.5 pb-2">
+        <div className="max-w-[1240px] mx-auto px-6 flex items-center justify-between">
+          {/* Left: 'Shop by Categories' button (Smooth rounded corners, font-bold) */}
           <div className="relative">
             <button
               type="button"
               onClick={() => setIsCategoryMenuOpen(!isCategoryMenuOpen)}
-              className="bg-[#1e5215] hover:bg-[#184211] text-white font-bold text-xs py-2.5 px-4 rounded-md flex items-center gap-2.5 transition-colors shadow-2xs cursor-pointer"
+              className="bg-[#c2410c] hover:bg-[#9a3412] text-white font-extrabold text-xs py-2 px-5 rounded-md flex items-center gap-2.5 transition-colors shadow-xs cursor-pointer border-0"
             >
               <Menu className="w-4 h-4" />
               <span>{t('nav.shopByCategories')}</span>
             </button>
 
-            {/* Categories dropdown */}
+            {/* Categories dropdown - Smooth rounded shadow */}
             {isCategoryMenuOpen && (
               <div
                 onMouseLeave={() => setIsCategoryMenuOpen(false)}
-                className="absolute left-0 top-full mt-1 w-64 bg-white rounded-lg shadow-xl border border-[#e5e9e0] py-1.5 z-50 animate-fade-in-up"
+                className="absolute left-0 top-full mt-1.5 w-64 bg-white rounded-xl shadow-2xl border border-slate-100 py-2 z-50 animate-fade-in-up text-[#111]"
               >
                 {categories.map((cat) => (
                   <Link
                     key={cat.id}
                     to={`/category/${cat.slug}`}
                     onClick={() => setIsCategoryMenuOpen(false)}
-                    className="flex items-center justify-between px-4 py-2 hover:bg-[#f6f8f2] text-xs font-medium text-[#333] hover:text-[#1e5215]"
+                    className="flex items-center justify-between px-4 py-2.5 hover:bg-orange-50 text-xs font-semibold text-[#333] hover:text-[#ea580c] transition-colors"
                   >
                     <span>{cat.name}</span>
-                    <span className="text-[10px] text-[#888]">{cat.itemCount}+</span>
+                    <span className="text-[10px] text-orange-600 bg-orange-100 px-1.5 py-0.5 rounded-full font-bold">{cat.itemCount}+</span>
                   </Link>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Middle Nav Links with green active indicator bar */}
-          <nav className="flex items-center gap-8 text-xs font-semibold text-[#2b2b2b]">
+          {/* Middle Nav Links */}
+          <nav className="flex items-center gap-8 text-xs font-bold text-white">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
                 <Link
                   key={link.label}
                   to={link.path}
-                  className={`relative py-3 flex items-center gap-1 hover:text-[#246b19] transition-colors ${
-                    isActive ? 'text-[#246b19] font-bold' : ''
+                  className={`relative py-2 flex items-center gap-1 hover:text-orange-200 transition-colors ${
+                    isActive ? 'text-white underline underline-offset-8 decoration-2' : ''
                   }`}
                 >
                   <span>{link.label}</span>
-                  {link.hasDropdown && <ChevronDown className="w-3 h-3 text-[#777]" />}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#246b19] rounded-full" />
-                  )}
+                  {link.hasDropdown && <ChevronDown className="w-3 h-3 text-orange-200" />}
                 </Link>
               );
             })}
           </nav>
 
-          {/* Right: FLASH DEALS with lightning bolt badge */}
+          {/* Right: FLASH DEALS - GHOST BUTTON with white font and icons */}
           <Link
             to="/shop?filter=deals"
-            className="flex items-center gap-1.5 text-[11px] font-black uppercase text-[#246b19] bg-[#f0f6ec] hover:bg-[#e4eedc] px-3 py-1.5 rounded-md transition-colors"
+            className="flex items-center gap-1.5 text-xs font-bold text-white bg-transparent hover:bg-white/15 px-3.5 py-1.5 rounded-md border border-white/60 hover:border-white transition-all shadow-xs"
           >
-            <Zap className="w-3.5 h-3.5 text-[#246b19] fill-[#246b19]" />
+            <Zap className="w-3.5 h-3.5 text-white" />
             <span>{t('nav.flashDeals')}</span>
           </Link>
         </div>
@@ -304,13 +279,13 @@ export const Header: React.FC = () => {
 
       {/* 4. RESPONSIVE MOBILE MENU DRAWER */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-[#e0e4d9] px-4 py-4 space-y-3 animate-fade-in-up shadow-lg">
-          <div className="flex items-center justify-between pb-2 border-b border-[#ecefe6]">
-            <span className="text-xs font-bold text-[#1e5215] uppercase tracking-wider">Navigation Menu</span>
+        <div className="lg:hidden bg-white text-[#111] px-5 py-4 space-y-3 animate-fade-in-up shadow-xl rounded-b-2xl">
+          <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+            <span className="text-xs font-black text-[#ea580c] uppercase tracking-wider">Navigation Menu</span>
             <button
               type="button"
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-xs font-bold text-[#246b19] bg-[#f0f6ec] px-2.5 py-1 rounded-full"
+              className="flex items-center gap-1 text-xs font-bold text-[#ea580c] bg-orange-50 px-2.5 py-1 rounded-full"
             >
               <Globe className="w-3.5 h-3.5" />
               <span>{language === 'en' ? 'स्विच करें: हिन्दी' : 'Switch: English'}</span>
@@ -323,20 +298,20 @@ export const Header: React.FC = () => {
                 key={link.label}
                 to={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 rounded-md hover:bg-[#f6f8f2] hover:text-[#246b19]"
+                className="p-2 rounded-lg hover:bg-orange-50 hover:text-[#ea580c]"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          <div className="pt-2 border-t border-[#ecefe6]">
+          <div className="pt-2 border-t border-slate-100">
             <Link
               to="/shop?filter=deals"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-1.5 w-full text-xs font-black uppercase text-white bg-[#246b19] py-2.5 rounded-md"
+              className="flex items-center justify-center gap-1.5 w-full text-xs font-black uppercase text-white bg-[#ea580c] py-2.5 rounded-lg shadow-sm"
             >
-              <Zap className="w-4 h-4 fill-white" />
+              <Zap className="w-4 h-4" />
               <span>{t('nav.flashDeals')} - UP TO 30% OFF</span>
             </Link>
           </div>
@@ -345,4 +320,3 @@ export const Header: React.FC = () => {
     </header>
   );
 };
-

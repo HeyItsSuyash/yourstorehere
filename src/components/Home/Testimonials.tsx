@@ -27,7 +27,7 @@ export const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="my-10 bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-8">
+    <section className="my-10 bg-white rounded-xl-none border border-slate-200/80 p-6 sm:p-8">
       <div className="text-center max-w-xl mx-auto mb-8">
         <h2 className="text-xl sm:text-2xl font-black text-slate-900">
           Trusted by 50,000+ Happy Families
@@ -41,7 +41,7 @@ export const Testimonials: React.FC = () => {
         {reviews.map((r, i) => (
           <div
             key={i}
-            className="p-5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between hover:border-emerald-200 transition-colors"
+            className="p-5 rounded-xl-none bg-slate-50 border border-slate-100 flex flex-col justify-between hover:border-emerald-200 transition-colors"
           >
             <div>
               <div className="flex items-center gap-1 mb-3 text-amber-500">
@@ -58,7 +58,7 @@ export const Testimonials: React.FC = () => {
               <img
                 src={r.avatar}
                 alt={r.name}
-                className="w-10 h-10 rounded-full object-cover border border-emerald-300"
+                className="w-10 h-10 rounded-xl-none object-cover border border-emerald-300"
               />
               <div>
                 <h4 className="text-xs font-bold text-slate-900">{r.name}</h4>

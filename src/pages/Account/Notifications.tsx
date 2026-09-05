@@ -96,14 +96,14 @@ export const Notifications: React.FC = () => {
             notifications.map((n) => (
               <div
                 key={n.id}
-                className={`p-4 rounded-2xl border transition-all flex items-start gap-3.5 ${
+                className={`p-4 rounded-xl-none border transition-all flex items-start gap-3.5 ${
                   n.read
                     ? 'bg-white border-slate-200'
                     : 'bg-emerald-50/40 border-emerald-300 ring-1 ring-emerald-200'
                 }`}
               >
                 <div
-                  className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
+                  className={`w-9 h-9 rounded-xl-none flex items-center justify-center shrink-0 ${
                     n.type === 'order'
                       ? 'bg-amber-100 text-amber-800'
                       : n.type === 'points'
@@ -128,7 +128,7 @@ export const Notifications: React.FC = () => {
               </div>
             ))
           ) : (
-            <div className="text-center py-12 bg-slate-50 rounded-2xl border border-slate-100">
+            <div className="text-center py-12 bg-slate-50 rounded-xl-none border border-slate-100">
               <p className="text-sm font-semibold text-slate-500">
                 You have no notifications right now.
               </p>

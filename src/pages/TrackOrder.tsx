@@ -47,7 +47,7 @@ export const TrackOrder: React.FC = () => {
             Order #{currentOrder.id} • Placed today
           </p>
         </div>
-        <span className="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wider">
+        <span className="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1.5 rounded-xl-none uppercase tracking-wider">
           {currentOrder.status}
         </span>
       </div>
@@ -56,7 +56,7 @@ export const TrackOrder: React.FC = () => {
         {/* Left 7 cols: Stylized Live Map Representation & Timeline */}
         <div className="lg:col-span-7 space-y-6">
           {/* Stylized Delivery Visualization Card (No external map dependencies) */}
-          <div className="bg-emerald-950 rounded-3xl p-6 text-white relative overflow-hidden shadow-lg border border-emerald-900">
+          <div className="bg-emerald-950 rounded-xl-none p-6 text-white relative overflow-hidden shadow-lg border border-emerald-900">
             <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
 
             {/* Stylized visual route */}
@@ -70,13 +70,13 @@ export const TrackOrder: React.FC = () => {
                     Arriving in 18 Mins
                   </h3>
                 </div>
-                <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
+                <div className="w-12 h-12 rounded-xl-none bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
                   <Navigation className="w-6 h-6 animate-pulse" />
                 </div>
               </div>
 
               {/* Graphic delivery path */}
-              <div className="bg-emerald-900/60 rounded-2xl p-4 border border-emerald-800/80 mb-4">
+              <div className="bg-emerald-900/60 rounded-xl-none p-4 border border-emerald-800/80 mb-4">
                 <div className="flex items-center justify-between text-xs font-bold text-emerald-200 mb-2">
                   <span>Hub: Lakhimpur Behajam Rd</span>
                   <span className="text-amber-400 font-extrabold flex items-center gap-1">
@@ -85,15 +85,15 @@ export const TrackOrder: React.FC = () => {
                   <span>Motinagar Colony</span>
                 </div>
                 {/* Progress track */}
-                <div className="w-full h-2.5 bg-emerald-950 rounded-full overflow-hidden p-0.5 border border-emerald-700">
-                  <div className="h-full bg-gradient-to-r from-emerald-500 to-amber-400 rounded-full w-3/4 animate-pulse" />
+                <div className="w-full h-2.5 bg-emerald-950 rounded-xl-none overflow-hidden p-0.5 border border-emerald-700">
+                  <div className="h-full bg-gradient-to-r from-emerald-500 to-amber-400 rounded-xl-none w-3/4 animate-pulse" />
                 </div>
               </div>
 
               {/* Delivery Driver Info */}
-              <div className="flex items-center justify-between bg-white/10 backdrop-blur-xs rounded-2xl p-3.5 border border-white/10">
+              <div className="flex items-center justify-between bg-white/10 backdrop-blur-xs rounded-xl-none p-3.5 border border-white/10">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-sm">
+                  <div className="w-10 h-10 rounded-xl-none bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-sm">
                     {currentOrder.deliveryPartner?.name.charAt(0) || 'M'}
                   </div>
                   <div>
@@ -108,7 +108,7 @@ export const TrackOrder: React.FC = () => {
 
                 <a
                   href={`tel:${currentOrder.deliveryPartner?.phone || '+919811234567'}`}
-                  className="flex items-center gap-1 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black px-3.5 py-2 rounded-xl transition-colors shadow-xs"
+                  className="flex items-center gap-1 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black px-3.5 py-2 rounded-xl-none transition-colors shadow-xs"
                 >
                   <Phone className="w-3.5 h-3.5" />
                   <span>Call Rider</span>
@@ -118,7 +118,7 @@ export const TrackOrder: React.FC = () => {
           </div>
 
           {/* Timeline Stages */}
-          <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-xs">
+          <div className="bg-white rounded-xl-none p-6 border border-slate-200/80 shadow-xs">
             <h3 className="font-bold text-slate-900 text-sm mb-4">
               Status Timeline
             </h3>
@@ -128,7 +128,7 @@ export const TrackOrder: React.FC = () => {
                 <div key={idx} className="relative">
                   {/* Dot */}
                   <div
-                    className={`absolute -left-[31px] top-0 w-4 h-4 rounded-full border-2 ${
+                    className={`absolute -left-[31px] top-0 w-4 h-4 rounded-xl-none border-2 ${
                       step.current
                         ? 'bg-amber-500 border-white ring-4 ring-amber-100'
                         : step.completed
@@ -163,7 +163,7 @@ export const TrackOrder: React.FC = () => {
 
         {/* Right 5 cols: Order Items & Delivery Summary */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-xs space-y-4">
+          <div className="bg-white rounded-xl-none p-6 border border-slate-200/80 shadow-xs space-y-4">
             <h3 className="font-bold text-slate-900 text-sm pb-2 border-b border-slate-100">
               Basket Contents ({currentOrder.items.length} items)
             </h3>
@@ -175,7 +175,7 @@ export const TrackOrder: React.FC = () => {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-10 h-10 object-contain rounded-lg bg-slate-50 border p-0.5"
+                      className="w-10 h-10 object-contain rounded-xl-none bg-slate-50 border p-0.5"
                     />
                     <div>
                       <p className="font-bold text-slate-800 line-clamp-1 max-w-[170px]">

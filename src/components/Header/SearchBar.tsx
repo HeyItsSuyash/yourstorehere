@@ -62,7 +62,7 @@ export const SearchBar: React.FC<{
   return (
     <div ref={searchRef} className="relative w-full max-w-3xl">
       <div
-        className={`flex items-center bg-white rounded-full border transition-all duration-200 ${
+        className={`flex items-center bg-white rounded-xl-none border transition-all duration-200 ${
           isOpen ? 'border-emerald-600 ring-2 ring-emerald-100 shadow-md' : 'border-slate-300 hover:border-slate-400'
         } ${isMobile ? 'h-11 px-3.5' : 'h-12 px-4 shadow-xs'}`}
       >
@@ -101,7 +101,7 @@ export const SearchBar: React.FC<{
           <button
             type="button"
             onClick={() => setQuery('')}
-            className="p-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 mr-1"
+            className="p-1 text-slate-400 hover:text-slate-600 rounded-xl-none hover:bg-slate-100 mr-1"
           >
             <X className="w-4 h-4" />
           </button>
@@ -110,7 +110,7 @@ export const SearchBar: React.FC<{
         <button
           type="button"
           onClick={() => handleSearch(query)}
-          className={`flex items-center justify-center rounded-full text-white bg-emerald-700 hover:bg-emerald-800 transition-colors ${
+          className={`flex items-center justify-center rounded-xl-none text-white bg-emerald-700 hover:bg-emerald-800 transition-colors ${
             isMobile ? 'w-8 h-8' : 'w-9 h-9'
           }`}
           title="Search"
@@ -121,7 +121,7 @@ export const SearchBar: React.FC<{
 
       {/* Autocomplete Dropdown */}
       {isOpen && (
-        <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden z-50 animate-in fade-in-50 duration-150">
+        <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl-none shadow-xl border border-slate-100 overflow-hidden z-50 animate-in fade-in-50 duration-150">
           {query.trim().length > 0 ? (
             <div>
               {filteredSuggestions.length > 0 ? (
@@ -142,7 +142,7 @@ export const SearchBar: React.FC<{
                         <img
                           src={prod.image}
                           alt={prod.name}
-                          className="w-10 h-10 object-contain rounded-md bg-white p-1 border border-slate-100"
+                          className="w-10 h-10 object-contain rounded-xl-none bg-white p-1 border border-slate-100"
                         />
                         <div>
                           <p className="text-sm font-medium text-slate-800 line-clamp-1">
@@ -195,7 +195,7 @@ export const SearchBar: React.FC<{
                       setQuery(item);
                       handleSearch(item);
                     }}
-                    className="px-3 py-1.5 text-xs bg-slate-100 hover:bg-emerald-100 hover:text-emerald-800 text-slate-700 rounded-full transition-colors"
+                    className="px-3 py-1.5 text-xs bg-slate-100 hover:bg-emerald-100 hover:text-emerald-800 text-slate-700 rounded-xl-none transition-colors"
                   >
                     {item}
                   </button>

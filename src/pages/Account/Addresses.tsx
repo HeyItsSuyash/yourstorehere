@@ -92,7 +92,7 @@ export const Addresses: React.FC = () => {
           <button
             type="button"
             onClick={handleStartAdd}
-            className="flex items-center gap-1.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs transition-colors"
+            className="flex items-center gap-1.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-4 py-2.5 rounded-xl-none shadow-xs transition-colors"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>Add Address</span>
@@ -104,7 +104,7 @@ export const Addresses: React.FC = () => {
           {addresses.map((addr) => (
             <div
               key={addr.id}
-              className={`p-5 rounded-2xl border transition-all flex flex-col justify-between ${
+              className={`p-5 rounded-xl-none border transition-all flex flex-col justify-between ${
                 addr.isDefault
                   ? 'bg-emerald-50/40 border-emerald-300 ring-1 ring-emerald-300'
                   : 'bg-white border-slate-200'
@@ -112,7 +112,7 @@ export const Addresses: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 flex items-center gap-1">
+                  <span className="text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-xl-none bg-emerald-100 text-emerald-800 flex items-center gap-1">
                     {addr.type === 'Home' ? (
                       <Home className="w-3 h-3" />
                     ) : (
@@ -121,7 +121,7 @@ export const Addresses: React.FC = () => {
                     {addr.type}
                   </span>
                   {addr.isDefault && (
-                    <span className="text-[10px] font-black text-emerald-700 uppercase bg-white border border-emerald-200 px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] font-black text-emerald-700 uppercase bg-white border border-emerald-200 px-2 py-0.5 rounded-xl-none">
                       Default
                     </span>
                   )}
@@ -183,7 +183,7 @@ export const Addresses: React.FC = () => {
         {isEditing && (
           <form
             onSubmit={handleSave}
-            className="p-6 bg-slate-50 rounded-3xl border border-slate-200 space-y-4 animate-in fade-in"
+            className="p-6 bg-slate-50 rounded-xl-none border border-slate-200 space-y-4 animate-in fade-in"
           >
             <h3 className="text-sm font-bold text-slate-900 uppercase">
               {editingId ? 'Edit Address' : 'Add New Address'}
@@ -195,7 +195,7 @@ export const Addresses: React.FC = () => {
                 placeholder="Receiver's Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl"
+                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl-none"
                 required
               />
               <input
@@ -203,7 +203,7 @@ export const Addresses: React.FC = () => {
                 placeholder="Mobile Number"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl"
+                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl-none"
                 required
               />
               <input
@@ -211,7 +211,7 @@ export const Addresses: React.FC = () => {
                 placeholder="Flat / House / Floor"
                 value={formData.flat}
                 onChange={(e) => setFormData({ ...formData, flat: e.target.value })}
-                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl"
+                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl-none"
                 required
               />
               <input
@@ -219,7 +219,7 @@ export const Addresses: React.FC = () => {
                 placeholder="Street / Area Name"
                 value={formData.street}
                 onChange={(e) => setFormData({ ...formData, street: e.target.value })}
-                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl"
+                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl-none"
                 required
               />
               <input
@@ -227,14 +227,14 @@ export const Addresses: React.FC = () => {
                 placeholder="Landmark"
                 value={formData.landmark}
                 onChange={(e) => setFormData({ ...formData, landmark: e.target.value })}
-                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl"
+                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl-none"
               />
               <input
                 type="text"
                 placeholder="6-Digit Pincode"
                 value={formData.pincode}
                 onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
-                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl"
+                className="p-2.5 text-xs bg-white border border-slate-200 rounded-xl-none"
                 required
               />
             </div>
@@ -265,7 +265,7 @@ export const Addresses: React.FC = () => {
               </button>
               <button
                 type="submit"
-                className="px-5 py-2 text-xs font-bold bg-emerald-700 text-white rounded-xl shadow-xs"
+                className="px-5 py-2 text-xs font-bold bg-emerald-700 text-white rounded-xl-none shadow-xs"
               >
                 Save Address
               </button>

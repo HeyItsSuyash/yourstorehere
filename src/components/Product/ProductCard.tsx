@@ -68,7 +68,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <button
           type="button"
           onClick={handleWishlistClick}
-          className={`p-1.5 rounded-full transition-colors ${
+          className={`p-1.5 rounded-xl-none transition-colors ${
             isWishlisted
               ? 'text-rose-500 bg-rose-50'
               : 'text-[#888] hover:text-rose-500 hover:bg-slate-100'
@@ -140,17 +140,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <button
               type="button"
               onClick={handleAddToCart}
-              className="w-full border border-[#246b19] text-[#246b19] hover:bg-[#246b19] hover:text-white transition-all text-[10.5px] font-bold py-1.5 rounded-md flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+              className="w-full border border-[#246b19] text-[#246b19] hover:bg-[#246b19] hover:text-white transition-all text-[10.5px] font-bold py-1.5 rounded-xl-none flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
             >
               <span>ADD TO CART</span>
               <ShoppingCart className="w-3.5 h-3.5" />
             </button>
           ) : (
-            <div className="flex items-center justify-between bg-[#246b19] text-white rounded-md overflow-hidden py-0.5 px-2">
+            <div className="flex items-center justify-between bg-[#246b19] text-white rounded-xl-none overflow-hidden py-0.5 px-2">
               <button
                 type="button"
                 onClick={handleDecrement}
-                className="p-1 hover:bg-[#184910] rounded"
+                className="p-1 hover:bg-[#184910] rounded-xl"
                 aria-label="Decrease quantity"
               >
                 <Minus className="w-3 h-3" />
@@ -161,7 +161,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               <button
                 type="button"
                 onClick={handleIncrement}
-                className="p-1 hover:bg-[#184910] rounded"
+                className="p-1 hover:bg-[#184910] rounded-xl"
                 aria-label="Increase quantity"
               >
                 <Plus className="w-3 h-3" />

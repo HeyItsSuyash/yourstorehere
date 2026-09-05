@@ -41,7 +41,7 @@ export const OTP: React.FC = () => {
 
   return (
     <div className="max-w-md mx-auto px-4 py-16">
-      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
+      <div className="bg-white rounded-xl-none p-6 sm:p-8 border border-slate-200/80 shadow-md">
         <button
           type="button"
           onClick={() => navigate('/login')}
@@ -59,7 +59,7 @@ export const OTP: React.FC = () => {
         </p>
 
         {/* OTP Demo Banner */}
-        <div className="my-4 p-2.5 bg-emerald-50 rounded-xl border border-emerald-200 text-center">
+        <div className="my-4 p-2.5 bg-emerald-50 rounded-xl-none border border-emerald-200 text-center">
           <span className="text-xs font-bold text-emerald-800">
             Demo OTP: <span className="tracking-widest underline font-black">123456</span>
           </span>
@@ -76,7 +76,7 @@ export const OTP: React.FC = () => {
                 maxLength={1}
                 value={digit}
                 onChange={(e) => handleChange(idx, e.target.value)}
-                className="w-12 h-14 text-center font-black text-lg border border-slate-300 rounded-2xl bg-slate-50 focus:bg-white focus:border-emerald-600 outline-none transition-all shadow-2xs"
+                className="w-12 h-14 text-center font-black text-lg border border-slate-300 rounded-xl-none bg-slate-50 focus:bg-white focus:border-emerald-600 outline-none transition-all shadow-2xs"
               />
             ))}
           </div>
@@ -85,7 +85,7 @@ export const OTP: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-black text-sm py-3.5 rounded-2xl shadow-md transition-all active:scale-95"
+            className="w-full flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-black text-sm py-3.5 rounded-xl-none shadow-md transition-all active:scale-95"
           >
             <span>VERIFY & PROCEED</span>
             <ArrowRight className="w-4 h-4" />

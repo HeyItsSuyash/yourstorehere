@@ -15,7 +15,7 @@ export const Wishlist: React.FC = () => {
   if (wishlist.length === 0) {
     return (
       <div className="max-w-2xl mx-auto px-4 py-16 text-center space-y-4">
-        <div className="w-20 h-20 bg-rose-50 text-rose-500 rounded-full flex items-center justify-center mx-auto">
+        <div className="w-20 h-20 bg-rose-50 text-rose-500 rounded-xl-none flex items-center justify-center mx-auto">
           <Heart className="w-10 h-10" />
         </div>
         <h1 className="text-2xl font-black text-slate-900">
@@ -27,7 +27,7 @@ export const Wishlist: React.FC = () => {
         <div>
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-6 py-3 rounded-xl shadow-xs"
+            className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs px-6 py-3 rounded-xl-none shadow-xs"
           >
             <span>DISCOVER GROCERIES</span>
             <ArrowRight className="w-4 h-4" />

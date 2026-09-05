@@ -104,13 +104,13 @@ export const Shop: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsMobileFilterOpen(true)}
-              className="lg:hidden flex items-center gap-2 bg-[#f0f6ec] text-[#246b19] border border-[#d8ded0] font-bold text-xs px-4 py-2.5 rounded-md shadow-2xs"
+              className="lg:hidden flex items-center gap-2 bg-[#f0f6ec] text-[#246b19] border border-[#d8ded0] font-bold text-xs px-4 py-2.5 rounded-xl-none shadow-2xs"
             >
               <Filter className="w-4 h-4" />
               <span>Filters</span>
             </button>
 
-            <div className="flex items-center gap-2 bg-white border border-[#d8ded0] rounded-md px-3 py-2 text-xs font-semibold text-[#333]">
+            <div className="flex items-center gap-2 bg-white border border-[#d8ded0] rounded-xl-none px-3 py-2 text-xs font-semibold text-[#333]">
               <ArrowUpDown className="w-3.5 h-3.5 text-[#777]" />
               <label htmlFor="shop-sort-select" className="text-[#777]">Sort by:</label>
               <select
@@ -158,7 +158,7 @@ export const Shop: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setSelectedCategory('all')}
-                  className={`w-full text-left px-2.5 py-1.5 rounded text-xs font-medium transition-colors flex items-center justify-between ${
+                  className={`w-full text-left px-2.5 py-1.5 rounded-xl text-xs font-medium transition-colors flex items-center justify-between ${
                     selectedCategory === 'all'
                       ? 'bg-[#f0f6ec] text-[#246b19] font-bold'
                       : 'text-[#444] hover:bg-slate-50'
@@ -172,7 +172,7 @@ export const Shop: React.FC = () => {
                     key={c.id}
                     type="button"
                     onClick={() => setSelectedCategory(c.slug)}
-                    className={`w-full text-left px-2.5 py-1.5 rounded text-xs font-medium transition-colors flex items-center justify-between ${
+                    className={`w-full text-left px-2.5 py-1.5 rounded-xl text-xs font-medium transition-colors flex items-center justify-between ${
                       selectedCategory === c.slug
                         ? 'bg-[#f0f6ec] text-[#246b19] font-bold'
                         : 'text-[#444] hover:bg-slate-50'
@@ -228,7 +228,7 @@ export const Shop: React.FC = () => {
                       type="checkbox"
                       checked={selectedBrands.includes(b)}
                       onChange={() => toggleBrand(b)}
-                      className="rounded accent-[#246b19]"
+                      className="rounded-xl accent-[#246b19]"
                     />
                     <span>{b}</span>
                   </label>
@@ -247,7 +247,7 @@ export const Shop: React.FC = () => {
                     key={star}
                     type="button"
                     onClick={() => setMinRating(minRating === star ? 0 : star)}
-                    className={`px-2 py-1 rounded text-xs font-semibold flex items-center gap-1 border transition-colors ${
+                    className={`px-2 py-1 rounded-xl text-xs font-semibold flex items-center gap-1 border transition-colors ${
                       minRating === star
                         ? 'bg-[#246b19] text-white border-[#246b19]'
                         : 'bg-white text-[#444] border-[#d8ded0] hover:bg-slate-50'
@@ -306,7 +306,7 @@ export const Shop: React.FC = () => {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full p-2 text-xs border border-[#d8ded0] rounded bg-white text-[#111]"
+                    className="w-full p-2 text-xs border border-[#d8ded0] rounded-xl bg-white text-[#111]"
                   >
                     <option value="all">All Categories</option>
                     {categories.map((c) => (
@@ -362,14 +362,14 @@ export const Shop: React.FC = () => {
                 <button
                   type="button"
                   onClick={resetFilters}
-                  className="flex-1 py-2 text-xs font-bold border border-[#d8ded0] rounded"
+                  className="flex-1 py-2 text-xs font-bold border border-[#d8ded0] rounded-xl"
                 >
                   Reset
                 </button>
                 <button
                   type="button"
                   onClick={() => setIsMobileFilterOpen(false)}
-                  className="flex-1 py-2 text-xs font-bold bg-[#246b19] text-white rounded"
+                  className="flex-1 py-2 text-xs font-bold bg-[#246b19] text-white rounded-xl"
                 >
                   Apply ({filteredProducts.length})
                 </button>

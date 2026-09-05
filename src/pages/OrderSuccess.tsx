@@ -12,14 +12,14 @@ export const OrderSuccess: React.FC = () => {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-md text-center space-y-6">
+      <div className="bg-white rounded-xl-none p-6 sm:p-10 border border-slate-200/80 shadow-md text-center space-y-6">
         {/* Animated Check */}
-        <div className="w-20 h-20 bg-emerald-100 text-emerald-700 rounded-full mx-auto flex items-center justify-center shadow-inner">
+        <div className="w-20 h-20 bg-emerald-100 text-emerald-700 rounded-xl-none mx-auto flex items-center justify-center shadow-inner">
           <CheckCircle2 className="w-12 h-12" />
         </div>
 
         <div className="space-y-1">
-          <span className="text-xs font-bold text-emerald-800 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+          <span className="text-xs font-bold text-emerald-800 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-xl-none border border-emerald-200">
             Order Confirmed
           </span>
           <h1 className="text-2xl sm:text-3xl font-black text-slate-900 pt-2">
@@ -31,7 +31,7 @@ export const OrderSuccess: React.FC = () => {
         </div>
 
         {/* Order Details Card */}
-        <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 text-left space-y-3">
+        <div className="bg-slate-50 rounded-xl-none p-5 border border-slate-200/80 text-left space-y-3">
           <div className="flex justify-between items-center pb-2 border-b border-slate-200">
             <div>
               <span className="text-[10px] uppercase font-bold text-slate-400">Order Reference</span>
@@ -65,14 +65,14 @@ export const OrderSuccess: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-3 pt-2">
           <Link
             to={`/track-order/${orderId}`}
-            className="flex-1 flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-black text-sm py-3.5 px-6 rounded-2xl shadow-md transition-all active:scale-95"
+            className="flex-1 flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-black text-sm py-3.5 px-6 rounded-xl-none shadow-md transition-all active:scale-95"
           >
             <Truck className="w-4 h-4" />
             <span>TRACK YOUR ORDER</span>
           </Link>
           <Link
             to="/shop"
-            className="flex-1 flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm py-3.5 px-6 rounded-2xl border border-slate-300 transition-all hover:border-emerald-600"
+            className="flex-1 flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm py-3.5 px-6 rounded-xl-none border border-slate-300 transition-all hover:border-emerald-600"
           >
             <span>CONTINUE SHOPPING</span>
             <ArrowRight className="w-4 h-4" />
