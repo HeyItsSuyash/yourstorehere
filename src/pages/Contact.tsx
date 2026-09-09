@@ -25,8 +25,8 @@ export const Contact: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 space-y-12">
       <SEO
-        title="Store Locator & Contact Support | Gomti Nagar, Lucknow"
-        description="Visit Express daily Mart in Vijayant Khand, Gomti Nagar, Lucknow, UP or call 094159 22031 for orders, queries, and quick doorstep grocery deliveries."
+        title="Store Locator & Contact Support | Supermarket"
+        description="Visit Express daily Mart in Vijayant Khand, Supermarket, UP or call +91 98765 43210 for orders, queries, and quick doorstep grocery deliveries."
       />
       {/* Title */}
       <div className="text-center max-w-2xl mx-auto space-y-2">
@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
           Store Locator & Customer Support
         </h1>
         <p className="text-xs sm:text-sm text-slate-500">
-          Visit our flagship Gomti Nagar, Lucknow supermarket or connect with our customer care desk.
+          Visit our flagship supermarket store or connect with our customer care desk.
         </p>
       </div>
 
@@ -43,20 +43,20 @@ export const Contact: React.FC = () => {
         <div className="lg:col-span-6 space-y-6">
           <div className="bg-white rounded-xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-4">
             <h2 className="text-lg font-black text-slate-900">
-              Express daily Mart - Gomti Nagar Supermarket
+              Your Store Here - Main Supermarket
             </h2>
 
             <div className="space-y-3.5 text-xs sm:text-sm text-slate-600">
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#15803d] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#c2410c] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-800 block">Store Address:</strong>
-                  <span>Shop no 19, 20, 21, 22, Kathauta Chauraha Rd, in front of petrol pump, Vijayant Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010</span>
+                  <span>123 Market Street, Commercial Hub, Metro City, State 100001</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Clock className="w-4 h-4 text-[#15803d] shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-[#c2410c] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-800 block">Operating Hours:</strong>
                   <span>Monday – Sunday: 10:00 AM – 9:30 PM (Open 7 Days a Week)</span>
@@ -64,20 +64,20 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#15803d] shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#c2410c] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-800 block">Contact Number:</strong>
-                  <a href="tel:09415922031" className="text-[#15803d] font-bold hover:underline">
-                    094159 22031
+                  <a href="tel:9876543210" className="text-[#c2410c] font-bold hover:underline">
+                    +91 98765 43210
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-[#15803d] shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#c2410c] shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-slate-800 block">Email Support:</strong>
-                  <span>care@expressdailymart.com</span>
+                  <span>care@yourstorehere.com</span>
                 </div>
               </div>
             </div>
@@ -86,9 +86,9 @@ export const Contact: React.FC = () => {
             <div className="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 relative h-52 flex flex-col justify-between p-4 mt-4">
               <div className="bg-white/90 backdrop-blur-xs p-3 rounded-xl border border-slate-200 shadow-xs max-w-sm text-xs">
                 <strong className="font-bold text-slate-900 block text-sm">
-                  EXPRESS DAILY MART, Lucknow
+                  YOUR STORE HERE, Main Branch
                 </strong>
-                <p className="text-[11px] text-slate-500 mt-0.5">Kathauta Chauraha Rd, Gomti Nagar, Lucknow, UP</p>
+                <p className="text-[11px] text-slate-500 mt-0.5">123 Market Street, Commercial Hub, Metro City</p>
                 <div className="flex items-center gap-1.5 text-amber-500 font-bold text-xs mt-1">
                   <div className="flex items-center">
                     <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
@@ -102,10 +102,10 @@ export const Contact: React.FC = () => {
               </div>
 
               <a
-                href="https://maps.app.goo.gl/9kBE7RBcQPjM6aWc6"
+                href="https://maps.google.com"
                 target="_blank"
                 rel="noreferrer"
-                className="self-start inline-flex items-center gap-1.5 bg-[#15803d] hover:bg-[#166534] text-white font-bold text-xs px-3.5 py-2 rounded-xl shadow-sm transition-transform "
+                className="self-start inline-flex items-center gap-1.5 bg-[#c2410c] hover:bg-[#9a3412] text-white font-bold text-xs px-3.5 py-2 rounded-xl shadow-sm transition-transform "
               >
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Open in Google Maps Directions</span>
@@ -123,11 +123,11 @@ export const Contact: React.FC = () => {
 
           {sent ? (
             <div className="p-6 bg-emerald-50 rounded-xl border border-emerald-200 text-center space-y-2">
-              <div className="w-10 h-10 bg-[#16a34a] text-white rounded-xl flex items-center justify-center mx-auto">
+              <div className="w-10 h-10 bg-[#ea580c] text-white rounded-xl flex items-center justify-center mx-auto">
                 <Check className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-[#166534] text-sm">Message Received</h3>
-              <p className="text-xs text-[#15803d]">
+              <h3 className="font-bold text-[#9a3412] text-sm">Message Received</h3>
+              <p className="text-xs text-[#c2410c]">
                 Thank you, {formData.name}. Our representative will contact you within 2 business hours.
               </p>
             </div>
@@ -173,7 +173,7 @@ export const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-[#15803d] hover:bg-[#166534] text-white font-bold text-xs py-3.5 rounded-xl shadow-md transition-all "
+                className="w-full flex items-center justify-center gap-2 bg-[#c2410c] hover:bg-[#9a3412] text-white font-bold text-xs py-3.5 rounded-xl shadow-md transition-all "
               >
                 <span>SEND MESSAGE</span>
                 <Send className="w-3.5 h-3.5" />

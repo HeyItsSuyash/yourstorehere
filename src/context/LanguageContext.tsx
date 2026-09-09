@@ -12,8 +12,8 @@ interface LanguageContextType {
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Top Bar (Exact details from Google Maps: Shop no 19, 20, 21, 22, Kathauta Chauraha Rd, Vijayant Khand, Gomti Nagar, Lucknow, UP 226010)
-    'top.address': 'Kathauta Chauraha Rd, Vijayant Khand, Gomti Nagar, Lucknow 226010',
-    'top.phone': '094159 22031',
+    'top.address': '123 Market Street, Commercial Hub, Metro City 100001',
+    'top.phone': '+91 98765 43210',
     'top.freeDelivery': 'Free Delivery on orders over ₹499',
     'top.timing': 'Mon - Sun: 10:00 AM - 9:30 PM',
     'top.langSwitch': 'हिन्दी',
@@ -62,7 +62,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Sections
     'sec.shopByCategory': 'Shop by Category',
     'sec.dealOfDay': 'Deal of the Day',
-    'sec.whyChoose': 'Why Choose Express daily Mart',
+    'sec.whyChoose': 'Why Choose Your Store Here',
     'sec.trusted': 'Trusted by 50,000+ Happy Families in India',
     'sec.newsletterTitle': 'Get Special Supermarket Offers',
     'sec.newsletterSubtitle': 'Subscribe to receive weekly flash deal coupons, recipe guides & festival discounts.',
@@ -91,12 +91,12 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.categories': 'CATEGORIES',
     'footer.contactUs': 'CONTACT US',
     'footer.weAccept': 'WE ACCEPT',
-    'footer.rights': '© 2026 Express daily Mart. All Rights Reserved.'
+    'footer.rights': '© 2026 Your Store Here. All Rights Reserved.'
   },
   hi: {
     // Top Bar
     'top.address': 'कठौता चौराहा रोड, पेट्रोल पंप के सामने, विजयांत खंड, गोमती नगर, लखनऊ 226010',
-    'top.phone': '094159 22031',
+    'top.phone': '+91 98765 43210',
     'top.freeDelivery': '₹499 से अधिक के ऑर्डर पर मुफ्त डिलीवरी',
     'top.timing': 'सोमवार - रविवार: प्रातः 10:00 - रात्रि 9:30',
     'top.langSwitch': 'English',

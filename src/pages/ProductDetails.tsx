@@ -69,7 +69,7 @@ export const ProductDetails: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 py-6">
       <SEO
         title={`${product.name} (${product.unit}) - ₹${product.price}`}
-        description={`Buy ${product.name} ${product.unit} online at ₹${product.price} from Express daily Mart Gomti Nagar Lucknow. Enjoy fresh quality guarantee and fast 30-min doorstep delivery.`}
+        description={`Buy ${product.name} ${product.unit} online at ₹${product.price} from Your Store Here. Enjoy fresh quality guarantee and fast 30-min doorstep delivery.`}
       />
       {/* Schema.org Product Rich Snippet */}
       <script
@@ -94,7 +94,7 @@ export const ProductDetails: React.FC = () => {
                 : 'https://schema.org/OutOfStock',
               seller: {
                 '@type': 'Organization',
-                name: 'Express daily Mart'
+                name: 'Your Store Here'
               }
             },
             aggregateRating: {
@@ -107,9 +107,9 @@ export const ProductDetails: React.FC = () => {
       />
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-slate-500 mb-6">
-        <Link to="/" className="hover:text-[#16a34a]">Home</Link>
+        <Link to="/" className="hover:text-[#ea580c]">Home</Link>
         <span>/</span>
-        <Link to={`/category/${product.category}`} className="hover:text-[#16a34a] capitalize">
+        <Link to={`/category/${product.category}`} className="hover:text-[#ea580c] capitalize">
           {product.category.replace('-', ' ')}
         </Link>
         <span>/</span>
@@ -122,7 +122,7 @@ export const ProductDetails: React.FC = () => {
         <div className="lg:col-span-6 space-y-4">
           <div className="relative aspect-square rounded-xl bg-slate-50 p-6 flex items-center justify-center border border-slate-100 overflow-hidden">
             {product.discount > 0 && (
-              <span className="absolute top-4 left-4 bg-[#16a34a] text-white text-xs font-black px-2.5 py-1 rounded-xl">
+              <span className="absolute top-4 left-4 bg-[#ea580c] text-white text-xs font-black px-2.5 py-1 rounded-xl">
                 {product.discount}% OFF
               </span>
             )}
@@ -170,7 +170,7 @@ export const ProductDetails: React.FC = () => {
         {/* Right Column: Information & Actions */}
         <div className="lg:col-span-6 space-y-5">
           <div>
-            <span className="text-xs font-bold text-[#16a34a] uppercase tracking-wider">
+            <span className="text-xs font-bold text-[#ea580c] uppercase tracking-wider">
               {product.brand}
             </span>
             <h1 className="text-xl sm:text-2xl font-black text-slate-900 mt-1">
@@ -205,12 +205,12 @@ export const ProductDetails: React.FC = () => {
                   </span>
                 )}
               </div>
-              <span className="text-[11px] text-[#16a34a] font-bold">
+              <span className="text-[11px] text-[#ea580c] font-bold">
                 (Inclusive of all taxes)
               </span>
             </div>
             {product.discount > 0 && (
-              <span className="text-xs font-black text-[#15803d] bg-orange-200 px-3 py-1.5 rounded-xl">
+              <span className="text-xs font-black text-[#c2410c] bg-orange-200 px-3 py-1.5 rounded-xl">
                 Save ₹{product.originalPrice - product.price}
               </span>
             )}
@@ -225,7 +225,7 @@ export const ProductDetails: React.FC = () => {
               <ul className="space-y-1">
                 {product.highlights.map((h, i) => (
                   <li key={i} className="flex items-center gap-2 text-xs text-slate-600">
-                    <Check className="w-3.5 h-3.5 text-[#16a34a] shrink-0" />
+                    <Check className="w-3.5 h-3.5 text-[#ea580c] shrink-0" />
                     <span>{h}</span>
                   </li>
                 ))}
@@ -239,16 +239,16 @@ export const ProductDetails: React.FC = () => {
               <button
                 type="button"
                 onClick={handleAddToCart}
-                className="flex-1 flex items-center justify-center gap-2 bg-[#16a34a] hover:bg-[#15803d] text-white font-black text-sm py-3.5 px-6 rounded-xl shadow-md transition-all "
+                className="flex-1 flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm py-3.5 px-6 rounded-xl shadow-md transition-all "
               >
                 <span>ADD TO BASKET</span>
               </button>
             ) : (
-              <div className="flex items-center justify-between bg-[#16a34a] text-white rounded-xl px-4 py-2 sm:w-48 shadow-md">
+              <div className="flex items-center justify-between bg-[#ea580c] text-white rounded-xl px-4 py-2 sm:w-48 shadow-md">
                 <button
                   type="button"
                   onClick={() => updateQuantity(product.id, inCartQty - 1)}
-                  className="p-1 hover:bg-[#15803d] rounded-xl"
+                  className="p-1 hover:bg-[#c2410c] rounded-xl"
                 >
                   <Minus className="w-4 h-4" />
                 </button>
@@ -256,7 +256,7 @@ export const ProductDetails: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => updateQuantity(product.id, inCartQty + 1)}
-                  className="p-1 hover:bg-[#15803d] rounded-xl"
+                  className="p-1 hover:bg-[#c2410c] rounded-xl"
                 >
                   <Plus className="w-4 h-4" />
                 </button>
@@ -275,7 +275,7 @@ export const ProductDetails: React.FC = () => {
           {/* Delivery Pincode Checker */}
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200/80 space-y-2">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
-              <MapPin className="w-4 h-4 text-[#16a34a]" />
+              <MapPin className="w-4 h-4 text-[#ea580c]" />
               <span>Check Delivery Speed in Your Area</span>
             </div>
             <form onSubmit={handleCheckPincode} className="flex gap-2">
@@ -292,14 +292,14 @@ export const ProductDetails: React.FC = () => {
               />
               <button
                 type="submit"
-                className="bg-[#16a34a] hover:bg-[#15803d] text-white font-bold text-xs px-4 py-2 rounded-xl"
+                className="bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs px-4 py-2 rounded-xl"
               >
                 Check
               </button>
             </form>
 
             {pincodeStatus === 'available' && (
-              <p className="text-xs text-[#16a34a] font-semibold flex items-center gap-1.5 animate-in fade-in">
+              <p className="text-xs text-[#ea580c] font-semibold flex items-center gap-1.5 animate-in fade-in">
                 <Check className="w-3.5 h-3.5" />
                 Delivery available in 30-45 mins at pincode {pincode}!
               </p>
@@ -315,15 +315,15 @@ export const ProductDetails: React.FC = () => {
           {/* Trust assurances */}
           <div className="grid grid-cols-3 gap-2 pt-2 border-t border-slate-100 text-center">
             <div className="p-2">
-              <Truck className="w-4 h-4 text-[#16a34a] mx-auto mb-1" />
+              <Truck className="w-4 h-4 text-[#ea580c] mx-auto mb-1" />
               <p className="text-[10px] font-bold text-slate-700">30-Min Delivery</p>
             </div>
             <div className="p-2">
-              <ShieldCheck className="w-4 h-4 text-[#16a34a] mx-auto mb-1" />
+              <ShieldCheck className="w-4 h-4 text-[#ea580c] mx-auto mb-1" />
               <p className="text-[10px] font-bold text-slate-700">100% Genuine</p>
             </div>
             <div className="p-2">
-              <RefreshCw className="w-4 h-4 text-[#16a34a] mx-auto mb-1" />
+              <RefreshCw className="w-4 h-4 text-[#ea580c] mx-auto mb-1" />
               <p className="text-[10px] font-bold text-slate-700">Easy Returns</p>
             </div>
           </div>
@@ -338,7 +338,7 @@ export const ProductDetails: React.FC = () => {
             onClick={() => setActiveTab('details')}
             className={`pb-3 text-sm font-bold border-b-2 transition-colors ${
               activeTab === 'details'
-                ? 'border-[#16a34a] text-[#15803d]'
+                ? 'border-[#ea580c] text-[#c2410c]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -349,7 +349,7 @@ export const ProductDetails: React.FC = () => {
             onClick={() => setActiveTab('nutrition')}
             className={`pb-3 text-sm font-bold border-b-2 transition-colors ${
               activeTab === 'nutrition'
-                ? 'border-[#16a34a] text-[#15803d]'
+                ? 'border-[#ea580c] text-[#c2410c]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -360,7 +360,7 @@ export const ProductDetails: React.FC = () => {
             onClick={() => setActiveTab('reviews')}
             className={`pb-3 text-sm font-bold border-b-2 transition-colors ${
               activeTab === 'reviews'
-                ? 'border-[#16a34a] text-[#15803d]'
+                ? 'border-[#ea580c] text-[#c2410c]'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -413,7 +413,7 @@ export const ProductDetails: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-xs text-slate-600">
-                  Delivered fresh within 25 minutes! Packaging was completely intact. Very happy with Express daily Mart service.
+                  Delivered fresh within 25 minutes! Packaging was completely intact. Very happy with Your Store Here service.
                 </p>
               </div>
             </div>

@@ -159,8 +159,8 @@ export const Home: React.FC = () => {
   return (
     <div className="w-full bg-[#fdfcfb] min-h-screen text-[#1c1c1c] pb-20 font-sans">
       <SEO
-        title="Fresh Quality Groceries Everyday | Express daily Mart Gomti Nagar Lucknow"
-        description="Shop fresh vegetables, fruits, staples, dairy, snacks & household essentials from Express daily Mart, Gomti Nagar, Lucknow. Fast 30-min doorstep delivery."
+        title="Fresh Quality Groceries Everyday | Your Store Here Supermarket"
+        description="Shop fresh vegetables, fruits, staples, dairy, snacks & household essentials from Your Store Here. Fast 30-min doorstep delivery."
       />
       {/* =========================================================================
           1. HERO SECTION (FULL-WIDTH EXTENDED BACKGROUND, PROFESSIONAL & CLEAN)
@@ -169,7 +169,7 @@ export const Home: React.FC = () => {
         className="w-full relative overflow-hidden min-h-[500px] lg:min-h-[560px] flex items-center bg-cover bg-center bg-no-repeat shadow-xs"
         style={{
           backgroundImage: "url('/hero_section.png')",
-          backgroundColor: '#f0fdf4'
+          backgroundColor: '#fff7ed'
         }}
       >
         {/* Soft, gentle gradient overlay for perfect readability without harsh borders */}
@@ -181,7 +181,7 @@ export const Home: React.FC = () => {
             {/* Title: Everything Your Family Needs, Under One Roof. */}
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-[#111827] leading-[1.08] tracking-tight">
               {t('hero.titleLine1')}<br />
-              <span className="text-[#16a34a]">{t('hero.titleLine2')}</span>
+              <span className="text-[#ea580c]">{t('hero.titleLine2')}</span>
             </h1>
 
             {/* Subtitle */}
@@ -193,7 +193,7 @@ export const Home: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4 pt-1">
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-2 bg-[#16a34a] hover:bg-[#15803d] text-white text-xs font-bold px-7 py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white text-xs font-bold px-7 py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>{t('hero.shopNow')}</span>
                 <ArrowRight className="w-4 h-4" />
@@ -201,7 +201,7 @@ export const Home: React.FC = () => {
 
               <Link
                 to="/shop?filter=deals"
-                className="inline-flex items-center gap-2 bg-white hover:bg-green-50 text-[#16a34a] text-xs font-bold px-7 py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-white hover:bg-orange-50 text-[#ea580c] text-xs font-bold px-7 py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
                 <span>{t('hero.exploreDeals')}</span>
               </Link>
@@ -225,7 +225,7 @@ export const Home: React.FC = () => {
                   alt="Customer"
                   className="w-8 h-8 rounded-full border-2 border-white object-cover shadow-xs"
                 />
-                <div className="w-8 h-8 rounded-full bg-[#16a34a] text-white text-[10px] font-bold flex items-center justify-center border-2 border-white shadow-xs">
+                <div className="w-8 h-8 rounded-full bg-[#ea580c] text-white text-[10px] font-bold flex items-center justify-center border-2 border-white shadow-xs">
                   10K+
                 </div>
               </div>
@@ -251,17 +251,17 @@ export const Home: React.FC = () => {
           {/* Right Column: Floating subtle offer card (smooth rounded, no brutalist edges) */}
           <div className="lg:col-span-5 hidden lg:flex justify-end items-center">
             <div className="bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-green-100/50 text-center min-w-[220px]">
-              <span className="text-xs font-bold text-[#16a34a] uppercase tracking-wider block">
+              <span className="text-xs font-bold text-[#ea580c] uppercase tracking-wider block">
                 SPECIAL SAVER
               </span>
-              <span className="text-5xl font-extrabold text-[#16a34a] block leading-none my-2">
+              <span className="text-5xl font-extrabold text-[#ea580c] block leading-none my-2">
                 30%
               </span>
               <span className="text-sm font-bold text-[#111827] block uppercase tracking-wide">
                 OFF STOREWIDE
               </span>
               <span className="text-xs text-[#6b7280] block mt-2 pt-2 border-t border-slate-100">
-                Gomti Nagar's Leading Supermarket
+                Your Trusted Neighborhood Supermarket
               </span>
             </div>
           </div>
@@ -269,36 +269,36 @@ export const Home: React.FC = () => {
       </section>
 
       {/* HORIZONTAL LOOPING MARQUEE STRIP RIGHT BELOW HERO (Thin orange strip, white text, dots) */}
-      <div className="w-full bg-[#16a34a] py-2.5 overflow-hidden text-white shadow-xs">
+      <div className="w-full bg-[#ea580c] py-2.5 overflow-hidden text-white shadow-xs">
         <div className="animate-marquee whitespace-nowrap flex items-center text-xs font-bold tracking-wider uppercase">
           {[1, 2, 3, 4].map((groupIndex) => (
             <div key={groupIndex} className="flex items-center">
               <span className="mx-4 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-green-200" />
+                <Sparkles className="w-4 h-4 text-orange-200" />
                 {t('feat.farmFresh')}
               </span>
-              <span className="text-green-200 mx-2 text-sm font-black">•</span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
 
               <span className="mx-4 flex items-center gap-2">
-                <Truck className="w-4 h-4 text-green-200 stroke-[2]" />
+                <Truck className="w-4 h-4 text-orange-200 stroke-[2]" />
                 {t('feat.freeDelivery')}
               </span>
-              <span className="text-green-200 mx-2 text-sm font-black">•</span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
 
               <span className="mx-4 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-green-200 stroke-[2]" />
+                <ShieldCheck className="w-4 h-4 text-orange-200 stroke-[2]" />
                 {t('feat.securePayment')}
               </span>
-              <span className="text-green-200 mx-2 text-sm font-black">•</span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
 
               <span className="mx-4 flex items-center gap-2">
-                <RefreshCw className="w-4 h-4 text-green-200 stroke-[2]" />
+                <RefreshCw className="w-4 h-4 text-orange-200 stroke-[2]" />
                 {t('feat.easyReturns')}
               </span>
-              <span className="text-green-200 mx-2 text-sm font-black">•</span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
 
               <span className="mx-4">30 MINUTE EXPRESS DELIVERY</span>
-              <span className="text-green-200 mx-2 text-sm font-black">•</span>
+              <span className="text-orange-200 mx-2 text-sm font-black">•</span>
 
               <span className="mx-4">100% FRESHNESS GUARANTEE</span>
               <span className="text-emerald-200 mx-2 text-sm font-black">•</span>
@@ -324,10 +324,10 @@ export const Home: React.FC = () => {
                 className="relative overflow-hidden h-[180px] rounded-xl bg-cover bg-center flex flex-col justify-end p-3 transition-all hover:-translate-y-1 hover:shadow-lg group"
                 style={{
                   backgroundImage: `url('${cat.img}')`,
-                  backgroundColor: '#15803d'
+                  backgroundColor: '#c2410c'
                 }}
               >
-                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent group-hover:from-[#15803d]/80 group-hover:via-[#15803d]/40 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent group-hover:from-[#c2410c]/80 group-hover:via-[#c2410c]/40 transition-colors duration-300" />
                 
                 <span className="relative z-10 text-xs font-bold text-white leading-tight drop-shadow-md text-center">
                   {t(cat.nameKey)}
@@ -342,10 +342,10 @@ export const Home: React.FC = () => {
             className="lg:col-span-8 rounded-2xl overflow-hidden text-white p-8 sm:p-10 flex flex-col sm:flex-row justify-between relative shadow-md bg-cover bg-center"
             style={{
               backgroundImage: "url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&auto=format&fit=crop&q=80')",
-              backgroundColor: '#15803d'
+              backgroundColor: '#c2410c'
             }}
           >
-            <div className="absolute inset-0 bg-linear-to-r from-[#166534]/95 via-[#15803d]/85 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-r from-[#9a3412]/95 via-[#c2410c]/85 to-transparent pointer-events-none" />
 
             <div className="space-y-3 max-w-md z-10 text-left">
               <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-200 bg-black/25 px-3 py-1 rounded-full inline-block">
@@ -360,7 +360,7 @@ export const Home: React.FC = () => {
               <div className="pt-2">
                 <Link
                   to="/shop?filter=deals"
-                  className="bg-white hover:bg-emerald-50 text-[#15803d] text-xs font-bold px-6 py-3 rounded-xl inline-block transition-all shadow-sm hover:shadow-md"
+                  className="bg-white hover:bg-emerald-50 text-[#c2410c] text-xs font-bold px-6 py-3 rounded-xl inline-block transition-all shadow-sm hover:shadow-md"
                 >
                   {t('hero.shopNow')}
                 </Link>
@@ -380,13 +380,13 @@ export const Home: React.FC = () => {
             className="lg:col-span-4 rounded-2xl overflow-hidden p-8 flex flex-col justify-between shadow-md relative bg-cover bg-center text-white"
             style={{
               backgroundImage: "url('/30MINDELIVERY.png')",
-              backgroundColor: '#15803d'
+              backgroundColor: '#c2410c'
             }}
           >
             <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/45 to-black/20 pointer-events-none" />
 
             <div className="space-y-3 z-10 text-left">
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-white bg-[#15803d] px-3 py-1 rounded-full inline-block shadow-xs">
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-white bg-[#c2410c] px-3 py-1 rounded-full inline-block shadow-xs">
                 EXPRESS DELIVERY
               </span>
               <h3 className="text-2xl font-black text-white leading-tight drop-shadow-md">
@@ -400,7 +400,7 @@ export const Home: React.FC = () => {
             <div className="pt-6 z-10 text-left">
               <Link
                 to="/shop"
-                className="bg-[#15803d] hover:bg-[#166534] text-white text-xs font-bold px-6 py-3 rounded-xl inline-flex items-center gap-2 transition-all shadow-md"
+                className="bg-[#c2410c] hover:bg-[#9a3412] text-white text-xs font-bold px-6 py-3 rounded-xl inline-flex items-center gap-2 transition-all shadow-md"
               >
                 <span>{t('hero.shopNow')}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -416,7 +416,7 @@ export const Home: React.FC = () => {
             </h2>
             <Link
               to="/shop?filter=deals"
-              className="text-xs font-bold text-[#15803d] hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-[#c2410c] hover:underline flex items-center gap-1"
             >
               <span>View All Deals</span>
               <span>&rarr;</span>
@@ -430,7 +430,7 @@ export const Home: React.FC = () => {
                 className="bg-white rounded-xl p-3.5 flex flex-col justify-between hover:shadow-lg transition-all shadow-xs group"
               >
                 <div className="flex justify-start">
-                  <span className="bg-emerald-100 text-[#15803d] text-[10px] font-bold px-2 py-0.5 rounded-full">
+                  <span className="bg-emerald-100 text-[#c2410c] text-[10px] font-bold px-2 py-0.5 rounded-full">
                     {p.discount} OFF
                   </span>
                 </div>
@@ -456,7 +456,7 @@ export const Home: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => handleAddDeal(p)}
-                  className="w-full bg-emerald-50 hover:bg-[#15803d] text-[#15803d] hover:text-white transition-colors text-xs font-bold py-2 rounded-lg flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full bg-emerald-50 hover:bg-[#c2410c] text-[#c2410c] hover:text-white transition-colors text-xs font-bold py-2 rounded-lg flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>{t('cart.addToCart')}</span>
                   <ShoppingCart className="w-3.5 h-3.5" />
@@ -469,18 +469,18 @@ export const Home: React.FC = () => {
         <section className="space-y-6 pt-4">
           <div className="text-center">
             <h2 className="text-xl font-extrabold text-[#111] tracking-tight">
-              WHY CHOOSE EXPRESS DAILY MART?
+              WHY CHOOSE Your Store Here?
             </h2>
             <div className="nfb-section-underline" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { title: 'Best Quality', desc: 'We deliver only the freshest & finest products.', icon: <Sparkles className="w-7 h-7 text-[#15803d]" /> },
-              { title: 'Affordable Prices', desc: 'Best prices & exclusive offers on all items.', icon: <Tag className="w-7 h-7 text-[#15803d]" /> },
-              { title: 'Fast Delivery', desc: 'Lightning fast delivery right at your doorstep.', icon: <Truck className="w-7 h-7 text-[#15803d]" /> },
-              { title: '100% Secure', desc: 'Your payments and data are always safe.', icon: <Lock className="w-7 h-7 text-[#15803d]" /> },
-              { title: 'Easy Returns', desc: 'Doorstep hassle-free replacement or refunds.', icon: <RefreshCw className="w-7 h-7 text-[#15803d]" /> }
+              { title: 'Best Quality', desc: 'We deliver only the freshest & finest products.', icon: <Sparkles className="w-7 h-7 text-[#c2410c]" /> },
+              { title: 'Affordable Prices', desc: 'Best prices & exclusive offers on all items.', icon: <Tag className="w-7 h-7 text-[#c2410c]" /> },
+              { title: 'Fast Delivery', desc: 'Lightning fast delivery right at your doorstep.', icon: <Truck className="w-7 h-7 text-[#c2410c]" /> },
+              { title: '100% Secure', desc: 'Your payments and data are always safe.', icon: <Lock className="w-7 h-7 text-[#c2410c]" /> },
+              { title: 'Easy Returns', desc: 'Doorstep hassle-free replacement or refunds.', icon: <RefreshCw className="w-7 h-7 text-[#c2410c]" /> }
             ].map((item) => (
               <div
                 key={item.title}
@@ -502,7 +502,7 @@ export const Home: React.FC = () => {
 
         <section className="bg-white rounded-2xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center shadow-xs">
           <div className="space-y-3 pr-4 md:border-r border-slate-100">
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#15803d]">
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#c2410c]">
               WHAT OUR CUSTOMERS SAY
             </h3>
             <div className="flex items-center gap-0.5">
@@ -513,15 +513,15 @@ export const Home: React.FC = () => {
               <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
             </div>
             <p className="text-xs text-[#555] italic leading-relaxed">
-              &ldquo;Express daily Mart has made supermarket grocery shopping so easy in Gomti Nagar, Lucknow. The quality is always top-notch and delivery is super fast!&rdquo;
+              &ldquo;Your Store Here has made supermarket grocery shopping so easy every day. The quality is always top-notch and delivery is super fast!&rdquo;
             </p>
             <div className="text-[11px] text-[#111] font-bold pt-1">
-              <span>– S. Sharma, Gomti Nagar</span>
+              <span>– S. Sharma, Metro City</span>
             </div>
           </div>
 
           <div className="space-y-3 px-0 md:px-4 md:border-r border-slate-100">
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#15803d]">
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#c2410c]">
               TRUSTED BY 50,000+ CUSTOMERS
             </h3>
             <div className="flex items-center gap-3 pt-1">
@@ -541,7 +541,7 @@ export const Home: React.FC = () => {
                   alt="Customer"
                   className="w-8 h-8 rounded-full border-2 border-white object-cover"
                 />
-                <div className="w-8 h-8 rounded-full bg-[#15803d] text-white text-[10px] font-bold flex items-center justify-center border-2 border-white">
+                <div className="w-8 h-8 rounded-full bg-[#c2410c] text-white text-[10px] font-bold flex items-center justify-center border-2 border-white">
                   50K+
                 </div>
               </div>
@@ -582,7 +582,7 @@ export const Home: React.FC = () => {
               />
               <button
                 type="submit"
-                className="bg-[#15803d] hover:bg-[#166534] text-white font-bold text-xs px-5 py-2.5 rounded-lg transition-colors cursor-pointer"
+                className="bg-[#c2410c] hover:bg-[#9a3412] text-white font-bold text-xs px-5 py-2.5 rounded-lg transition-colors cursor-pointer"
               >
                 SUBSCRIBE
               </button>

@@ -12,8 +12,8 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical }) => {
 
   useEffect(() => {
     // Dynamic Page Title
-    const baseTitle = 'Express daily Mart';
-    document.title = title ? `${title} | ${baseTitle}` : `${baseTitle} - Fresh Quality Groceries Everyday | Gomti Nagar, Lucknow`;
+    const baseTitle = 'Your Store Here';
+    document.title = title ? `${title} | ${baseTitle}` : `${baseTitle} - Fresh Quality Groceries Everyday | Supermarket`;
 
     // Dynamic Meta Description
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -21,7 +21,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical }) => {
       metaDescription.setAttribute(
         'content',
         description ||
-          'Order fresh vegetables, fruits, staples, dairy, snacks & household essentials from Express daily Mart, Gomti Nagar, Lucknow. Fast delivery to your doorstep.'
+          'Order fresh vegetables, fruits, staples, dairy, snacks & household essentials from Your Store Here. Fast delivery to your doorstep.'
       );
     }
 
@@ -32,7 +32,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical }) => {
       linkCanonical.setAttribute('rel', 'canonical');
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.setAttribute('href', canonical || `https://expressdailymart.com${location.pathname}`);
+    linkCanonical.setAttribute('href', canonical || `https://yourstorehere.com${location.pathname}`);
   }, [title, description, canonical, location]);
 
   return null;

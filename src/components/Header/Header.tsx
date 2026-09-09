@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   MapPin,
@@ -41,18 +41,18 @@ export const Header: React.FC = () => {
   ];
 
   return (
-    <header className="w-full bg-[#15803d] text-white sticky top-0 z-50 shadow-md">
+    <header className="w-full bg-[#ea580c] text-white sticky top-0 z-50 shadow-md">
       {/* 1. TOP UTILITY BAR (Single row on all screens without multi-row wrapping) */}
-      <div className="bg-[#166534] text-[10.5px] sm:text-[11px] py-1.5 px-3 sm:px-6 text-emerald-50 font-medium overflow-x-auto no-scrollbar whitespace-nowrap">
+      <div className="bg-[#c2410c] text-[10.5px] sm:text-[11px] py-1.5 px-3 sm:px-6 text-orange-50 font-medium overflow-x-auto no-scrollbar whitespace-nowrap">
         <div className="max-w-[1240px] mx-auto flex items-center justify-between gap-3">
           {/* Left Info Items */}
           <div className="flex items-center gap-3 sm:gap-6 shrink-0">
             <span className="flex items-center gap-1.5 shrink-0">
-              <MapPin className="w-3.5 h-3.5 text-emerald-200 shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-orange-200 shrink-0" />
               <span className="truncate max-w-[140px] sm:max-w-[260px] md:max-w-none">{t('top.address')}</span>
             </span>
             <span className="hidden md:flex items-center gap-1.5 shrink-0">
-              <Truck className="w-3.5 h-3.5 text-emerald-200 shrink-0" />
+              <Truck className="w-3.5 h-3.5 text-orange-200 shrink-0" />
               <span>{t('top.freeDelivery')}</span>
             </span>
           </div>
@@ -63,23 +63,23 @@ export const Header: React.FC = () => {
             <button
               type="button"
               onClick={toggleLanguage}
-              className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 hover:bg-white text-white hover:text-[#166534] transition-all font-bold text-[10px] sm:text-[10.5px] cursor-pointer shrink-0"
+              className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 hover:bg-white text-white hover:text-[#c2410c] transition-all font-bold text-[10px] sm:text-[10.5px] cursor-pointer shrink-0"
               title="Toggle Hindi / English"
             >
               <Globe className="w-3.5 h-3.5 shrink-0" />
-              <span>{language === 'en' ? 'हिन्दी' : 'English'}</span>
+              <span>{language === 'en' ? 'à¤¹à¤¿à¤¨à¥à¤¦à¥€' : 'English'}</span>
             </button>
 
             <a
               href="tel:09415922031"
               className="flex items-center gap-1 hover:text-white transition-colors shrink-0"
             >
-              <Phone className="w-3.5 h-3.5 text-emerald-200 shrink-0" />
+              <Phone className="w-3.5 h-3.5 text-orange-200 shrink-0" />
               <span className="hidden xs:inline">094159 22031</span>
             </a>
 
             <span className="hidden lg:flex items-center gap-1.5 shrink-0">
-              <Clock className="w-3.5 h-3.5 text-emerald-200 shrink-0" />
+              <Clock className="w-3.5 h-3.5 text-orange-200 shrink-0" />
               <span>{t('top.timing')}</span>
             </span>
 
@@ -106,20 +106,25 @@ export const Header: React.FC = () => {
       </div>
 
       {/* 2. MAIN HEADER (Fresh Green Navbar with transparent logo & transparent text logo, NO BOXES) */}
-      <div className="bg-[#15803d] py-3 px-3 sm:px-6">
+      <div className="bg-[#ea580c] py-3 px-3 sm:px-6">
         <div className="max-w-[1240px] mx-auto flex items-center justify-between gap-3 sm:gap-6">
-          {/* Dual Brand Logo: Exact logo.png and text_logo_white.png with increased size */}
+          {/* Dual Brand Logo: Shopping cart illustration + 'Your Store Here' */}
           <Link to="/" className="flex items-center gap-3 shrink-0 group">
-            <img
-              src="/logo.png"
-              alt="Express daily Mart Logo"
-              className="h-11 w-11 sm:h-12 sm:w-12 object-contain drop-shadow-xs transition-transform"
-            />
-            <img
-              src="/text_logo_white.png"
-              alt="Express daily Mart"
-              className="h-8 sm:h-9 w-auto object-contain drop-shadow-xs transition-transform"
-            />
+            <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-2xl bg-white/15 backdrop-blur-xs border border-white/25 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform">
+              <img
+                src="/logo.svg"
+                alt="Shopping Cart Logo"
+                className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight leading-tight uppercase font-sans">
+                Your Store Here
+              </span>
+              <span className="text-[10px] text-orange-200 uppercase tracking-widest font-semibold">
+                Daily Supermarket
+              </span>
+            </div>
           </Link>
 
           {/* Center Search Bar (Smooth rounded pill, subtle & clean) */}
@@ -138,7 +143,7 @@ export const Header: React.FC = () => {
             </div>
             <Link
               to={`/search?q=${encodeURIComponent(searchQuery || 'fresh')}`}
-              className="w-[44px] h-[36px] mr-1 bg-[#15803d] hover:bg-[#166534] text-white rounded-full flex items-center justify-center transition-colors shrink-0"
+              className="w-[44px] h-[36px] mr-1 bg-[#ea580c] hover:bg-[#c2410c] text-white rounded-full flex items-center justify-center transition-colors shrink-0"
               aria-label="Search"
             >
               <Search className="w-4 h-4" />
@@ -150,11 +155,11 @@ export const Header: React.FC = () => {
             {/* Account */}
             <Link
               to={isAuthenticated ? '/account' : '/login'}
-              className="flex items-center gap-2 hover:text-emerald-200 transition-colors"
+              className="flex items-center gap-2 hover:text-orange-200 transition-colors"
             >
               <User className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
               <div className="text-left text-xs leading-tight hidden sm:block">
-                <span className="text-[10px] text-emerald-200 block">
+                <span className="text-[10px] text-orange-200 block">
                   {isAuthenticated ? t('account.welcome') : t('account.signIn')}
                 </span>
                 <span className="font-bold text-white block">
@@ -166,18 +171,18 @@ export const Header: React.FC = () => {
             {/* My Cart */}
             <Link
               to="/cart"
-              className="flex items-center gap-2 hover:text-emerald-200 transition-colors pl-1"
+              className="flex items-center gap-2 hover:text-orange-200 transition-colors pl-1"
             >
               <div className="relative">
                 <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
-                <span className="absolute -top-1.5 -right-2 bg-white text-[#15803d] text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
+                <span className="absolute -top-1.5 -right-2 bg-white text-[#ea580c] text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
                   {totalItems}
                 </span>
               </div>
               <div className="text-left text-xs leading-tight hidden sm:block">
-                <span className="text-[10px] text-emerald-200 block">{t('cart.myCart')}</span>
+                <span className="text-[10px] text-orange-200 block">{t('cart.myCart')}</span>
                 <span className="font-extrabold text-white block">
-                  ₹{subtotal}
+                  â‚¹{subtotal}
                 </span>
               </div>
             </Link>
@@ -186,7 +191,7 @@ export const Header: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-1 text-white hover:text-emerald-200 transition-colors"
+              className="lg:hidden p-1 text-white hover:text-orange-200 transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -205,7 +210,7 @@ export const Header: React.FC = () => {
           />
           <Link
             to={`/search?q=${encodeURIComponent(searchQuery || 'fresh')}`}
-            className="w-[32px] h-[32px] bg-[#15803d] text-white rounded-full flex items-center justify-center shrink-0"
+            className="w-[32px] h-[32px] bg-[#ea580c] text-white rounded-full flex items-center justify-center shrink-0"
             aria-label="Search"
           >
             <Search className="w-3.5 h-3.5" />
@@ -214,14 +219,14 @@ export const Header: React.FC = () => {
       </div>
 
       {/* 3. NAVIGATION BAR (Seamless background matching navbar - NO line between navbar and shop categories) */}
-      <div className="bg-[#15803d] hidden lg:block border-0 pt-0.5 pb-2">
+      <div className="bg-[#ea580c] hidden lg:block border-0 pt-0.5 pb-2">
         <div className="max-w-[1240px] mx-auto px-6 flex items-center justify-between">
           {/* Left: 'Shop by Categories' button (Smooth rounded corners, font-bold) */}
           <div className="relative">
             <button
               type="button"
               onClick={() => setIsCategoryMenuOpen(!isCategoryMenuOpen)}
-              className="bg-[#166534] hover:bg-[#14532d] text-white font-extrabold text-xs py-2 px-5 rounded-md flex items-center gap-2.5 transition-colors shadow-xs cursor-pointer border-0"
+              className="bg-[#c2410c] hover:bg-[#9a3412] text-white font-extrabold text-xs py-2 px-5 rounded-md flex items-center gap-2.5 transition-colors shadow-xs cursor-pointer border-0"
             >
               <Menu className="w-4 h-4" />
               <span>{t('nav.shopByCategories')}</span>
@@ -238,10 +243,10 @@ export const Header: React.FC = () => {
                     key={cat.id}
                     to={`/category/${cat.slug}`}
                     onClick={() => setIsCategoryMenuOpen(false)}
-                    className="flex items-center justify-between px-4 py-2.5 hover:bg-emerald-50 text-xs font-semibold text-[#333] hover:text-[#15803d] transition-colors"
+                    className="flex items-center justify-between px-4 py-2.5 hover:bg-orange-50 text-xs font-semibold text-[#333] hover:text-[#ea580c] transition-colors"
                   >
                     <span>{cat.name}</span>
-                    <span className="text-[10px] text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded-full font-bold">{cat.itemCount}+</span>
+                    <span className="text-[10px] text-orange-600 bg-orange-100 px-1.5 py-0.5 rounded-full font-bold">{cat.itemCount}+</span>
                   </Link>
                 ))}
               </div>
@@ -256,12 +261,12 @@ export const Header: React.FC = () => {
                 <Link
                   key={link.label}
                   to={link.path}
-                  className={`relative py-2 flex items-center gap-1 hover:text-emerald-200 transition-colors ${
+                  className={`relative py-2 flex items-center gap-1 hover:text-orange-200 transition-colors ${
                     isActive ? 'text-white underline underline-offset-8 decoration-2' : ''
                   }`}
                 >
                   <span>{link.label}</span>
-                  {link.hasDropdown && <ChevronDown className="w-3 h-3 text-emerald-200" />}
+                  {link.hasDropdown && <ChevronDown className="w-3 h-3 text-orange-200" />}
                 </Link>
               );
             })}
@@ -282,14 +287,14 @@ export const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white text-[#111] px-5 py-4 space-y-3 animate-fade-in-up shadow-xl rounded-b-2xl">
           <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-            <span className="text-xs font-black text-[#15803d] uppercase tracking-wider">Navigation Menu</span>
+            <span className="text-xs font-black text-[#ea580c] uppercase tracking-wider">Navigation Menu</span>
             <button
               type="button"
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-xs font-bold text-[#15803d] bg-emerald-50 px-2.5 py-1 rounded-full"
+              className="flex items-center gap-1 text-xs font-bold text-[#ea580c] bg-orange-50 px-2.5 py-1 rounded-full"
             >
               <Globe className="w-3.5 h-3.5" />
-              <span>{language === 'en' ? 'स्विच करें: हिन्दी' : 'Switch: English'}</span>
+              <span>{language === 'en' ? 'à¤¸à¥à¤µà¤¿à¤š à¤•à¤°à¥‡à¤‚: à¤¹à¤¿à¤¨à¥à¤¦à¥€' : 'Switch: English'}</span>
             </button>
           </div>
 

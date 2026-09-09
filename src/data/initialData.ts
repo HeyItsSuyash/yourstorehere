@@ -45,34 +45,34 @@ export const initialAddresses: Address[] = [
     id: 'addr-1',
     type: 'Home',
     name: 'Rahul Sharma',
-    phone: '094159 22031',
+    phone: '+91 98765 43210',
     flat: 'Flat No. 402, Tower B',
     street: 'Kathauta Chauraha Rd, Vijayant Khand',
-    landmark: 'Near Express daily Mart',
-    city: 'Gomti Nagar, Lucknow',
+    landmark: 'Near Central Park',
+    city: 'Green Park, Metro City',
     state: 'Uttar Pradesh',
-    pincode: '226010',
+    pincode: '100001',
     isDefault: true
   },
   {
     id: 'addr-2',
     type: 'Work',
     name: 'Rahul Sharma',
-    phone: '094159 22031',
+    phone: '+91 98765 43210',
     flat: 'Office 12, Commercial Hub',
     street: 'Kathauta Chauraha Road',
     landmark: 'In front of petrol pump',
-    city: 'Gomti Nagar, Lucknow',
+    city: 'Green Park, Metro City',
     state: 'Uttar Pradesh',
-    pincode: '226010',
+    pincode: '100001',
     isDefault: false
   }
 ];
 
 export const initialProfile: UserProfile = {
   name: 'Rahul Sharma',
-  phone: '094159 22031',
-  email: 'rahul.sharma@expressdailymart.com',
+  phone: '+91 98765 43210',
+  email: 'rahul.sharma@example.com',
   dob: '1992-08-15',
   gender: 'Male',
   loyaltyPoints: 2450

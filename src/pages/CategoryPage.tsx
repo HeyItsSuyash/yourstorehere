@@ -22,21 +22,21 @@ export const CategoryPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 py-6">
       <SEO
         title={`${currentCategory.name} Online - Best Prices & Offers`}
-        description={`Order fresh ${currentCategory.name} from Express daily Mart Gomti Nagar Lucknow. Explore top brands, everyday discounts, and speedy 30-minute delivery.`}
+        description={`Order fresh ${currentCategory.name} from Your Store Here. Explore top brands, everyday discounts, and speedy 30-minute delivery.`}
       />
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-slate-500 mb-4">
-        <Link to="/" className="hover:text-[#16a34a]">Home</Link>
+        <Link to="/" className="hover:text-[#ea580c]">Home</Link>
         <span>/</span>
-        <Link to="/shop" className="hover:text-[#16a34a]">Categories</Link>
+        <Link to="/shop" className="hover:text-[#ea580c]">Categories</Link>
         <span>/</span>
         <span className="text-slate-800 font-semibold">{currentCategory.name}</span>
       </div>
 
       {/* Category Hero Banner */}
-      <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-[#16a34a] to-[#15803d] text-white p-6 sm:p-10 mb-8 shadow-md">
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-[#ea580c] to-[#c2410c] text-white p-6 sm:p-10 mb-8 shadow-md">
         <div className="relative z-10 max-w-xl space-y-2">
-          <div className="inline-flex items-center gap-1.5 bg-black/30 backdrop-blur-xs text-green-100 text-xs font-bold px-3 py-1 rounded-xl border border-green-300/60">
+          <div className="inline-flex items-center gap-1.5 bg-black/30 backdrop-blur-xs text-green-100 text-xs font-bold px-3 py-1 rounded-xl border border-orange-300/60">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             <span>AUTHENTIC INDIAN GROCERIES</span>
           </div>
@@ -69,8 +69,8 @@ export const CategoryPage: React.FC = () => {
             type="button"
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-colors ${
               idx === 0
-                ? 'bg-[#16a34a] text-white shadow-2xs'
-                : 'bg-white text-slate-700 border border-slate-200 hover:border-[#16a34a]'
+                ? 'bg-[#ea580c] text-white shadow-2xs'
+                : 'bg-white text-slate-700 border border-slate-200 hover:border-[#ea580c]'
             }`}
           >
             {tab}
@@ -86,7 +86,7 @@ export const CategoryPage: React.FC = () => {
           </h2>
           <Link
             to="/shop"
-            className="text-xs font-bold text-[#16a34a] hover:text-[#15803d] flex items-center gap-1"
+            className="text-xs font-bold text-[#ea580c] hover:text-[#c2410c] flex items-center gap-1"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Browse All Aisles</span>

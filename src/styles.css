@@ -1,24 +1,24 @@
 /* =========================================================================
-   EXPRESS DAILY MART - UNIFIED FRESH GREEN BRAND DESIGN SYSTEM
+   YOUR STORE HERE - UNIFIED WARM ORANGE BRAND DESIGN SYSTEM
    Subtle, Smooth & Professional Modern Aesthetic
    ========================================================================= */
 
 :root {
-  /* 1. Primary Fresh Green Brand Palette */
-  --nfb-orange-primary: #16a34a; /* primary brand vibrant green */
-  --nfb-orange-dark: #15803d;    /* rich emerald green */
-  --nfb-orange-darker: #166534;  /* deep forest mart green */
-  --nfb-orange-light: #f0fdf4;   /* soft pale mint surface */
-  --nfb-orange-hover: #22c55e;   /* vibrant hover green */
+  /* 1. Primary Warm Orange Brand Palette */
+  --nfb-orange-primary: #ea580c; /* primary brand vibrant orange */
+  --nfb-orange-dark: #c2410c;    /* rich warm orange */
+  --nfb-orange-darker: #9a3412;  /* deep accent orange */
+  --nfb-orange-light: #fff7ed;   /* soft warm surface */
+  --nfb-orange-hover: #f97316;   /* vibrant hover orange */
   
   /* Complementary Accents */
-  --nfb-green-primary: #166534;
-  --nfb-green-accent: #10b981;
+  --nfb-green-primary: #15803d;
+  --nfb-green-accent: #16a34a;
   
   /* Neutral Warm Surfaces & Soft Subtle Borders */
   --nfb-bg-page: #fdfcfb;
   --nfb-bg-card: #ffffff;
-  --nfb-bg-hero: #f0fdf4;
+  --nfb-bg-hero: #fff7ed;
   --nfb-border-card: #f3f4f6;
   --nfb-border-light: #f9fafb;
   --nfb-border-subtle: #f1f5f9;
