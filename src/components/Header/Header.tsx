@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   MapPin,
@@ -107,24 +107,20 @@ export const Header: React.FC = () => {
 
       {/* 2. MAIN HEADER (Fresh Green Navbar with transparent logo & transparent text logo, NO BOXES) */}
       <div className="bg-[#ea580c] py-3 px-3 sm:px-6">
-        <div className="max-w-[1240px] mx-auto flex items-center justify-between gap-3 sm:gap-6">
-          {/* Dual Brand Logo: Shopping cart illustration + 'Your Store Here' */}
-          <Link to="/" className="flex items-center gap-3 shrink-0 group">
-            <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-2xl bg-white/15 backdrop-blur-xs border border-white/25 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform">
-              <img
-                src="/logo.svg"
-                alt="Shopping Cart Logo"
-                className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight leading-tight uppercase font-sans">
-                Your Store Here
-              </span>
-              <span className="text-[10px] text-orange-200 uppercase tracking-widest font-semibold">
-                Daily Supermarket
-              </span>
-            </div>
+        <div className="max-w-[1240px] mx-auto flex items-center justify-between">
+          {/* Simplistic Flat Brand Logo: Clean White Shopping Cart Icon + 'Your Store Here' */}
+          <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
+            <img
+              src="/logo_white.svg"
+              alt="Shopping Cart Logo"
+              className="h-8 w-8 sm:h-9 sm:w-9 object-contain opacity-95 group-hover:opacity-100 transition-opacity"
+            />
+            <span
+              style={{ fontFamily: "var(--font-nav, 'Inter', system-ui, sans-serif)" }}
+              className="text-white font-extrabold text-xl sm:text-2xl tracking-tight leading-none"
+            >
+              Your Store Here
+            </span>
           </Link>
 
           {/* Center Search Bar (Smooth rounded pill, subtle & clean) */}
@@ -143,47 +139,47 @@ export const Header: React.FC = () => {
             </div>
             <Link
               to={`/search?q=${encodeURIComponent(searchQuery || 'fresh')}`}
-              className="w-[44px] h-[36px] mr-1 bg-[#ea580c] hover:bg-[#c2410c] text-white rounded-full flex items-center justify-center transition-colors shrink-0"
+              className="w-[34px] h-[34px] mr-1 bg-[#ea580c] hover:bg-[#c2410c] text-white rounded-full flex items-center justify-center transition-colors cursor-pointer shrink-0"
               aria-label="Search"
             >
               <Search className="w-4 h-4" />
             </Link>
           </div>
 
-          {/* Right Area: Sign In / My Account + My Cart */}
-          <div className="flex items-center gap-5 sm:gap-7 shrink-0 text-white">
-            {/* Account */}
+          {/* Right Utilities: Account & Cart with white icons */}
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+            {/* Account pill */}
             <Link
               to={isAuthenticated ? '/account' : '/login'}
-              className="flex items-center gap-2 hover:text-orange-200 transition-colors"
+              className="hidden sm:flex items-center gap-2.5 text-white hover:text-orange-100 py-1.5 px-3 rounded-full hover:bg-white/10 transition-colors"
             >
-              <User className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
-              <div className="text-left text-xs leading-tight hidden sm:block">
-                <span className="text-[10px] text-orange-200 block">
-                  {isAuthenticated ? t('account.welcome') : t('account.signIn')}
-                </span>
-                <span className="font-bold text-white block">
-                  {isAuthenticated ? user?.name.split(' ')[0] : t('account.myAccount')}
+              <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <User className="w-4 h-4" />
+              </div>
+              <div className="text-left leading-tight hidden xl:block">
+                <span className="text-[10px] text-orange-200 block">{t('account.welcome')}</span>
+                <span className="text-xs font-bold block max-w-[100px] truncate">
+                  {isAuthenticated && user ? user.name : t('account.signIn')}
                 </span>
               </div>
             </Link>
 
-            {/* My Cart */}
+            {/* Cart Button */}
             <Link
               to="/cart"
-              className="flex items-center gap-2 hover:text-orange-200 transition-colors pl-1"
+              className="flex items-center gap-2.5 bg-white text-[#ea580c] py-2 px-3 sm:px-4 rounded-full font-bold text-xs shadow-xs hover:bg-orange-50 transition-colors cursor-pointer"
             >
               <div className="relative">
-                <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
-                <span className="absolute -top-1.5 -right-2 bg-white text-[#ea580c] text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
-                  {totalItems}
-                </span>
+                <ShoppingBag className="w-4 h-4 text-[#ea580c]" />
+                {totalItems > 0 && (
+                  <span className="absolute -top-1.5 -right-2 bg-white text-[#ea580c] text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
+                    {totalItems}
+                  </span>
+                )}
               </div>
-              <div className="text-left text-xs leading-tight hidden sm:block">
-                <span className="text-[10px] text-orange-200 block">{t('cart.myCart')}</span>
-                <span className="font-extrabold text-white block">
-                  â‚¹{subtotal}
-                </span>
+              <div className="hidden sm:flex flex-col text-left leading-none">
+                <span className="text-[9px] text-[#777] font-semibold">{totalItems} {t('cart.inCart')}</span>
+                <span className="text-xs font-black text-[#111] mt-0.5">₹{subtotal.toFixed(0)}</span>
               </div>
             </Link>
 
@@ -226,7 +222,8 @@ export const Header: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsCategoryMenuOpen(!isCategoryMenuOpen)}
-              className="bg-[#c2410c] hover:bg-[#9a3412] text-white font-extrabold text-xs py-2 px-5 rounded-md flex items-center gap-2.5 transition-colors shadow-xs cursor-pointer border-0"
+              style={{ fontFamily: "var(--font-nav, 'Inter', system-ui, sans-serif)" }}
+              className="bg-[#c2410c] hover:bg-[#9a3412] text-white font-bold text-xs py-2 px-5 rounded-md flex items-center gap-2.5 transition-colors shadow-xs cursor-pointer border-0 tracking-wide"
             >
               <Menu className="w-4 h-4" />
               <span>{t('nav.shopByCategories')}</span>
@@ -254,7 +251,10 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Middle Nav Links */}
-          <nav className="flex items-center gap-8 text-xs font-bold text-white">
+          <nav
+            style={{ fontFamily: "var(--font-nav, 'Inter', system-ui, sans-serif)" }}
+            className="flex items-center gap-8 text-[13px] font-semibold text-white tracking-normal"
+          >
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (

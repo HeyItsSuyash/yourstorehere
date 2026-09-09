@@ -15,24 +15,20 @@ export const Footer: React.FC = () => {
       <div className="max-w-[1240px] mx-auto px-6 space-y-12">
         {/* Main 5 columns matching supermarket layout with fresh green brand theme */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 items-start">
-          {/* Col 1: Brand (lg:col-span-3) - Shopping cart illustration + 'Your Store Here' */}
+          {/* Col 1: Brand (lg:col-span-3) - Flat white icon + 'Your Store Here' */}
           <div className="lg:col-span-3 space-y-4">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-2xl bg-white/15 backdrop-blur-xs border border-white/25 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform">
-                <img
-                  src="/logo.svg"
-                  alt="Shopping Cart Logo"
-                  className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight leading-tight uppercase font-sans">
-                  Your Store Here
-                </span>
-                <span className="text-[10px] text-orange-300 uppercase tracking-widest font-semibold">
-                  Daily Supermarket
-                </span>
-              </div>
+            <Link to="/" className="flex items-center gap-2.5 group">
+              <img
+                src="/logo_white.svg"
+                alt="Shopping Cart Logo"
+                className="h-8 w-8 sm:h-9 sm:w-9 object-contain opacity-95 group-hover:opacity-100 transition-opacity"
+              />
+              <span
+                style={{ fontFamily: "var(--font-nav, 'Inter', system-ui, sans-serif)" }}
+                className="text-white font-extrabold text-xl sm:text-2xl tracking-tight leading-none"
+              >
+                Your Store Here
+              </span>
             </Link>
             <p className="text-xs sm:text-sm text-orange-100/85 leading-relaxed max-w-xs font-normal">
               {t('footer.tagline')}
