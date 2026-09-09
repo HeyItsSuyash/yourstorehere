@@ -67,15 +67,15 @@ export const Header: React.FC = () => {
               title="Toggle Hindi / English"
             >
               <Globe className="w-3.5 h-3.5 shrink-0" />
-              <span>{language === 'en' ? 'à¤¹à¤¿à¤¨à¥à¤¦à¥€' : 'English'}</span>
+              <span>{language === 'en' ? 'हिन्दी' : 'English'}</span>
             </button>
 
             <a
-              href="tel:09415922031"
+              href="tel:9876543210"
               className="flex items-center gap-1 hover:text-white transition-colors shrink-0"
             >
               <Phone className="w-3.5 h-3.5 text-orange-200 shrink-0" />
-              <span className="hidden xs:inline">094159 22031</span>
+              <span className="hidden xs:inline">+91 98765 43210</span>
             </a>
 
             <span className="hidden lg:flex items-center gap-1.5 shrink-0">
@@ -294,7 +294,7 @@ export const Header: React.FC = () => {
               className="flex items-center gap-1 text-xs font-bold text-[#ea580c] bg-orange-50 px-2.5 py-1 rounded-full"
             >
               <Globe className="w-3.5 h-3.5" />
-              <span>{language === 'en' ? 'à¤¸à¥à¤µà¤¿à¤š à¤•à¤°à¥‡à¤‚: à¤¹à¤¿à¤¨à¥à¤¦à¥€' : 'Switch: English'}</span>
+              <span>{language === 'en' ? 'स्विच करें: हिन्दी' : 'Switch: English'}</span>
             </button>
           </div>
 
