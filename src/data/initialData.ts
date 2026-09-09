@@ -46,12 +46,12 @@ export const initialAddresses: Address[] = [
     type: 'Home',
     name: 'Rahul Sharma',
     phone: '094159 22031',
-    flat: 'House No. 12, Lane 3',
-    street: 'Behajam Road, Motinagar Colony, Maharaj Nagar',
-    landmark: 'Near New Family Bazar',
-    city: 'Lakhimpur',
+    flat: 'Flat No. 402, Tower B',
+    street: 'Kathauta Chauraha Rd, Vijayant Khand',
+    landmark: 'Near Express daily Mart',
+    city: 'Gomti Nagar, Lucknow',
     state: 'Uttar Pradesh',
-    pincode: '262701',
+    pincode: '226010',
     isDefault: true
   },
   {
@@ -59,12 +59,12 @@ export const initialAddresses: Address[] = [
     type: 'Work',
     name: 'Rahul Sharma',
     phone: '094159 22031',
-    flat: 'Commercial Complex, Shop 4',
-    street: 'Station Road, Maharaj Nagar',
-    landmark: 'Opposite Main Market',
-    city: 'Lakhimpur',
+    flat: 'Office 12, Commercial Hub',
+    street: 'Kathauta Chauraha Road',
+    landmark: 'In front of petrol pump',
+    city: 'Gomti Nagar, Lucknow',
     state: 'Uttar Pradesh',
-    pincode: '262701',
+    pincode: '226010',
     isDefault: false
   }
 ];
@@ -72,7 +72,7 @@ export const initialAddresses: Address[] = [
 export const initialProfile: UserProfile = {
   name: 'Rahul Sharma',
   phone: '094159 22031',
-  email: 'rahul.sharma@newfamilybazar.com',
+  email: 'rahul.sharma@expressdailymart.com',
   dob: '1992-08-15',
   gender: 'Male',
   loyaltyPoints: 2450

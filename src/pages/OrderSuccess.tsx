@@ -14,19 +14,19 @@ export const OrderSuccess: React.FC = () => {
     <div className="max-w-2xl mx-auto px-4 py-12">
       <div className="bg-white rounded-xl p-6 sm:p-10 border border-slate-200/80 shadow-md text-center space-y-6">
         {/* Animated Check */}
-        <div className="w-20 h-20 bg-orange-100 text-[#ea580c] rounded-xl mx-auto flex items-center justify-center shadow-inner">
+        <div className="w-20 h-20 bg-green-100 text-[#16a34a] rounded-xl mx-auto flex items-center justify-center shadow-inner">
           <CheckCircle2 className="w-12 h-12" />
         </div>
 
         <div className="space-y-1">
-          <span className="text-xs font-bold text-[#c2410c] uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-xl border border-orange-200">
+          <span className="text-xs font-bold text-[#15803d] uppercase tracking-widest bg-green-50 px-3 py-1 rounded-xl border border-green-200">
             Order Confirmed
           </span>
           <h1 className="text-2xl sm:text-3xl font-black text-slate-900 pt-2">
             Order Placed Successfully!
           </h1>
           <p className="text-xs sm:text-sm text-slate-500">
-            Thank you for shopping with New Family Bazar. Your groceries are being picked from our fresh inventory.
+            Thank you for shopping with Express daily Mart. Your groceries are being picked from our fresh inventory.
           </p>
         </div>
 
@@ -39,24 +39,24 @@ export const OrderSuccess: React.FC = () => {
             </div>
             <div className="text-right">
               <span className="text-[10px] uppercase font-bold text-slate-400">Total Amount</span>
-              <p className="font-black text-sm text-[#c2410c]">
+              <p className="font-black text-sm text-[#15803d]">
                 ₹{order ? order.total : 587}
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-3 text-xs text-slate-600">
-            <Clock className="w-4 h-4 text-[#ea580c] shrink-0" />
+            <Clock className="w-4 h-4 text-[#16a34a] shrink-0" />
             <span>
               Estimated Delivery: <strong>Today, within 45 minutes</strong>
             </span>
           </div>
 
           <div className="flex items-center gap-3 text-xs text-slate-600">
-            <MapPin className="w-4 h-4 text-[#ea580c] shrink-0" />
+            <MapPin className="w-4 h-4 text-[#16a34a] shrink-0" />
             <span className="line-clamp-1">
               Delivering to: {order?.deliveryAddress?.flat || 'Flat 402, Sunshine Heights'},{' '}
-              {order?.deliveryAddress?.city || 'Bengaluru'}
+              {order?.deliveryAddress?.city || 'Lucknow'}
             </span>
           </div>
         </div>
@@ -65,7 +65,7 @@ export const OrderSuccess: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-3 pt-2">
           <Link
             to={`/track-order/${orderId}`}
-            className="flex-1 flex items-center justify-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-black text-sm py-3.5 px-6 rounded-xl shadow-md transition-all "
+            className="flex-1 flex items-center justify-center gap-2 bg-[#16a34a] hover:bg-[#15803d] text-white font-black text-sm py-3.5 px-6 rounded-xl shadow-md transition-all "
           >
             <Truck className="w-4 h-4" />
             <span>TRACK YOUR ORDER</span>

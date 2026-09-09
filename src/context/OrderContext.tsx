@@ -136,7 +136,7 @@ export const OrderProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       id: `NFB-${randomNum}`,
       date: new Date().toISOString(),
       status: 'Order Placed',
-      statusDescription: 'Order confirmed and sent to nearest New Family Bazar hub for packing.',
+      statusDescription: 'Order confirmed and sent to nearest Express daily Mart hub for packing.',
       items: data.items.map((it) => ({
         productId: it.product.id,
         name: it.product.name,

@@ -35,7 +35,7 @@ export const TrackOrder: React.FC = () => {
         <div>
           <Link
             to="/account/orders"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-[#ea580c]"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-[#16a34a]"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to My Orders</span>
@@ -47,7 +47,7 @@ export const TrackOrder: React.FC = () => {
             Order #{currentOrder.id} • Placed today
           </p>
         </div>
-        <span className="bg-orange-100 text-[#c2410c] text-xs font-black px-3 py-1.5 rounded-xl uppercase tracking-wider">
+        <span className="bg-orange-100 text-[#15803d] text-xs font-black px-3 py-1.5 rounded-xl uppercase tracking-wider">
           {currentOrder.status}
         </span>
       </div>
@@ -77,23 +77,23 @@ export const TrackOrder: React.FC = () => {
 
               {/* Graphic delivery path */}
               <div className="bg-slate-900/80 rounded-xl p-4 border border-slate-800 mb-4">
-                <div className="flex items-center justify-between text-xs font-bold text-orange-200 mb-2">
-                  <span>Hub: Lakhimpur Behajam Rd</span>
+                <div className="flex items-center justify-between text-xs font-bold text-green-200 mb-2">
+                  <span>Hub: Express daily Mart, Gomti Nagar</span>
                   <span className="text-amber-400 font-extrabold flex items-center gap-1">
                     <Truck className="w-3.5 h-3.5" /> 1.2 km away
                   </span>
-                  <span>Motinagar Colony</span>
+                  <span>Vijayant Khand</span>
                 </div>
                 {/* Progress track */}
-                <div className="w-full h-2.5 bg-slate-950 rounded-xl overflow-hidden p-0.5 border border-[#ea580c]">
-                  <div className="h-full bg-gradient-to-r from-[#ea580c] to-amber-400 rounded-xl w-3/4 animate-pulse" />
+                <div className="w-full h-2.5 bg-slate-950 rounded-xl overflow-hidden p-0.5 border border-[#16a34a]">
+                  <div className="h-full bg-gradient-to-r from-[#16a34a] to-amber-400 rounded-xl w-3/4 animate-pulse" />
                 </div>
               </div>
 
               {/* Delivery Driver Info */}
               <div className="flex items-center justify-between bg-white/10 backdrop-blur-xs rounded-xl p-3.5 border border-white/10">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#ea580c] text-white flex items-center justify-center font-black text-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#16a34a] text-white flex items-center justify-center font-black text-sm">
                     {currentOrder.deliveryPartner?.name.charAt(0) || 'M'}
                   </div>
                   <div>
@@ -108,7 +108,7 @@ export const TrackOrder: React.FC = () => {
 
                 <a
                   href={`tel:${currentOrder.deliveryPartner?.phone || '+919811234567'}`}
-                  className="flex items-center gap-1 bg-[#ea580c] hover:bg-[#c2410c] text-white text-xs font-black px-3.5 py-2 rounded-xl transition-colors shadow-xs"
+                  className="flex items-center gap-1 bg-[#16a34a] hover:bg-[#15803d] text-white text-xs font-black px-3.5 py-2 rounded-xl transition-colors shadow-xs"
                 >
                   <Phone className="w-3.5 h-3.5" />
                   <span>Call Rider</span>
@@ -132,7 +132,7 @@ export const TrackOrder: React.FC = () => {
                       step.current
                         ? 'bg-amber-500 border-white ring-4 ring-amber-100'
                         : step.completed
-                        ? 'bg-[#ea580c] border-white ring-2 ring-orange-200'
+                        ? 'bg-[#16a34a] border-white ring-2 ring-orange-200'
                         : 'bg-slate-200 border-white'
                     }`}
                   />
@@ -152,7 +152,7 @@ export const TrackOrder: React.FC = () => {
                       <p className="text-[11px] text-slate-400">{step.time}</p>
                     </div>
                     {step.completed && (
-                      <CheckCircle2 className="w-4 h-4 text-[#ea580c]" />
+                      <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
                     )}
                   </div>
                 </div>
@@ -198,13 +198,13 @@ export const TrackOrder: React.FC = () => {
                 <span>Subtotal</span>
                 <span>₹{currentOrder.subtotal}</span>
               </div>
-              <div className="flex justify-between text-[#ea580c] font-semibold">
+              <div className="flex justify-between text-[#16a34a] font-semibold">
                 <span>Total Discount</span>
                 <span>- ₹{currentOrder.discount + currentOrder.couponDiscount}</span>
               </div>
               <div className="flex justify-between text-slate-600">
                 <span>Delivery</span>
-                <span className="text-[#ea580c] font-bold uppercase text-[11px]">
+                <span className="text-[#16a34a] font-bold uppercase text-[11px]">
                   FREE
                 </span>
               </div>

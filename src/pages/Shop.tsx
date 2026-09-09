@@ -79,12 +79,12 @@ export const Shop: React.FC = () => {
     <div className="w-full bg-[#f8f9f5] min-h-screen py-6 font-sans">
       <SEO
         title="Shop Groceries, Fruits & Essentials Online"
-        description="Browse our complete supermarket catalog: fresh fruits, vegetables, dairy, staples, snacks, beverages and household cleaners in Lakhimpur."
+        description="Browse our complete supermarket catalog: fresh fruits, vegetables, dairy, staples, snacks, beverages and household cleaners in Gomti Nagar, Lucknow."
       />
       <div className="max-w-[1240px] mx-auto px-4">
         {/* Breadcrumb strip */}
         <div className="flex items-center gap-2 text-[11px] text-[#777] mb-4">
-          <Link to="/" className="hover:text-[#ea580c]">Home</Link>
+          <Link to="/" className="hover:text-[#16a34a]">Home</Link>
           <span>/</span>
           <span className="text-[#111] font-bold">Shop Supermarket Catalog</span>
         </div>
@@ -109,7 +109,7 @@ export const Shop: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsMobileFilterOpen(true)}
-              className="lg:hidden flex items-center gap-2 bg-[#fff7ed] text-[#ea580c] border border-[#d8ded0] font-bold text-xs px-4 py-2.5 rounded-xl shadow-2xs"
+              className="lg:hidden flex items-center gap-2 bg-[#f0fdf4] text-[#16a34a] border border-[#d8ded0] font-bold text-xs px-4 py-2.5 rounded-xl shadow-2xs"
             >
               <Filter className="w-4 h-4" />
               <span>Filters</span>
@@ -140,7 +140,7 @@ export const Shop: React.FC = () => {
           <aside className="hidden lg:block lg:col-span-3 nfb-card p-5 space-y-6 sticky top-28">
             <div className="flex items-center justify-between pb-3 border-b border-[#ecefe6]">
               <div className="flex items-center gap-2">
-                <SlidersHorizontal className="w-4 h-4 text-[#ea580c]" />
+                <SlidersHorizontal className="w-4 h-4 text-[#16a34a]" />
                 <h3 className="font-bold text-[#111] text-xs uppercase tracking-wider">
                   Filter Products
                 </h3>
@@ -148,7 +148,7 @@ export const Shop: React.FC = () => {
               <button
                 type="button"
                 onClick={resetFilters}
-                className="text-xs text-[#ea580c] hover:underline font-bold"
+                className="text-xs text-[#16a34a] hover:underline font-bold"
               >
                 Reset
               </button>
@@ -165,7 +165,7 @@ export const Shop: React.FC = () => {
                   onClick={() => setSelectedCategory('all')}
                   className={`w-full text-left px-2.5 py-1.5 rounded-xl text-xs font-medium transition-colors flex items-center justify-between ${
                     selectedCategory === 'all'
-                      ? 'bg-[#fff7ed] text-[#ea580c] font-bold'
+                      ? 'bg-[#f0fdf4] text-[#16a34a] font-bold'
                       : 'text-[#444] hover:bg-slate-50'
                   }`}
                 >
@@ -179,7 +179,7 @@ export const Shop: React.FC = () => {
                     onClick={() => setSelectedCategory(c.slug)}
                     className={`w-full text-left px-2.5 py-1.5 rounded-xl text-xs font-medium transition-colors flex items-center justify-between ${
                       selectedCategory === c.slug
-                        ? 'bg-[#fff7ed] text-[#ea580c] font-bold'
+                        ? 'bg-[#f0fdf4] text-[#16a34a] font-bold'
                         : 'text-[#444] hover:bg-slate-50'
                     }`}
                   >
@@ -198,7 +198,7 @@ export const Shop: React.FC = () => {
                 <h4 className="text-[11px] font-black text-[#111] uppercase tracking-wider">
                   Max Price
                 </h4>
-                <span className="text-xs font-black text-[#ea580c]">
+                <span className="text-xs font-black text-[#16a34a]">
                   ₹{maxPrice}
                 </span>
               </div>
@@ -210,7 +210,7 @@ export const Shop: React.FC = () => {
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
                 aria-label="Filter products by maximum price"
-                className="w-full accent-[#ea580c] cursor-pointer"
+                className="w-full accent-[#16a34a] cursor-pointer"
               />
               <div className="flex justify-between text-[10px] text-[#888] mt-1">
                 <span>₹20</span>
@@ -227,13 +227,13 @@ export const Shop: React.FC = () => {
                 {brands.map((b) => (
                   <label
                     key={b}
-                    className="flex items-center gap-2 text-xs text-[#444] cursor-pointer hover:text-[#ea580c] select-none"
+                    className="flex items-center gap-2 text-xs text-[#444] cursor-pointer hover:text-[#16a34a] select-none"
                   >
                     <input
                       type="checkbox"
                       checked={selectedBrands.includes(b)}
                       onChange={() => toggleBrand(b)}
-                      className="rounded-xl accent-[#ea580c]"
+                      className="rounded-xl accent-[#16a34a]"
                     />
                     <span>{b}</span>
                   </label>
@@ -254,7 +254,7 @@ export const Shop: React.FC = () => {
                     onClick={() => setMinRating(minRating === star ? 0 : star)}
                     className={`px-2 py-1 rounded-xl text-xs font-semibold flex items-center gap-1 border transition-colors ${
                       minRating === star
-                        ? 'bg-[#ea580c] text-white border-[#ea580c]'
+                        ? 'bg-[#16a34a] text-white border-[#16a34a]'
                         : 'bg-white text-[#444] border-[#d8ded0] hover:bg-slate-50'
                     }`}
                   >
@@ -326,7 +326,7 @@ export const Shop: React.FC = () => {
                 <div>
                   <div className="flex justify-between text-xs mb-1 font-bold">
                     <span>Max Price</span>
-                    <span className="text-[#ea580c]">₹{maxPrice}</span>
+                    <span className="text-[#16a34a]">₹{maxPrice}</span>
                   </div>
                   <input
                     type="range"
@@ -336,7 +336,7 @@ export const Shop: React.FC = () => {
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(Number(e.target.value))}
                     aria-label="Filter products by maximum price"
-                    className="w-full accent-[#ea580c]"
+                    className="w-full accent-[#16a34a]"
                   />
                   <div className="flex justify-between text-[10px] text-[#888] mt-1">
                     <span>₹20</span>
@@ -354,7 +354,7 @@ export const Shop: React.FC = () => {
                           type="checkbox"
                           checked={selectedBrands.includes(b)}
                           onChange={() => toggleBrand(b)}
-                          className="accent-[#ea580c]"
+                          className="accent-[#16a34a]"
                         />
                         <span>{b}</span>
                       </label>
@@ -374,7 +374,7 @@ export const Shop: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsMobileFilterOpen(false)}
-                  className="flex-1 py-2 text-xs font-bold bg-[#ea580c] text-white rounded-xl"
+                  className="flex-1 py-2 text-xs font-bold bg-[#16a34a] text-white rounded-xl"
                 >
                   Apply ({filteredProducts.length})
                 </button>

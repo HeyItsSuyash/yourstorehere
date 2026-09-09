@@ -6,7 +6,7 @@ export const Testimonials: React.FC = () => {
     {
       name: 'Sarah J. (Bellandur)',
       comment:
-        'New Family Bazar has made grocery shopping so easy and convenient. The quality of fresh veggies and Amul milk is top-notch, and delivery is super fast!',
+        'Express daily Mart has made grocery shopping so easy and convenient. The quality of fresh veggies and Amul milk is top-notch, and delivery is super fast!',
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80'
     },
@@ -33,7 +33,7 @@ export const Testimonials: React.FC = () => {
           Trusted by 50,000+ Happy Families
         </h2>
         <p className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
-          See why your neighbors trust New Family Bazar for their daily kitchen & home supplies
+          See why your neighbors trust Express daily Mart for their daily kitchen & home supplies
         </p>
       </div>
 

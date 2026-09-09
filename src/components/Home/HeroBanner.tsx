@@ -14,14 +14,14 @@ export const HeroBanner: React.FC = () => {
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: Copy & CTAs */}
           <div className="lg:col-span-7 space-y-5 text-left">
-            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-xs border border-orange-300 text-[#c2410c] text-xs font-bold px-3.5 py-1.5 rounded-xl shadow-2xs">
-              <Sparkles className="w-4 h-4 text-[#ea580c]" />
+            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-xs border border-orange-300 text-[#15803d] text-xs font-bold px-3.5 py-1.5 rounded-xl shadow-2xs">
+              <Sparkles className="w-4 h-4 text-[#16a34a]" />
               <span>FRESHNESS YOU CAN TRUST • BEST INDIAN BRANDS</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
               Everything Your Family Needs,{' '}
-              <span className="text-[#ea580c] block mt-1">Under One Roof.</span>
+              <span className="text-[#16a34a] block mt-1">Under One Roof.</span>
             </h1>
 
             <p className="text-slate-600 text-sm sm:text-base max-w-xl leading-relaxed">
@@ -31,7 +31,7 @@ export const HeroBanner: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <Link
                 to="/shop"
-                className="inline-flex items-center gap-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md shadow-emerald-800/20 transition-all  "
+                className="inline-flex items-center gap-2 bg-[#16a34a] hover:bg-[#15803d] text-white font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md shadow-emerald-800/20 transition-all  "
               >
                 <span>SHOP NOW</span>
                 <ArrowRight className="w-4 h-4" />
@@ -49,7 +49,7 @@ export const HeroBanner: React.FC = () => {
           {/* Right Column: Hero Graphic Composition */}
           <div className="lg:col-span-5 relative flex justify-center items-center">
             {/* Discount Badge */}
-            <div className="absolute -top-3 left-4 sm:left-8 z-20 bg-[#ea580c] text-white rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center shadow-xl border-4 border-white transform -rotate-6 hover:rotate-0 transition-transform">
+            <div className="absolute -top-3 left-4 sm:left-8 z-20 bg-[#16a34a] text-white rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center shadow-xl border-4 border-white transform -rotate-6 hover:rotate-0 transition-transform">
               <span className="text-[10px] font-bold uppercase tracking-wider">UP TO</span>
               <span className="text-xl sm:text-2xl font-black leading-none">30%</span>
               <span className="text-[10px] font-bold uppercase tracking-wider">OFF</span>
@@ -59,7 +59,7 @@ export const HeroBanner: React.FC = () => {
             <div className="relative w-full max-w-md aspect-4/3 rounded-xl overflow-hidden shadow-2xl border-4 border-white">
               <img
                 src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&auto=format&fit=crop&q=80"
-                alt="Fresh Groceries in Basket - New Family Bazar"
+                alt="Fresh Groceries in Basket - Express daily Mart"
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-4">
@@ -75,7 +75,7 @@ export const HeroBanner: React.FC = () => {
       {/* Trust Indicators Bar below Hero */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-4">
         <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/80 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#ea580c] flex items-center justify-center shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#16a34a] flex items-center justify-center shrink-0">
             <CheckCircle2 className="w-5 h-5" />
           </div>
           <div>
@@ -85,7 +85,7 @@ export const HeroBanner: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/80 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#ea580c] flex items-center justify-center shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#16a34a] flex items-center justify-center shrink-0">
             <Truck className="w-5 h-5" />
           </div>
           <div>
@@ -95,7 +95,7 @@ export const HeroBanner: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/80 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#ea580c] flex items-center justify-center shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#16a34a] flex items-center justify-center shrink-0">
             <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
@@ -105,7 +105,7 @@ export const HeroBanner: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/80 flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#ea580c] flex items-center justify-center shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#16a34a] flex items-center justify-center shrink-0">
             <RefreshCw className="w-5 h-5" />
           </div>
           <div>

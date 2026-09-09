@@ -11,25 +11,25 @@ export const Footer: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="w-full bg-[#7c2d12] text-white text-sm pt-16 pb-20 md:pb-12 border-t-2 border-[#ea580c] font-sans">
+    <footer className="w-full bg-[#14532d] text-white text-sm pt-16 pb-20 md:pb-12 border-t-2 border-[#16a34a] font-sans">
       <div className="max-w-[1240px] mx-auto px-6 space-y-12">
-        {/* Main 5 columns matching supermarket layout with warm orange brand theme */}
+        {/* Main 5 columns matching supermarket layout with fresh green brand theme */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 items-start">
           {/* Col 1: Brand (lg:col-span-3) - Exact logo.png and text_logo_white.png directly with NO backgrounds */}
           <div className="lg:col-span-3 space-y-4">
             <Link to="/" className="flex items-center gap-3">
               <img
                 src="/logo.png"
-                alt="New Family Bazar Logo"
+                alt="Express daily Mart Logo"
                 className="h-11 w-11 sm:h-12 sm:w-12 object-contain"
               />
               <img
                 src="/text_logo_white.png"
-                alt="New Family Bazar"
+                alt="Express daily Mart"
                 className="h-8 sm:h-9 w-auto object-contain"
               />
             </Link>
-            <p className="text-xs sm:text-sm text-orange-100/85 leading-relaxed max-w-xs font-normal">
+            <p className="text-xs sm:text-sm text-emerald-100/85 leading-relaxed max-w-xs font-normal">
               {t('footer.tagline')}
             </p>
             {/* Social Icons - Clean without enclosing box */}
@@ -66,10 +66,10 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Quick Links (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-orange-200">
+            <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-emerald-200">
               {t('footer.quickLinks')}
             </h4>
-            <ul className="space-y-2 text-xs sm:text-sm text-orange-100/80 font-normal">
+            <ul className="space-y-2 text-xs sm:text-sm text-emerald-100/80 font-normal">
               <li><Link to="/" className="hover:text-white transition-colors">{t('nav.home')}</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">{t('nav.about')}</Link></li>
               <li><Link to="/shop" className="hover:text-white transition-colors">{t('nav.categories')}</Link></li>
@@ -81,10 +81,10 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Customer Service (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-orange-200">
+            <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-emerald-200">
               {t('footer.customerService')}
             </h4>
-            <ul className="space-y-2 text-xs sm:text-sm text-orange-100/80 font-normal">
+            <ul className="space-y-2 text-xs sm:text-sm text-emerald-100/80 font-normal">
               <li><Link to="/account" className="hover:text-white transition-colors">My Account</Link></li>
               <li><Link to="/account/orders" className="hover:text-white transition-colors">Order Tracking</Link></li>
               <li><Link to="/wishlist" className="hover:text-white transition-colors">Wishlist</Link></li>
@@ -96,10 +96,10 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: Categories (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-orange-200">
+            <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-emerald-200">
               {t('footer.categories')}
             </h4>
-            <ul className="space-y-2 text-xs sm:text-sm text-orange-100/80 font-normal">
+            <ul className="space-y-2 text-xs sm:text-sm text-emerald-100/80 font-normal">
               <li><Link to="/category/fruits-vegetables" className="hover:text-white transition-colors">{t('cat.fruitsVegetables')}</Link></li>
               <li><Link to="/category/dairy-eggs" className="hover:text-white transition-colors">{t('cat.dairyEggs')}</Link></li>
               <li><Link to="/category/beverages" className="hover:text-white transition-colors">{t('cat.beverages')}</Link></li>
@@ -112,26 +112,26 @@ export const Footer: React.FC = () => {
           {/* Col 5: Contact Us + We Accept (lg:col-span-3) */}
           <div className="lg:col-span-3 space-y-5">
             <div className="space-y-3.5">
-              <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-orange-200">
+              <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-emerald-200">
                 {t('footer.contactUs')}
               </h4>
-              <div className="space-y-3 text-xs sm:text-sm text-orange-100/85 leading-relaxed font-normal">
+              <div className="space-y-3 text-xs sm:text-sm text-emerald-100/85 leading-relaxed font-normal">
                 <a
-                  href="https://maps.app.goo.gl/dik1TVGpPLVk4dBo8"
+                  href="https://maps.app.goo.gl/9kBE7RBcQPjM6aWc6"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-start gap-2.5 hover:text-white transition-colors"
                 >
-                  <MapPin className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
-                  <span>Behajam Rd, Motinagar Colony, Maharaj Nagar, Lakhimpur, UP 262701</span>
+                  <MapPin className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <span>Shop no 19, 20, 21, 22, Kathauta Chauraha Rd, in front of petrol pump, Vijayant Khand, Gomti Nagar, Lucknow, UP 226010</span>
                 </a>
                 <p className="flex items-center gap-2.5">
-                  <Phone className="w-4 h-4 text-orange-400 shrink-0" />
+                  <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
                   <a href="tel:09415922031" className="hover:text-white font-medium">094159 22031</a>
                 </p>
                 <p className="flex items-center gap-2.5">
-                  <Mail className="w-4 h-4 text-orange-400 shrink-0" />
-                  <span className="font-medium">support@newfamilybazar.com</span>
+                  <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span className="font-medium">support@expressdailymart.com</span>
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Copyright strip */}
-        <div className="pt-8 border-t border-orange-800/60 text-center text-xs text-orange-200/80 font-normal">
+        <div className="pt-8 border-t border-emerald-800/60 text-center text-xs text-emerald-200/80 font-normal">
           {t('footer.rights')}
         </div>
       </div>

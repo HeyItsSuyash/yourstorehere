@@ -11,8 +11,8 @@ interface LanguageContextType {
 
 const translations: Record<Language, Record<string, string>> = {
   en: {
-    // Top Bar (Exact details from Google Maps: Behajam Rd, Motinagar Colony, Maharaj Nagar, Lakhimpur, UP 262701)
-    'top.address': 'Behajam Rd, Motinagar Colony, Maharaj Nagar, Lakhimpur, UP 262701',
+    // Top Bar (Exact details from Google Maps: Shop no 19, 20, 21, 22, Kathauta Chauraha Rd, Vijayant Khand, Gomti Nagar, Lucknow, UP 226010)
+    'top.address': 'Kathauta Chauraha Rd, Vijayant Khand, Gomti Nagar, Lucknow 226010',
     'top.phone': '094159 22031',
     'top.freeDelivery': 'Free Delivery on orders over ₹499',
     'top.timing': 'Mon - Sun: 10:00 AM - 9:30 PM',
@@ -62,7 +62,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Sections
     'sec.shopByCategory': 'Shop by Category',
     'sec.dealOfDay': 'Deal of the Day',
-    'sec.whyChoose': 'Why Choose New Family Bazar',
+    'sec.whyChoose': 'Why Choose Express daily Mart',
     'sec.trusted': 'Trusted by 50,000+ Happy Families in India',
     'sec.newsletterTitle': 'Get Special Supermarket Offers',
     'sec.newsletterSubtitle': 'Subscribe to receive weekly flash deal coupons, recipe guides & festival discounts.',
@@ -91,11 +91,11 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.categories': 'CATEGORIES',
     'footer.contactUs': 'CONTACT US',
     'footer.weAccept': 'WE ACCEPT',
-    'footer.rights': '© 2026 New Family Bazar. All Rights Reserved.'
+    'footer.rights': '© 2026 Express daily Mart. All Rights Reserved.'
   },
   hi: {
     // Top Bar
-    'top.address': 'बेहजाम रोड, मोतीनगर कॉलोनी, महाराज नगर, लखीमपुर, उत्तर प्रदेश 262701',
+    'top.address': 'कठौता चौराहा रोड, पेट्रोल पंप के सामने, विजयांत खंड, गोमती नगर, लखनऊ 226010',
     'top.phone': '094159 22031',
     'top.freeDelivery': '₹499 से अधिक के ऑर्डर पर मुफ्त डिलीवरी',
     'top.timing': 'सोमवार - रविवार: प्रातः 10:00 - रात्रि 9:30',
@@ -145,7 +145,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Sections
     'sec.shopByCategory': 'श्रेणियों के अनुसार खरीदारी',
     'sec.dealOfDay': 'आज का विशेष ऑफ़र',
-    'sec.whyChoose': 'न्यू फैमिली बाज़ार ही क्यों?',
+    'sec.whyChoose': 'एक्सप्रेस डेली मार्ट ही क्यों?',
     'sec.trusted': 'भारत के 50,000+ संतुष्ट परिवारों का भरोसा',
     'sec.newsletterTitle': 'पाएं सुपरमार्केट के विशेष ऑफ़र',
     'sec.newsletterSubtitle': 'साप्ताहिक डिस्काउंट कूपन और त्योहारी छूट की जानकारी के लिए सब्सक्राइब करें।',
@@ -174,7 +174,7 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.categories': 'श्रेणियाँ',
     'footer.contactUs': 'संपर्क करें',
     'footer.weAccept': 'भुगतान के साधन',
-    'footer.rights': '© 2026 न्यू फैमिली बाज़ार. सर्वाधिकार सुरक्षित।'
+    'footer.rights': '© 2026 एक्सप्रेस डेली मार्ट. सर्वाधिकार सुरक्षित।'
   }
 };
 
